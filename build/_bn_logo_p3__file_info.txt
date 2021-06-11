@@ -1,0 +1,3 @@
+graphics/logo_p3.bmp
+2166
+1622402427.55

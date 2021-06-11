@@ -1,0 +1,3 @@
+graphics/logo_p4.bmp
+2166
+1622402398.78

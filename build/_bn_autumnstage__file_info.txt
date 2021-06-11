@@ -1,0 +1,3 @@
+graphics/autumnstage.bmp
+8388706
+1622860280.36

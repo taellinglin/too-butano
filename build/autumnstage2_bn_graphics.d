@@ -1,0 +1,1 @@
+autumnstage2_bn_graphics.o: autumnstage2_bn_graphics.s

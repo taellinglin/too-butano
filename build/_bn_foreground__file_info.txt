@@ -1,0 +1,3 @@
+graphics/foreground.bmp
+32878
+1622329155.96

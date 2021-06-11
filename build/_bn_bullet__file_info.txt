@@ -1,0 +1,3 @@
+graphics/bullet.bmp
+1334
+1622242890.01

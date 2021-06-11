@@ -1,0 +1,1 @@
+variable_8x16_font_bn_graphics.o: variable_8x16_font_bn_graphics.s

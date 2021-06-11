@@ -1,0 +1,1 @@
+cursor_right_bn_graphics.o: cursor_right_bn_graphics.s

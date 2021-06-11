@@ -1,0 +1,1 @@
+foreground_bn_graphics.o: foreground_bn_graphics.s

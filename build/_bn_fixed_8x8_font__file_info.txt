@@ -1,0 +1,3 @@
+../../common/graphics/fixed_8x8_font.bmp
+3638
+1622242887.25
