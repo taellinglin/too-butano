@@ -30,6 +30,7 @@
 #include "bn_regular_bg_items_summerstage.h"
 #include "bn_regular_bg_items_summerstage2.h"
 #include "bn_affine_bg_items_seasonstileset.h"
+#include "summer_tilemap.h"
 
 
 #include "bn_sprite_items_cursor_right.h"
@@ -174,7 +175,7 @@ void main_game()
 {
          bn::regular_bg_ptr background_bg = bn::regular_bg_items::background.create_bg(64,32);
        // background_bg.set_priority(0);
-        bn::regular_bg_ptr summerstage_tiles = bn::regular_bg_items::summerstage.create_bg(64,32);
+        bn::regular_bg_ptr summerstage_tiles = bn::regular_bg_items::summer_tilemap.create_bg(64,32);
         bn::regular_bg_ptr summerstage2_tiles = bn::regular_bg_items::summerstage2.create_bg(64,32);
 
 
