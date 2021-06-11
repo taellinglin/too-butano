@@ -175,9 +175,10 @@ void main_game()
 {
          bn::regular_bg_ptr background_bg = bn::regular_bg_items::background.create_bg(64,32);
        // background_bg.set_priority(0);
-        bn::regular_bg_ptr summerstage_tiles = bn::regular_bg_items::summer_tilemap.create_bg(64,32);
-        bn::regular_bg_ptr summerstage2_tiles = bn::regular_bg_items::summerstage2.create_bg(64,32);
 
+        bn::regular_bg_ptr summerstage_tiles = bn::regular_bg_items::summerstage.create_bg(64,32);
+        bn::regular_bg_ptr summerstage2_tiles = bn::regular_bg_items::summerstage2.create_bg(64,32);
+        
 
         // bn::affine_bg_ptr seasons_tileset = bn::affine_bg_items::seasonstileset.create_bg(256,256);
          
