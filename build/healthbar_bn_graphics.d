@@ -1,0 +1,1 @@
+healthbar_bn_graphics.o: healthbar_bn_graphics.s

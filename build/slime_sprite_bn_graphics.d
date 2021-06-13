@@ -1,0 +1,1 @@
+slime_sprite_bn_graphics.o: slime_sprite_bn_graphics.s

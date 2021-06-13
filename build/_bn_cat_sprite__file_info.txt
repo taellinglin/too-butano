@@ -1,0 +1,3 @@
+graphics/cat_sprite.bmp
+4214
+1623056530.29

@@ -1,0 +1,1 @@
+cat_sprite_bn_graphics.o: cat_sprite_bn_graphics.s

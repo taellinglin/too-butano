@@ -1,0 +1,1 @@
+golem_sprite_bn_graphics.o: golem_sprite_bn_graphics.s

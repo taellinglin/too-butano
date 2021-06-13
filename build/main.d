@@ -78,16 +78,12 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/butano/include/bn_string_view.h \
  C:/butano/butano/include/bn_vector.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
- C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h \
- C:/butano/butano/include/bn_regular_bg_item.h \
- C:/butano/homebrew/too-butano/build/bn_regular_bg_items_foreground.h \
- C:/butano/homebrew/too-butano/build/bn_regular_bg_items_midground.h \
- C:/butano/homebrew/too-butano/build/bn_regular_bg_items_summerstage.h \
- C:/butano/homebrew/too-butano/build/bn_regular_bg_items_summerstage2.h \
- C:/butano/homebrew/too-butano/build/bn_affine_bg_items_seasonstileset.h \
+ C:/butano/homebrew/too-butano/build/bn_affine_bg_items_summerstage.h \
  C:/butano/butano/include/bn_affine_bg_item.h \
  C:/butano/butano/include/bn_affine_bg_map_item.h \
  C:/butano/butano/include/bn_affine_bg_tiles_item.h \
+ C:/butano/homebrew/too-butano/build/bn_affine_bg_items_summerstage2.h \
+ C:/butano/homebrew/too-butano/build/bn_affine_bg_items_seasonstileset.h \
  C:/butano/homebrew/too-butano/include/summer_tilemap.h \
  C:/butano/butano/hw/3rd_party/libtonc/include/tonc.h \
  C:/butano/butano/hw/3rd_party/libtonc/include/tonc_types.h \
@@ -103,19 +99,45 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/butano/hw/3rd_party/libtonc/include/tonc_surface.h \
  C:/butano/butano/hw/3rd_party/libtonc/include/tonc_video.h \
  C:/butano/butano/hw/3rd_party/libtonc/include/tonc_nocash.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_cursor_right.h \
- C:/butano/butano/include/bn_sprite_item.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p1.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p2.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p3.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p4.h \
- C:/butano/homebrew/too-butano/build/bn_music_items.h \
- C:/butano/butano/include/bn_music_item.h \
- C:/butano/homebrew/too-butano/build/bn_sound_items.h \
- C:/butano/butano/include/bn_sound_item.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_bullet.h \
- c:\butano\common\include\info.h C:/butano/butano/include/bn_span_fwd.h \
+ C:/butano/butano/include/bn_camera_actions.h \
+ C:/butano/butano/include/bn_sprite_animate_actions.h \
+ C:/butano/butano/include/bn_sprite_tiles_ptr.h \
+ C:/butano/homebrew/too-butano/include/too_scene_mainmenu.h \
+ C:/butano/homebrew/too-butano/include/too_scene.h \
+ C:/butano/homebrew/too-butano/include/too_player.h \
+ C:/butano/butano/include/bn_fixed_point.h \
  C:/butano/butano/include/bn_sprite_ptr.h \
+ C:/butano/butano/include/bn_camera_ptr.h \
+ C:/butano/butano/include/bn_span.h \
+ C:/butano/homebrew/too-butano/include/too_level.h \
+ C:/butano/homebrew/too-butano/include/too_hitbox.h \
+ C:/butano/butano/include/bn_fixed.h \
+ C:/butano/homebrew/too-butano/include/too_enemy.h \
+ C:/butano/butano/include/bn_string.h \
+ C:/butano/homebrew/too-butano/include/too_enemy_type.h \
+ C:/butano/homebrew/too-butano/include/too_data.h \
+ C:/butano/homebrew/too-butano/include/too_healthbar.h \
+ C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h \
+ C:/butano/butano/include/bn_sprite_item.h \
+ C:/butano/homebrew/too-butano/include/too_scene_maingame.h \
+ C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h \
+ C:/butano/homebrew/too-butano/include/too_scene_loading.h \
+ C:/butano/homebrew/too-butano/include/too_level.h \
+ C:/butano/homebrew/too-butano/include/too_player.h \
+ C:/butano/homebrew/too-butano/include/too_story_save.h \
+ C:/butano/homebrew/too-butano/include/too_story_type.h \
+ C:/butano/homebrew/too-butano/include/too_story_type.h \
+ C:/butano/homebrew/too-butano/include/too_tooltip.h \
+ C:/butano/homebrew/too-butano/include/too_data.h \
+ C:/butano/homebrew/too-butano/include/too_enemy.h \
+ C:/butano/homebrew/too-butano/include/too_enemy_type.h \
+ C:/butano/homebrew/too-butano/include/too_extras.h \
+ C:/butano/homebrew/too-butano/include/too_healthbar.h \
+ C:/butano/homebrew/too-butano/include/too_hitbox.h \
+ C:/butano/homebrew/too-butano/include/too_npc.h \
+ C:/butano/homebrew/too-butano/include/too_npc_type.h \
+ C:/butano/homebrew/too-butano/include/too_npc_type.h \
+ c:\butano\common\include\info.h C:/butano/butano/include/bn_span_fwd.h \
  c:\butano\common\include\variable_8x16_sprite_font.h \
  C:/butano/butano/include/bn_sprite_font.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x16_font.h
@@ -200,16 +222,12 @@ C:/butano/butano/include/bn_affine_bg_map_cell.h:
 C:/butano/butano/include/bn_string_view.h:
 C:/butano/butano/include/bn_vector.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
-C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h:
-C:/butano/butano/include/bn_regular_bg_item.h:
-C:/butano/homebrew/too-butano/build/bn_regular_bg_items_foreground.h:
-C:/butano/homebrew/too-butano/build/bn_regular_bg_items_midground.h:
-C:/butano/homebrew/too-butano/build/bn_regular_bg_items_summerstage.h:
-C:/butano/homebrew/too-butano/build/bn_regular_bg_items_summerstage2.h:
-C:/butano/homebrew/too-butano/build/bn_affine_bg_items_seasonstileset.h:
+C:/butano/homebrew/too-butano/build/bn_affine_bg_items_summerstage.h:
 C:/butano/butano/include/bn_affine_bg_item.h:
 C:/butano/butano/include/bn_affine_bg_map_item.h:
 C:/butano/butano/include/bn_affine_bg_tiles_item.h:
+C:/butano/homebrew/too-butano/build/bn_affine_bg_items_summerstage2.h:
+C:/butano/homebrew/too-butano/build/bn_affine_bg_items_seasonstileset.h:
 C:/butano/homebrew/too-butano/include/summer_tilemap.h:
 C:/butano/butano/hw/3rd_party/libtonc/include/tonc.h:
 C:/butano/butano/hw/3rd_party/libtonc/include/tonc_types.h:
@@ -225,20 +243,46 @@ C:/butano/butano/hw/3rd_party/libtonc/include/tonc_tte.h:
 C:/butano/butano/hw/3rd_party/libtonc/include/tonc_surface.h:
 C:/butano/butano/hw/3rd_party/libtonc/include/tonc_video.h:
 C:/butano/butano/hw/3rd_party/libtonc/include/tonc_nocash.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_cursor_right.h:
+C:/butano/butano/include/bn_camera_actions.h:
+C:/butano/butano/include/bn_sprite_animate_actions.h:
+C:/butano/butano/include/bn_sprite_tiles_ptr.h:
+C:/butano/homebrew/too-butano/include/too_scene_mainmenu.h:
+C:/butano/homebrew/too-butano/include/too_scene.h:
+C:/butano/homebrew/too-butano/include/too_player.h:
+C:/butano/butano/include/bn_fixed_point.h:
+C:/butano/butano/include/bn_sprite_ptr.h:
+C:/butano/butano/include/bn_camera_ptr.h:
+C:/butano/butano/include/bn_span.h:
+C:/butano/homebrew/too-butano/include/too_level.h:
+C:/butano/homebrew/too-butano/include/too_hitbox.h:
+C:/butano/butano/include/bn_fixed.h:
+C:/butano/homebrew/too-butano/include/too_enemy.h:
+C:/butano/butano/include/bn_string.h:
+C:/butano/homebrew/too-butano/include/too_enemy_type.h:
+C:/butano/homebrew/too-butano/include/too_data.h:
+C:/butano/homebrew/too-butano/include/too_healthbar.h:
+C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:
 C:/butano/butano/include/bn_sprite_item.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p1.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p2.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p3.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p4.h:
-C:/butano/homebrew/too-butano/build/bn_music_items.h:
-C:/butano/butano/include/bn_music_item.h:
-C:/butano/homebrew/too-butano/build/bn_sound_items.h:
-C:/butano/butano/include/bn_sound_item.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_bullet.h:
+C:/butano/homebrew/too-butano/include/too_scene_maingame.h:
+C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h:
+C:/butano/homebrew/too-butano/include/too_scene_loading.h:
+C:/butano/homebrew/too-butano/include/too_level.h:
+C:/butano/homebrew/too-butano/include/too_player.h:
+C:/butano/homebrew/too-butano/include/too_story_save.h:
+C:/butano/homebrew/too-butano/include/too_story_type.h:
+C:/butano/homebrew/too-butano/include/too_story_type.h:
+C:/butano/homebrew/too-butano/include/too_tooltip.h:
+C:/butano/homebrew/too-butano/include/too_data.h:
+C:/butano/homebrew/too-butano/include/too_enemy.h:
+C:/butano/homebrew/too-butano/include/too_enemy_type.h:
+C:/butano/homebrew/too-butano/include/too_extras.h:
+C:/butano/homebrew/too-butano/include/too_healthbar.h:
+C:/butano/homebrew/too-butano/include/too_hitbox.h:
+C:/butano/homebrew/too-butano/include/too_npc.h:
+C:/butano/homebrew/too-butano/include/too_npc_type.h:
+C:/butano/homebrew/too-butano/include/too_npc_type.h:
 c:\butano\common\include\info.h:
 C:/butano/butano/include/bn_span_fwd.h:
-C:/butano/butano/include/bn_sprite_ptr.h:
 c:\butano\common\include\variable_8x16_sprite_font.h:
 C:/butano/butano/include/bn_sprite_font.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x16_font.h:

@@ -1,0 +1,3 @@
+graphics/loading_bg.bmp
+32886
+1623056530.33

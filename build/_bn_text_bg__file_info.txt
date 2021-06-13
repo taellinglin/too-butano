@@ -1,0 +1,3 @@
+graphics/text_bg.bmp
+1142
+1623056530.34

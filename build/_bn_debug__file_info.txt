@@ -1,0 +1,3 @@
+graphics/debug.bmp
+246
+1623056530.29

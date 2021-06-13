@@ -1,0 +1,3 @@
+graphics/slime_sprite.bmp
+630
+1623056530.34

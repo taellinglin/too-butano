@@ -1,0 +1,3 @@
+graphics/penguin_sprite.bmp
+374
+1623056530.33

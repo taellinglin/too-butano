@@ -1,0 +1,1 @@
+stone_plaque_bn_graphics.o: stone_plaque_bn_graphics.s

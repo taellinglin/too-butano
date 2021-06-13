@@ -1,0 +1,3 @@
+graphics/healthbar.bmp
+534
+1623056530.31
