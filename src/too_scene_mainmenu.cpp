@@ -26,21 +26,16 @@
 #include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
 
+#include "too_scene_mainmenu.h"
+
 namespace too 
 {
 
-    //Main Menu
-    class MainMenu
-    {
-        
-    private:
-        /* data */
-    public:
         bool main_menu_mode_enabled = false; //Is menu mode enabled?
         int cursor_index; // The index that the cursor is at
         int num_options; // How many options there are
 
-        MainMenu(bn::sprite_text_generator& text_generator )
+        MainMenu::MainMenu(bn::sprite_text_generator& text_generator )
         {
             //BG0 BG1 BG2 render the background, midground, and foreground on 3 layers.
             bn::regular_bg_ptr background_bg = bn::regular_bg_items::background.create_bg(64,32);
@@ -84,5 +79,4 @@ namespace too
             
             
         };
-    };
  }

@@ -75,7 +75,6 @@
         while(true)
         {
             too::TitleScreen titlescreen = too::TitleScreen(text_generator);
-            bn::core::update();
             too::MainMenu mainmenu = too::MainMenu(text_generator);
             too::MainGame maingame = too::MainGame();
         };

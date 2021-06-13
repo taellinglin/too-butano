@@ -10,7 +10,7 @@ namespace too
     class TitleScreen
     {       
         public:
-        TitleScreen(bn::sprite_text_generator& text_generator);
+            TitleScreen(bn::sprite_text_generator& text_generator);
     };
 }
 

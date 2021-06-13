@@ -43,8 +43,8 @@ namespace too
         // map
         bn::affine_bg_ptr map = bn::affine_bg_items::map.create_bg(512, 512);
         too::Level level = too::Level(map);
-        map.set_horizontal_scale(2);
-        map.set_vertical_scale(2);
+        map.set_horizontal_scale(1);
+        map.set_vertical_scale(1);
 
         // camera
         map.set_camera(camera);

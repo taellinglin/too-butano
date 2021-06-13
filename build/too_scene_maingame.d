@@ -76,6 +76,8 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_sprite_shape_size.h \
  C:/butano/butano/include/bn_sprite_palette_item.h \
  C:/butano/homebrew/too-butano/include/too_scene_house.h \
+ C:/butano/homebrew/too-butano/include/too_scene_limbo.h \
+ C:/butano/homebrew/too-butano/include/too_scene_limbo2.h \
  C:/butano/homebrew/too-butano/include/too_scene_sky.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat.h \
@@ -103,7 +105,8 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_unordered_map.h \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
- c:\butano\common\include\info.h C:/butano/butano/include/bn_span_fwd.h
+ c:\butano\common\include\info.h C:/butano/butano/include/bn_span_fwd.h \
+ C:/butano/homebrew/too-butano/include/too_scene_maingame.h
 C:/butano/butano/include/bn_core.h:
 C:/butano/butano/include/bn_span_fwd.h:
 C:/butano/butano/include/bn_common.h:
@@ -182,6 +185,8 @@ C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/butano/include/bn_sprite_shape_size.h:
 C:/butano/butano/include/bn_sprite_palette_item.h:
 C:/butano/homebrew/too-butano/include/too_scene_house.h:
+C:/butano/homebrew/too-butano/include/too_scene_limbo.h:
+C:/butano/homebrew/too-butano/include/too_scene_limbo2.h:
 C:/butano/homebrew/too-butano/include/too_scene_sky.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat.h:
@@ -211,3 +216,4 @@ C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
 c:\butano\common\include\info.h:
 C:/butano/butano/include/bn_span_fwd.h:
+C:/butano/homebrew/too-butano/include/too_scene_maingame.h:

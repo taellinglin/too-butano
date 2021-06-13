@@ -8,6 +8,8 @@
 #include "bn_fixed_point.h"
 #include "too_scene_dungeon.h"
 #include "too_scene_house.h"
+#include "too_scene_limbo.h"
+#include "too_scene_limbo2.h"
 #include "too_scene_sky.h"
 #include "too_player.h"
 #include "bn_sprite_items_cat.h"
@@ -29,56 +31,59 @@
 #include "bn_affine_bg_map_cell.h"
 #include "info.h"
 
+#include "too_scene_maingame.h"
 
 namespace too
 {
-    class MainGame
-    {
-
-        public:
-        
-
-            MainGame()
-            {
-                too::Scene scene = too::Scene::SKY_DUNGEON;
-                too::Loading loading = too::Loading();
-
-                bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
-                too::Player player = too::Player(cat_sprite);
-
-                while(true)
-                {
-                    if(scene == too::Scene::HOUSE_START){
-                        too::House house = too::House();
-                        scene = house.execute(player, bn::fixed_point(288, 292));
-                    } 
-                    else if(scene == too::Scene::HOUSE_SKY){
-                        too::Sky sky = too::Sky();
-                        scene = sky.execute(player, bn::fixed_point(213, 728));
-                    } 
-                    else if(scene == too::Scene::SKY_DUNGEON)
-                    {
-                        too::Dungeon dungeon = too::Dungeon();
-                        scene = dungeon.execute(player, bn::fixed_point(150, 192));
-                    } 
-                    else if(scene == too::Scene::DUNGEON_SKY)
-                    {
-                        too::Sky sky = too::Sky();
-                        scene = sky.execute(player, bn::fixed_point(67, 968));
-                    }
-                    else if(scene == too::Scene::SKY_HOUSE)
-                    {
-                        too::House house = too::House();
-                        scene = house.execute(player, bn::fixed_point(710, 312));
-                    }
-                    cat_sprite.set_visible(false);
-                    loading.execute();
-                    bn::core::update();
-                
-                };
-
-        }
-
-    };
     
+    MainGame::MainGame()
+    {
+        too::Scene scene = too::Scene::HOUSE_SKY;
+        too::Loading loading = too::Loading();
+
+        bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
+        too::Player player = too::Player(cat_sprite);
+
+        while(true)
+        {
+            if(scene == too::Scene::HOUSE_START){
+                too::House house = too::House();
+                scene = house.execute(player, bn::fixed_point(288, 282));
+            } 
+            else if(scene == too::Scene::HOUSE_SKY){
+                too::Sky sky = too::Sky();
+                scene = sky.execute(player, bn::fixed_point(213, 728));
+            } 
+            else if(scene == too::Scene::SKY_DUNGEON)
+            {
+                too::Dungeon dungeon = too::Dungeon();
+                scene = dungeon.execute(player, bn::fixed_point(150, 192));
+            } 
+            else if(scene == too::Scene::DUNGEON_SKY)
+            {
+                too::Sky sky = too::Sky();
+                scene = sky.execute(player, bn::fixed_point(67, 968));
+            }
+            else if(scene == too::Scene::SKY_HOUSE)
+            {
+                too::House house = too::House();
+                scene = house.execute(player, bn::fixed_point(710, 312));
+            }
+            else if(scene == too::Scene::LIMBO)
+            {
+                too::Limbo limbo = too::Limbo();
+                scene = limbo.execute(player, bn::fixed_point(128, 128));
+            }
+            else if(scene == too::Scene::LIMBO2)
+            {
+                too::Limbo2 limbo2 = too::Limbo2();
+                scene = limbo2.execute(player, bn::fixed_point(128, 128));
+            }
+            cat_sprite.set_visible(false);
+            loading.execute();
+            bn::core::update();
+            
+        
+        };
+    };
 }

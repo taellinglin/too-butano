@@ -74,9 +74,9 @@ namespace too
     }
 
     //constants
-    constexpr const bn::fixed gravity = 0.2;
+    constexpr const bn::fixed gravity = 0.1;
     constexpr const bn::fixed wall_run_speed =0.25;
-    constexpr const bn::fixed jump_power = 4;
+    constexpr const bn::fixed jump_power = 5;
     constexpr const bn::fixed acc = 0.4;
     constexpr const bn::fixed max_dy = 6;
     constexpr const bn::fixed friction = 0.85;
@@ -301,29 +301,29 @@ namespace too
         }
         _sprite.set_vertical_scale(1);
         if(_attacking){
-            if(_action.graphics_indexes().front() != 14){
+            if(_action.graphics_indexes().front() !=8 ){
                 _action = bn::create_sprite_animate_action_once(
-                            _sprite, 1, bn::sprite_items::cat_sprite.tiles_item(), 14,14,14,14,14,14,14,14,15,15);
+                            _sprite, 4, bn::sprite_items::cat_sprite.tiles_item(), 8, 9, 10, 11, 12, 12, 13, 13, 14, 15);
             }
         } else if(_jumping){
             _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 12,12,12,12,12,12,12,12,12,12);
+                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
         } else if(_wall_running){
-            if(_action.graphics_indexes().front() != 8){
+            if(_action.graphics_indexes().front() != 4){
                 _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 8, 9,10,11, 2, 3, 4, 5, 6,7);
+                            _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 4, 4, 5, 5, 6, 6, 5, 5, 6, 6);
             }
             _sprite.set_vertical_scale(0.9);
         } else if(_falling){
             _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 13,13,13,13,13,13,13,13,13,13);
+                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 6, 6, 6, 6, 6, 6, 6, 6, 6, 6);
         } else if(_sliding){
             _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 6,6,6,6,6,6,6,6,6,6);
+                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 8, 8, 8, 8, 8, 8, 8, 8, 8, 8);
         } else if(_running){
             if(_action.graphics_indexes().front() != 8){
                 _action = bn::create_sprite_animate_action_forever(
-                        _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 8, 9,10,11, 2, 3, 4, 5, 6,7);
+                        _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 6, 5, 4, 3);
             }
         } else {
             //idle

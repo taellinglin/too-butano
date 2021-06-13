@@ -44,19 +44,19 @@ namespace too
 
             bn::string_view _golem_lines[14] = {
                 ". . .",
-                "* groans *",
-                "S o m e o n e  t h e r e  ?",
-                "Hello young one.",
-                "* cough *",
-                "Something troubles you?",
+                "Oh, it's you!",
+                "Where have you come from?",
+                "A distant kingdom?",
+                "Well, welcome to the realm we call Limbo",
+                "What's the matter?",
                 ". . .",
                 "Oh.",
                 "Thats no good.",
-                "I am gravely sorry.",
-                "I don't know if they came passed me.",
-                "I haven't awoken for many centuries now.",
-                "You see..",
-                "*they motion toward the sprawling cobwebs*"
+                "I am sorry to hear you don't like the fog",
+                "It is because it is a realm between realms",
+                "Things tend to dissappear and reapear here.",
+                "Well, you better be off now.",
+                ". . ."
             };
 
             bn::string_view _tortoise_lines[12] = {

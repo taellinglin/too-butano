@@ -7,12 +7,12 @@
 
 //======================================================================
 //
-//	cat_sprite_bn_graphics, 32x256@4, 
+//	cat_sprite_bn_graphics, 64x512@4, 
 //	+ palette 16 entries, not compressed
-//	+ 128 tiles not compressed
-//	Total size: 32 + 4096 = 4128
+//	+ 512 tiles not compressed
+//	Total size: 32 + 16384 = 16416
 //
-//	Time-stamp: 2021-06-12, 20:33:57
+//	Time-stamp: 2021-06-13, 16:27:44
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -21,8 +21,8 @@
 #ifndef GRIT_CAT_SPRITE_BN_GRAPHICS_H
 #define GRIT_CAT_SPRITE_BN_GRAPHICS_H
 
-#define cat_sprite_bn_graphicsTilesLen 4096
-extern const bn::tile cat_sprite_bn_graphicsTiles[bn::max(1024 / 8, 1)];
+#define cat_sprite_bn_graphicsTilesLen 16384
+extern const bn::tile cat_sprite_bn_graphicsTiles[bn::max(4096 / 8, 1)];
 
 #define cat_sprite_bn_graphicsPalLen 32
 extern const bn::color cat_sprite_bn_graphicsPal[16];
@@ -33,8 +33,8 @@ extern const bn::color cat_sprite_bn_graphicsPal[16];
 
 namespace bn::sprite_items
 {
-    constexpr sprite_item cat_sprite(sprite_shape_size(sprite_shape::WIDE, sprite_size::BIG), 
-            sprite_tiles_item(span<const tile>(cat_sprite_bn_graphicsTiles, 128), bpp_mode::BPP_4, compression_type::NONE, 16), 
+    constexpr sprite_item cat_sprite(sprite_shape_size(sprite_shape::WIDE, sprite_size::HUGE), 
+            sprite_tiles_item(span<const tile>(cat_sprite_bn_graphicsTiles, 512), bpp_mode::BPP_4, compression_type::NONE, 16), 
             sprite_palette_item(span<const color>(cat_sprite_bn_graphicsPal, 16), bpp_mode::BPP_4, compression_type::NONE));
 }
 
