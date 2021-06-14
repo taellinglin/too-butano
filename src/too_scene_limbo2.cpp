@@ -14,6 +14,7 @@
 #include "bn_optional.h"
 #include "bn_span.h"
 #include "bn_affine_bg_map_cell.h"
+#include"bn_format.h"
 
 //fe code
 #include "too_level.h"
@@ -22,10 +23,13 @@
 #include "too_npc.h"
 #include "too_npc_type.h"
 
+#include <bn_affine_bg_map_cell.h>
+
 //assets
 #include "bn_sprite_items_cat_sprite.h"
 #include "bn_affine_bg_items_limbo2_background.h"
 #include "bn_affine_bg_items_limbo2_midground.h"
+#include "bn_regular_bg_items_background.h"
 
 
 #include "bn_sprite_text_generator.h"
@@ -39,16 +43,18 @@ namespace too
 
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
         // map
-        bn::affine_bg_ptr background = bn::affine_bg_items::limbo2_background.create_bg(512, 512);
-        bn::affine_bg_ptr midground = bn::affine_bg_items::limbo2_midground.create_bg(512, 512);
-        too::Level level = too::Level(midground);
-        background.set_horizontal_scale(1);
-        background.set_vertical_scale(1);
-        midground.set_horizontal_scale(1);
-        midground.set_vertical_scale(1);
+
+        //bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
+        bn::affine_bg_ptr map_background = bn::affine_bg_items::limbo2_background.create_bg(0, 0);
+        bn::affine_bg_ptr map = bn::affine_bg_items::limbo2_midground.create_bg(0, 0);
+        too::Level level = too::Level(map);
+        map_background.set_horizontal_scale(1);
+        map_background.set_vertical_scale(1);
+        map.set_horizontal_scale(1);
+        map.set_vertical_scale(1);
         // camera
-        midground.set_camera(camera);
-        background.set_camera(camera);
+        map.set_camera(camera);
+        map_background.set_camera(camera);
         
         // bn::fixed max_cpu_usage;
         // int counter = 1;
@@ -56,7 +62,7 @@ namespace too
         bn::vector<Enemy, 32> enemies = {};
 
         // player
-        player.spawn(spawn_location, camera, midground, enemies);
+        player.spawn(spawn_location, camera, map, enemies);
         while(true)
         {
             
@@ -70,7 +76,7 @@ namespace too
             // }
 
 
-            player.update_position(midground, level);
+            player.update_position(map, level);
             player.apply_animation_state();
             // BN_LOG(bn::to_string<32>(player.pos().x())+" " + bn::to_string<32>(player.pos().y()));
             

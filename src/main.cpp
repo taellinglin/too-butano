@@ -68,7 +68,7 @@
     int main()
     {
         bn::core::init();
-        too::Scene scene = too::Scene::SKY_DUNGEON;
+        too::Scene scene = too::Scene::LIMBO2;
         too::Loading loading = too::Loading();
         bn::sprite_text_generator text_generator(variable_8x16_sprite_font);
         bn::bg_palettes::set_transparent_color(bn::color(13, 8, 14));

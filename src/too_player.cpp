@@ -23,6 +23,7 @@
 #include "too_enemy_type.h"
 
 #include "bn_affine_bg_items_house.h"
+#include "bn_affine_bg_items_limbo2_midground.h"
 
 namespace too
 {
@@ -84,7 +85,7 @@ namespace too
     Player::Player(bn::sprite_ptr sprite) :
         _sprite(sprite),
         _camera(bn::camera_ptr::create(0,0)),
-        _map(bn::affine_bg_items::house.create_bg(0, 0)),
+        _map(bn::affine_bg_items::limbo2_midground.create_bg(0, 0)),
         _text_bg1(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _text_bg2(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _healthbar(too::Healthbar())
@@ -447,8 +448,8 @@ namespace too
         _pos.set_y(_pos.y() + _dy);
 
         // lock player position to map limits x
-        if(_pos.x() > 1016){
-            _pos.set_x(1016);
+        if(_pos.x() > 992){
+            _pos.set_x(992);
         } else if(_pos.x() < 4){
             _pos.set_x(4);
         }

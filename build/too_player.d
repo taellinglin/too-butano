@@ -75,7 +75,8 @@ too_player.o: C:/butano/homebrew/too-butano/src/too_player.cpp \
  C:/butano/butano/include/bn_bg_palette_item.h \
  C:/butano/butano/include/bn_affine_bg_map_item.h \
  C:/butano/butano/include/bn_size.h \
- C:/butano/butano/include/bn_affine_bg_tiles_item.h
+ C:/butano/butano/include/bn_affine_bg_tiles_item.h \
+ C:/butano/homebrew/too-butano/build/bn_affine_bg_items_limbo2_midground.h
 C:/butano/butano/include/bn_fixed_point.h:
 C:/butano/butano/include/bn_fixed.h:
 C:/butano/butano/include/bn_limits.h:
@@ -158,3 +159,4 @@ C:/butano/butano/include/bn_bg_palette_item.h:
 C:/butano/butano/include/bn_affine_bg_map_item.h:
 C:/butano/butano/include/bn_size.h:
 C:/butano/butano/include/bn_affine_bg_tiles_item.h:
+C:/butano/homebrew/too-butano/build/bn_affine_bg_items_limbo2_midground.h:

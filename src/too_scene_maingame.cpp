@@ -38,7 +38,7 @@ namespace too
     
     MainGame::MainGame()
     {
-        too::Scene scene = too::Scene::HOUSE_SKY;
+        too::Scene scene = too::Scene::LIMBO2;
         too::Loading loading = too::Loading();
 
         bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
@@ -77,7 +77,7 @@ namespace too
             else if(scene == too::Scene::LIMBO2)
             {
                 too::Limbo2 limbo2 = too::Limbo2();
-                scene = limbo2.execute(player, bn::fixed_point(128, 128));
+                scene = limbo2.execute(player, bn::fixed_point(0, 0));
             }
             cat_sprite.set_visible(false);
             loading.execute();
