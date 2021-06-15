@@ -10,6 +10,7 @@
 #include "too_scene_house.h"
 #include "too_scene_limbo.h"
 #include "too_scene_limbo2.h"
+#include "too_scene_limbo3.h"
 #include "too_scene_sky.h"
 #include "too_player.h"
 #include "bn_sprite_items_cat.h"
@@ -38,7 +39,7 @@ namespace too
     
     MainGame::MainGame()
     {
-        too::Scene scene = too::Scene::LIMBO2;
+        too::Scene scene = too::Scene::LIMBO3;
         too::Loading loading = too::Loading();
 
         bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
@@ -64,6 +65,11 @@ namespace too
                 too::Sky sky = too::Sky();
                 scene = sky.execute(player, bn::fixed_point(67, 968));
             }
+            else if(scene == too::Scene::DUNGEON)
+            {
+                too::Dungeon dungeon = too::Dungeon();
+                scene = dungeon.execute(player, bn::fixed_point(150, 192));
+            }
             else if(scene == too::Scene::SKY_HOUSE)
             {
                 too::House house = too::House();
@@ -77,7 +83,12 @@ namespace too
             else if(scene == too::Scene::LIMBO2)
             {
                 too::Limbo2 limbo2 = too::Limbo2();
-                scene = limbo2.execute(player, bn::fixed_point(0, 0));
+                scene = limbo2.execute(player, bn::fixed_point(256, 256));
+            }
+            else if(scene == too::Scene::LIMBO3)
+            {
+                too::Limbo3 limbo3 = too::Limbo3();
+                scene = limbo3.execute(player, bn::fixed_point(512+256, 512+256));
             }
             cat_sprite.set_visible(false);
             loading.execute();

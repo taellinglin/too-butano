@@ -247,7 +247,7 @@ namespace too
                 _wall_running = false;
                 _falling = false;
                 _dy = 0;
-                _pos.set_y(_pos.y() - modulo(_pos.y(),8));
+                _pos.set_y(_pos.y() - modulo(_pos.y(),16));
                 //todo if they pressed jump a few milliseconds before hitting the ground then jump now
             }
         } 
@@ -312,19 +312,19 @@ namespace too
         } else if(_wall_running){
             if(_action.graphics_indexes().front() != 4){
                 _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 4, 4, 5, 5, 6, 6, 5, 5, 6, 6);
+                            _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 4, 5, 5, 5, 6, 6, 5, 5, 6, 6);
             }
             _sprite.set_vertical_scale(0.9);
         } else if(_falling){
             _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 6, 6, 6, 6, 6, 6, 6, 6, 6, 6);
+                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 3, 5, 4, 3);
         } else if(_sliding){
             _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 8, 8, 8, 8, 8, 8, 8, 8, 8, 8);
+                            _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 6, 5, 4, 3);
         } else if(_running){
-            if(_action.graphics_indexes().front() != 8){
+            if(_action.graphics_indexes().front() != 2){
                 _action = bn::create_sprite_animate_action_forever(
-                        _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 6, 5, 4, 3);
+                        _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 3, 5, 4, 3);
             }
         } else {
             //idle

@@ -10,8 +10,10 @@ namespace too
         SKY_HOUSE,
         SKY_DUNGEON,
         DUNGEON_SKY,
+        DUNGEON,
         LIMBO,
         LIMBO2,
+        LIMBO3,
         LOADING
     };
 }

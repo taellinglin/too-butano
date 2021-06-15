@@ -57,6 +57,9 @@ too_scene_limbo2.o: \
  C:/butano/butano/include/bn_sprite_shape_size.h \
  C:/butano/butano/include/bn_sprite_palette_item.h \
  C:/butano/butano/include/bn_color.h C:/butano/butano/include/bn_core.h \
+ C:/butano/butano/include/bn_math.h C:/butano/butano/include/bn_sin_lut.h \
+ C:/butano/butano/include/bn_reciprocal_lut.h \
+ C:/butano/butano/include/bn_rule_of_three_approximation.h \
  C:/butano/butano/include/bn_log.h \
  C:/butano/butano/include/bn_config_log.h \
  C:/butano/butano/include/bn_log_backend.h \
@@ -64,8 +67,6 @@ too_scene_limbo2.o: \
  C:/butano/butano/include/bn_regular_bg_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
- C:/butano/butano/include/bn_format.h \
- C:/butano/butano/include/bn_string.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
@@ -82,19 +83,31 @@ too_scene_limbo2.o: \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
+ C:/butano/homebrew/too-butano/include/too_tooltip.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
- C:/butano/homebrew/too-butano/build/bn_affine_bg_items_limbo2_background.h \
- C:/butano/butano/include/bn_affine_bg_item.h \
- C:/butano/butano/include/bn_bg_palette_item.h \
- C:/butano/butano/include/bn_affine_bg_map_item.h \
- C:/butano/butano/include/bn_size.h \
- C:/butano/butano/include/bn_affine_bg_tiles_item.h \
- C:/butano/homebrew/too-butano/build/bn_affine_bg_items_limbo2_midground.h \
- C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h \
+ C:/butano/homebrew/too-butano/include/too_enemy.h \
+ C:/butano/homebrew/too-butano/include/too_enemy_type.h \
+ C:/butano/homebrew/too-butano/include/too_data.h \
+ C:/butano/homebrew/too-butano/include/too_story_save.h \
+ C:/butano/homebrew/too-butano/include/too_story_type.h \
+ C:/butano/homebrew/too-butano/build/bn_sprite_items_debug.h \
+ C:/butano/homebrew/too-butano/build/bn_regular_bg_items_limbo2_background.h \
  C:/butano/butano/include/bn_regular_bg_item.h \
+ C:/butano/butano/include/bn_bg_palette_item.h \
  C:/butano/butano/include/bn_regular_bg_map_item.h \
+ C:/butano/butano/include/bn_size.h \
  C:/butano/butano/include/bn_regular_bg_map_cell.h \
  C:/butano/butano/include/bn_regular_bg_tiles_item.h \
+ C:/butano/homebrew/too-butano/build/bn_affine_bg_items_limbo2_midground.h \
+ C:/butano/butano/include/bn_affine_bg_item.h \
+ C:/butano/butano/include/bn_affine_bg_map_item.h \
+ C:/butano/butano/include/bn_affine_bg_tiles_item.h \
+ C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h \
+ C:/butano/homebrew/too-butano/build/bn_music_items.h \
+ C:/butano/butano/include/bn_music_item.h \
+ C:/butano/butano/include/bn_music_actions.h \
+ C:/butano/butano/include/bn_music.h \
+ C:/butano/butano/include/bn_template_actions.h \
  C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h \
  C:/butano/butano/include/bn_sprite_font.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h
@@ -159,6 +172,10 @@ C:/butano/butano/include/bn_sprite_shape_size.h:
 C:/butano/butano/include/bn_sprite_palette_item.h:
 C:/butano/butano/include/bn_color.h:
 C:/butano/butano/include/bn_core.h:
+C:/butano/butano/include/bn_math.h:
+C:/butano/butano/include/bn_sin_lut.h:
+C:/butano/butano/include/bn_reciprocal_lut.h:
+C:/butano/butano/include/bn_rule_of_three_approximation.h:
 C:/butano/butano/include/bn_log.h:
 C:/butano/butano/include/bn_config_log.h:
 C:/butano/butano/include/bn_log_backend.h:
@@ -166,8 +183,6 @@ C:/butano/butano/include/bn_keypad.h:
 C:/butano/butano/include/bn_regular_bg_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
-C:/butano/butano/include/bn_format.h:
-C:/butano/butano/include/bn_string.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
@@ -184,19 +199,31 @@ C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
+C:/butano/homebrew/too-butano/include/too_tooltip.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
-C:/butano/homebrew/too-butano/build/bn_affine_bg_items_limbo2_background.h:
-C:/butano/butano/include/bn_affine_bg_item.h:
-C:/butano/butano/include/bn_bg_palette_item.h:
-C:/butano/butano/include/bn_affine_bg_map_item.h:
-C:/butano/butano/include/bn_size.h:
-C:/butano/butano/include/bn_affine_bg_tiles_item.h:
-C:/butano/homebrew/too-butano/build/bn_affine_bg_items_limbo2_midground.h:
-C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h:
+C:/butano/homebrew/too-butano/include/too_enemy.h:
+C:/butano/homebrew/too-butano/include/too_enemy_type.h:
+C:/butano/homebrew/too-butano/include/too_data.h:
+C:/butano/homebrew/too-butano/include/too_story_save.h:
+C:/butano/homebrew/too-butano/include/too_story_type.h:
+C:/butano/homebrew/too-butano/build/bn_sprite_items_debug.h:
+C:/butano/homebrew/too-butano/build/bn_regular_bg_items_limbo2_background.h:
 C:/butano/butano/include/bn_regular_bg_item.h:
+C:/butano/butano/include/bn_bg_palette_item.h:
 C:/butano/butano/include/bn_regular_bg_map_item.h:
+C:/butano/butano/include/bn_size.h:
 C:/butano/butano/include/bn_regular_bg_map_cell.h:
 C:/butano/butano/include/bn_regular_bg_tiles_item.h:
+C:/butano/homebrew/too-butano/build/bn_affine_bg_items_limbo2_midground.h:
+C:/butano/butano/include/bn_affine_bg_item.h:
+C:/butano/butano/include/bn_affine_bg_map_item.h:
+C:/butano/butano/include/bn_affine_bg_tiles_item.h:
+C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h:
+C:/butano/homebrew/too-butano/build/bn_music_items.h:
+C:/butano/butano/include/bn_music_item.h:
+C:/butano/butano/include/bn_music_actions.h:
+C:/butano/butano/include/bn_music.h:
+C:/butano/butano/include/bn_template_actions.h:
 C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h:
 C:/butano/butano/include/bn_sprite_font.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h:

@@ -52,10 +52,10 @@ namespace too
             bn::affine_bg_ptr _map;
             bn::vector<Enemy,32>* _enemies;
 
-            too::Hitbox _hitbox_fall = Hitbox(0,8,8,0);
-            too::Hitbox _hitbox_left = Hitbox(-4,0,4,8);
-            too::Hitbox _hitbox_right = Hitbox(4,0,4,8);
-            too::Hitbox _hitbox_jump = Hitbox(0,4,8,4);
+            too::Hitbox _hitbox_fall = Hitbox(0,16,16,0);
+            too::Hitbox _hitbox_left = Hitbox(-8,0,8,16);
+            too::Hitbox _hitbox_right = Hitbox(8,0,8,16);
+            too::Hitbox _hitbox_jump = Hitbox(0,8,16,8);
             bn::sprite_animate_action<10> _action = bn::create_sprite_animate_action_forever(
                         _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 0,1,0,1,0,1,0,1,0,1);
             void _update_camera(int lerp);

@@ -78,6 +78,7 @@ too_scene_maingame.o: \
  C:/butano/homebrew/too-butano/include/too_scene_house.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo2.h \
+ C:/butano/homebrew/too-butano/include/too_scene_limbo3.h \
  C:/butano/homebrew/too-butano/include/too_scene_sky.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat.h \
@@ -187,6 +188,7 @@ C:/butano/butano/include/bn_sprite_palette_item.h:
 C:/butano/homebrew/too-butano/include/too_scene_house.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo2.h:
+C:/butano/homebrew/too-butano/include/too_scene_limbo3.h:
 C:/butano/homebrew/too-butano/include/too_scene_sky.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat.h:

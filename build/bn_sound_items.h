@@ -12,11 +12,11 @@ namespace bn::sound_items
     constexpr sound_item disabled(181);
     constexpr sound_item hurt(182);
     constexpr sound_item jump(183);
-    constexpr sound_item select(416);
-    constexpr sound_item spin(417);
-    constexpr sound_item spin_down(418);
-    constexpr sound_item spin_up(419);
-    constexpr sound_item start(482);
+    constexpr sound_item select(429);
+    constexpr sound_item spin(430);
+    constexpr sound_item spin_down(431);
+    constexpr sound_item spin_up(432);
+    constexpr sound_item start(495);
 }
 
 #endif
