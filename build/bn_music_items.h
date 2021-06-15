@@ -22,7 +22,8 @@ namespace bn::music_items
     constexpr music_item spring_stage_1(14);
     constexpr music_item sudden_attack(15);
     constexpr music_item summer_stage_1(16);
-    constexpr music_item winter_stage_1(17);
+    constexpr music_item valley(17);
+    constexpr music_item winter_stage_1(18);
 }
 
 #endif

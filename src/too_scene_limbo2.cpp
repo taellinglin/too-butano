@@ -50,7 +50,7 @@ namespace too
     {
         bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
 
-        bn::music_items::maze.play();
+        bn::music_items::valley.play();
 
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
         // map

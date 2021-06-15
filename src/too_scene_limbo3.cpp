@@ -57,9 +57,9 @@ namespace too
 
         bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
         bn::affine_bg_ptr map = bn::affine_bg_items::limbo3_map.create_bg(512, 512);
-        bn::regular_bg_ptr map_background = bn::regular_bg_items::limbo3_map_bg.create_bg(512, 512);
-        background.set_priority(2);
-        map_background.set_priority(1);
+        //bn::regular_bg_ptr map_background = bn::regular_bg_items::limbo3_map_bg.create_bg(512, 512);
+        background.set_priority(1);
+        //map_background.set_priority(1);
         map.set_priority(0);
         too::Level level = too::Level(map);
         //map_background.set_horizontal_scale(1);
@@ -68,7 +68,7 @@ namespace too
         map.set_vertical_scale(1);
         // camera
         map.set_camera(camera);
-        map_background.set_camera(camera);
+        //map_background.set_camera(camera);
         
         // bn::fixed max_cpu_usage;
         // int counter = 1;
