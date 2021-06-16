@@ -6,12 +6,9 @@
 #include "bn_sound_items.h"
 #include "bn_music_actions.h"
 #include "bn_fixed_point.h"
-#include "too_scene_dungeon.h"
-#include "too_scene_house.h"
-#include "too_scene_limbo.h"
+#include "too_scene_limbo1.h"
 #include "too_scene_limbo2.h"
 #include "too_scene_limbo3.h"
-#include "too_scene_sky.h"
 #include "too_player.h"
 #include "bn_sprite_items_cat.h"
 #include "bn_sprite_items_cat_sprite.h"
@@ -47,38 +44,21 @@ namespace too
 
         while(true)
         {
-            if(scene == too::Scene::HOUSE_START){
-                too::House house = too::House();
-                scene = house.execute(player, bn::fixed_point(288, 282));
-            } 
-            else if(scene == too::Scene::HOUSE_SKY){
-                too::Sky sky = too::Sky();
-                scene = sky.execute(player, bn::fixed_point(213, 728));
-            } 
-            else if(scene == too::Scene::SKY_DUNGEON)
+           //Starting Room
+            if(scene == too::Scene::LIMBO1)
             {
-                too::Dungeon dungeon = too::Dungeon();
-                scene = dungeon.execute(player, bn::fixed_point(150, 192));
-            } 
-            else if(scene == too::Scene::DUNGEON_SKY)
-            {
-                too::Sky sky = too::Sky();
-                scene = sky.execute(player, bn::fixed_point(67, 968));
+                too::Limbo1 limbo1 = too::Limbo1();
+                scene = limbo1.execute(player, bn::fixed_point(112, 208));
             }
-            else if(scene == too::Scene::DUNGEON)
+            else if(scene == too::Scene::LIMBO2_LIMBO1)
             {
-                too::Dungeon dungeon = too::Dungeon();
-                scene = dungeon.execute(player, bn::fixed_point(150, 192));
+                too::Limbo1 to_limbo1_from_limbo2 = too::Limbo1();
+                scene = to_limbo1_from_limbo2.execute(player, bn::fixed_point(944, 736));
             }
-            else if(scene == too::Scene::SKY_HOUSE)
+            else if(scene == too::Scene::LIMBO1_LIMBO2)
             {
-                too::House house = too::House();
-                scene = house.execute(player, bn::fixed_point(710, 312));
-            }
-            else if(scene == too::Scene::LIMBO)
-            {
-                too::Limbo limbo = too::Limbo();
-                scene = limbo.execute(player, bn::fixed_point(128, 128));
+                too::Limbo2 to_limbo2_from_limbo1 = too::Limbo2();
+                scene = to_limbo2_from_limbo1.execute(player, bn::fixed_point(80, 896));
             }
             else if(scene == too::Scene::LIMBO2)
             {
@@ -92,13 +72,13 @@ namespace too
             }
             else if(scene == too::Scene::LIMBO3_LIMBO2)
             {
-                too::Limbo2 limbo2 = too::Limbo2();
-                scene = limbo2.execute(player, bn::fixed_point(960, 194));
+                too::Limbo2 to_limbo2_from_limbo3 = too::Limbo2();
+                scene = to_limbo2_from_limbo3.execute(player, bn::fixed_point(960, 194));
             }
             else if(scene == too::Scene::LIMBO2_LIMBO3)
             {
-                too::Limbo3 limbo3 = too::Limbo3();
-                scene = limbo3.execute(player, bn::fixed_point(208, 224));
+                too::Limbo3 to_limbo3_from_limbo2 = too::Limbo3();
+                scene = to_limbo3_from_limbo2.execute(player, bn::fixed_point(208, 224));
             }
             cat_sprite.set_visible(false);
             loading.execute();

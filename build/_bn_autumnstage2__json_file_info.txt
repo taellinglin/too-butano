@@ -1,3 +1,0 @@
-graphics/autumnstage2.json
-32
-1622860411.45

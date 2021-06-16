@@ -44,7 +44,7 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_template_actions.h \
  C:/butano/butano/include/bn_fixed_point.h \
  C:/butano/butano/include/bn_point.h \
- C:/butano/homebrew/too-butano/include/too_scene_dungeon.h \
+ C:/butano/homebrew/too-butano/include/too_scene_limbo1.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/butano/include/bn_sprite_ptr.h \
@@ -75,11 +75,8 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_sprite_item.h \
  C:/butano/butano/include/bn_sprite_shape_size.h \
  C:/butano/butano/include/bn_sprite_palette_item.h \
- C:/butano/homebrew/too-butano/include/too_scene_house.h \
- C:/butano/homebrew/too-butano/include/too_scene_limbo.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo2.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo3.h \
- C:/butano/homebrew/too-butano/include/too_scene_sky.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat.h \
  C:/butano/homebrew/too-butano/include/too_scene_loading.h \
@@ -154,7 +151,7 @@ C:/butano/butano/include/bn_music.h:
 C:/butano/butano/include/bn_template_actions.h:
 C:/butano/butano/include/bn_fixed_point.h:
 C:/butano/butano/include/bn_point.h:
-C:/butano/homebrew/too-butano/include/too_scene_dungeon.h:
+C:/butano/homebrew/too-butano/include/too_scene_limbo1.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/butano/include/bn_sprite_ptr.h:
@@ -185,11 +182,8 @@ C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:
 C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/butano/include/bn_sprite_shape_size.h:
 C:/butano/butano/include/bn_sprite_palette_item.h:
-C:/butano/homebrew/too-butano/include/too_scene_house.h:
-C:/butano/homebrew/too-butano/include/too_scene_limbo.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo2.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo3.h:
-C:/butano/homebrew/too-butano/include/too_scene_sky.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat.h:
 C:/butano/homebrew/too-butano/include/too_scene_loading.h:

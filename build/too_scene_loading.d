@@ -63,7 +63,9 @@ too_scene_loading.o: \
  C:/butano/butano/include/bn_regular_bg_map_item.h \
  C:/butano/butano/include/bn_size.h \
  C:/butano/butano/include/bn_regular_bg_map_cell.h \
- C:/butano/butano/include/bn_regular_bg_tiles_item.h
+ C:/butano/butano/include/bn_regular_bg_tiles_item.h \
+ C:/butano/homebrew/too-butano/build/bn_regular_bg_items_midground.h \
+ C:/butano/homebrew/too-butano/build/bn_regular_bg_items_foreground.h
 C:/butano/homebrew/too-butano/include/too_scene_loading.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/butano/include/bn_core.h:
@@ -130,3 +132,5 @@ C:/butano/butano/include/bn_regular_bg_map_item.h:
 C:/butano/butano/include/bn_size.h:
 C:/butano/butano/include/bn_regular_bg_map_cell.h:
 C:/butano/butano/include/bn_regular_bg_tiles_item.h:
+C:/butano/homebrew/too-butano/build/bn_regular_bg_items_midground.h:
+C:/butano/homebrew/too-butano/build/bn_regular_bg_items_foreground.h:

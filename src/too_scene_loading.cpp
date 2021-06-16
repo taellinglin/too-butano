@@ -20,6 +20,9 @@
 //assets
 #include "bn_sprite_items_cat_sprite.h"
 #include "bn_regular_bg_items_background.h"
+#include "bn_regular_bg_items_midground.h"
+#include "bn_regular_bg_items_foreground.h"
+
 
 namespace too
 {
@@ -28,6 +31,8 @@ namespace too
         bn::fixed_point init_pos = bn::fixed_point(0, 0);
 
         bn::music_items::options.play();
+
+        /*
         // player sprite
         bn::sprite_ptr cat_sprite1 = bn::sprite_items::cat_sprite.create_sprite(init_pos.x(), init_pos.y()-50);
         bn::sprite_ptr cat_sprite2 = bn::sprite_items::cat_sprite.create_sprite(init_pos.x(), init_pos.y()-25);
@@ -47,33 +52,19 @@ namespace too
                         cat_sprite5, 2, bn::sprite_items::cat_sprite.tiles_item(), 8, 9,10,11, 2, 3, 4, 5, 6,7);
 
         bn::camera_ptr camera = bn::camera_ptr::create(init_pos.x()+100, init_pos.y());
-
+    */
         // map
-        bn::regular_bg_ptr map = bn::regular_bg_items::background.create_bg(0, 0);
+        bn::regular_bg_ptr loading_bg = bn::regular_bg_items::background.create_bg(64, 32);
+        bn::regular_bg_ptr loading_mg = bn::regular_bg_items::midground.create_bg(64, 64);
+        bn::regular_bg_ptr loading_fg = bn::regular_bg_items::foreground.create_bg(64, 64);
         // map.set_horizontal_scale(2);
 
-        // camera
-        cat_sprite1.set_camera(camera);
-        cat_sprite2.set_camera(camera);
-        cat_sprite3.set_camera(camera);
-        cat_sprite4.set_camera(camera);
-        cat_sprite5.set_camera(camera);
-        map.set_camera(camera);
-
-        for(int i = 0; i < 120; ++i)
+        for(int i = 0; i < 60; ++i)
         {
-            cat_sprite1.set_x(cat_sprite1.x() + 1.3);
-            cat_sprite2.set_x(cat_sprite2.x() + 2);
-            cat_sprite3.set_x(cat_sprite3.x() + 1.5);
-            cat_sprite4.set_x(cat_sprite4.x() + 2.2);
-            cat_sprite5.set_x(cat_sprite5.x() + 1.7);
-
-            action1.update();
-            action2.update();
-            action3.update();
-            action4.update();
-            action5.update();
+            loading_mg.set_x(loading_mg.x() - 1);
+            loading_fg.set_x(loading_fg.x() - 0.5);
             bn::core::update();
         }
+    
     }
 }

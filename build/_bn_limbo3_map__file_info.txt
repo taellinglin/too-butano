@@ -1,3 +1,0 @@
-graphics/limbo3_map.bmp
-524370
-1623781935.71

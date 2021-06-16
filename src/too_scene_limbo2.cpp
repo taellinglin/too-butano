@@ -15,7 +15,7 @@
 #include "bn_optional.h"
 #include "bn_span.h"
 #include "bn_affine_bg_map_cell.h"
-//#include"bn_format.h"
+#include"bn_format.h"
 
 //fe code
 #include "too_level.h"
@@ -34,8 +34,7 @@
 //assets
 #include "bn_sprite_items_debug.h"
 #include "bn_sprite_items_cat_sprite.h"
-#include "bn_regular_bg_items_limbo2_background.h"
-#include "bn_affine_bg_items_limbo2_midground.h"
+#include "bn_affine_bg_items_limbo2.h"
 #include "bn_regular_bg_items_background.h"
 #include "bn_music_items.h"
 #include "bn_music_actions.h"
@@ -56,8 +55,7 @@ namespace too
         // map
 
         bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
-        bn::affine_bg_ptr map = bn::affine_bg_items::limbo2_midground.create_bg(512, 512);
-        //bn::regular_bg_ptr map_background = bn::regular_bg_items::limbo2_background.create_bg(256, 256);
+        bn::affine_bg_ptr map = bn::affine_bg_items::limbo2.create_bg(512, 512);
         background.set_priority(2);
         //map_background.set_priority(1);
         map.set_priority(0);
@@ -81,13 +79,14 @@ namespace too
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
         StorySave portal = StorySave(bn::fixed_point(960, 194), STORY_TYPE::BEGINNING, camera, text_generator);
-        StorySave portal2 = StorySave(bn::fixed_point(80, 930), STORY_TYPE::BEGINNING, camera, text_generator);
+        StorySave portal2 = StorySave(bn::fixed_point(80, 912), STORY_TYPE::BEGINNING, camera, text_generator);
 
         // player
         player.spawn(spawn_location, camera, map, enemies);
         while(true)
         {
             portal.update();
+            portal2.update();
             if(bn::keypad::up_pressed())
             {
                 if(player.pos().x() < 960+16 && player.pos().x() > 960-16){
@@ -96,8 +95,8 @@ namespace too
                     }
                 }
                 if(player.pos().x() < 80+16 && player.pos().x() > 80-16){
-                    if(player.pos().y() < 930+16 && player.pos().y() > 930-16){
-                        return Scene::LIMBO3_LIMBO2;
+                    if(player.pos().y() < 912+16 && player.pos().y() > 912-16){
+                        return Scene::LIMBO2_LIMBO1;
                     }
                 }
             }

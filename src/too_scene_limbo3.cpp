@@ -15,7 +15,7 @@
 #include "bn_optional.h"
 #include "bn_span.h"
 #include "bn_affine_bg_map_cell.h"
-#include"bn_format.h"
+//#include"bn_format.h"
 
 //fe code
 #include "too_level.h"
@@ -34,8 +34,7 @@
 //assets
 #include "bn_sprite_items_debug.h"
 #include "bn_sprite_items_cat_sprite.h"
-#include "bn_regular_bg_items_limbo3_map_bg.h"
-#include "bn_affine_bg_items_limbo3_map.h"
+#include "bn_affine_bg_items_limbo3.h"
 #include "bn_regular_bg_items_background.h"
 #include "bn_music_items.h"
 #include "bn_music_actions.h"
@@ -56,7 +55,7 @@ namespace too
         // map
 
         bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
-        bn::affine_bg_ptr map = bn::affine_bg_items::limbo3_map.create_bg(512, 512);
+        bn::affine_bg_ptr map = bn::affine_bg_items::limbo3.create_bg(512, 512);
         //bn::regular_bg_ptr map_background = bn::regular_bg_items::limbo3_map_bg.create_bg(512, 512);
         background.set_priority(1);
         //map_background.set_priority(1);

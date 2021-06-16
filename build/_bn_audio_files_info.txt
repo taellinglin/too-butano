@@ -22,9 +22,6 @@ audio/cutscene_1.it
 audio/cutscene_2.it
 172711
 1622316788.33
-audio/cyberrid.mod
-196032
-1622242890.01
 audio/dawn_stage.it
 159424
 1622316788.38
@@ -71,8 +68,8 @@ audio/spin.wav
 651506
 1599244267.66
 audio/spin_down.wav
-651506
-1599244500.05
+16970
+1623814744.92
 audio/spin_up.wav
 1954730
 1599242042.81
