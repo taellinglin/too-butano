@@ -10,6 +10,7 @@
 #include "bn_optional.h"
 #include "bn_span.h"
 #include "bn_log.h"
+#include "bn_sound_items.h"
 
 #include "bn_sprite_items_cat_sprite.h"
 #include "bn_sprite_items_text_bg.h"
@@ -211,6 +212,7 @@ namespace too
             {
                 if(_enemies->at(i).is_hit(damage_hitbox))
                 {
+                    bn::sound_items::hurt.play(false);
                     _invulnerable = true;
                     _healthbar.set_hp(_healthbar.hp() - 1);
                     _dy -= 0.3;
@@ -411,12 +413,16 @@ namespace too
         // jump
         if(bn::keypad::a_pressed())
         {
+            
+            bn::sound_items::jump.play();
             jump();
         } 
 
         // attack
         if(bn::keypad::b_pressed())
         {
+            
+            bn::sound_items::attack.play();
             attack();
         } 
 
@@ -430,6 +436,8 @@ namespace too
         
         // ouch
         if(_invulnerable){
+            
+            bn::sound_items::hurt.play();
             ++_inv_timer;
             if(modulo(_inv_timer/5, 2) == 0){
                 _sprite.set_visible(true);

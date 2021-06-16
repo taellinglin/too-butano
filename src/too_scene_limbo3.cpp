@@ -50,7 +50,7 @@ namespace too
     {
         bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
 
-        bn::music_items::limbo.play();
+        bn::music_items::limbo.play(0.5);
 
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
         // map
@@ -104,6 +104,7 @@ namespace too
                     enemy.set_visible(false);
                 }
             }
+
             first_plaque.update();
 
             if(bn::keypad::up_pressed())
