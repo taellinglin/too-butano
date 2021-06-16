@@ -1,0 +1,3 @@
+graphics/oorta_static.bmp
+610
+1623789856.14

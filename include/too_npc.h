@@ -80,6 +80,12 @@ namespace too
                 "There is nothing I want to do more",
                 ". . ."
             };
+            
+            bn::string_view _frog_lines[3] = {
+                "Ribbit...",
+                ". . .",
+                "You remind me of myself..."
+            };
 
         public:
             NPC(bn::fixed_point pos, bn::camera_ptr& camera, NPC_TYPE type, bn::sprite_text_generator& text_generator);

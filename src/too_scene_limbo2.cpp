@@ -56,10 +56,10 @@ namespace too
         // map
 
         bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
-        bn::affine_bg_ptr map = bn::affine_bg_items::limbo2_midground.create_bg(256, 256);
-        bn::regular_bg_ptr map_background = bn::regular_bg_items::limbo2_background.create_bg(256, 256);
+        bn::affine_bg_ptr map = bn::affine_bg_items::limbo2_midground.create_bg(512, 512);
+        //bn::regular_bg_ptr map_background = bn::regular_bg_items::limbo2_background.create_bg(256, 256);
         background.set_priority(2);
-        map_background.set_priority(1);
+        //map_background.set_priority(1);
         map.set_priority(0);
         too::Level level = too::Level(map);
         //map_background.set_horizontal_scale(1);
@@ -68,7 +68,7 @@ namespace too
         map.set_vertical_scale(1);
         // camera
         map.set_camera(camera);
-        map_background.set_camera(camera);
+        //map_background.set_camera(camera);
         
         // bn::fixed max_cpu_usage;
         // int counter = 1;
@@ -80,11 +80,27 @@ namespace too
         //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
+        StorySave portal = StorySave(bn::fixed_point(960, 194), STORY_TYPE::BEGINNING, camera, text_generator);
+        StorySave portal2 = StorySave(bn::fixed_point(80, 930), STORY_TYPE::BEGINNING, camera, text_generator);
 
         // player
         player.spawn(spawn_location, camera, map, enemies);
         while(true)
         {
+            portal.update();
+            if(bn::keypad::up_pressed())
+            {
+                if(player.pos().x() < 960+16 && player.pos().x() > 960-16){
+                    if(player.pos().y() < 194+16 && player.pos().y() > 194-16){
+                        return Scene::LIMBO2_LIMBO3;
+                    }
+                }
+                if(player.pos().x() < 80+16 && player.pos().x() > 80-16){
+                    if(player.pos().y() < 930+16 && player.pos().y() > 930-16){
+                        return Scene::LIMBO3_LIMBO2;
+                    }
+                }
+            }
             
             // max_cpu_usage = bn::max(max_cpu_usage, bn::core::last_cpu_usage());
             // --counter;

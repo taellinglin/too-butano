@@ -1,0 +1,3 @@
+graphics/frog_sprite.json
+44
+1623806321.74

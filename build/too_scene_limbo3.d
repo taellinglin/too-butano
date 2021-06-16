@@ -67,6 +67,8 @@ too_scene_limbo3.o: \
  C:/butano/butano/include/bn_regular_bg_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
+ C:/butano/butano/include/bn_format.h \
+ C:/butano/butano/include/bn_string.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
@@ -183,6 +185,8 @@ C:/butano/butano/include/bn_keypad.h:
 C:/butano/butano/include/bn_regular_bg_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
+C:/butano/butano/include/bn_format.h:
+C:/butano/butano/include/bn_string.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:

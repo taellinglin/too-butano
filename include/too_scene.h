@@ -12,8 +12,12 @@ namespace too
         DUNGEON_SKY,
         DUNGEON,
         LIMBO,
+        LIMBO_LIMBO2,
+        LIMBO2_LIMBO,
         LIMBO2,
         LIMBO3,
+        LIMBO3_LIMBO2,
+        LIMBO2_LIMBO3,
         LOADING
     };
 }

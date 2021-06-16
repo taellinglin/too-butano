@@ -39,7 +39,7 @@ namespace too
     
     MainGame::MainGame()
     {
-        too::Scene scene = too::Scene::LIMBO3;
+        too::Scene scene = too::Scene::LIMBO2;
         too::Loading loading = too::Loading();
 
         bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
@@ -83,12 +83,22 @@ namespace too
             else if(scene == too::Scene::LIMBO2)
             {
                 too::Limbo2 limbo2 = too::Limbo2();
-                scene = limbo2.execute(player, bn::fixed_point(256, 256));
+                scene = limbo2.execute(player, bn::fixed_point(80, 912));
             }
             else if(scene == too::Scene::LIMBO3)
             {
                 too::Limbo3 limbo3 = too::Limbo3();
-                scene = limbo3.execute(player, bn::fixed_point(512+256, 512+256));
+                scene = limbo3.execute(player, bn::fixed_point(512+256, 512+128));
+            }
+            else if(scene == too::Scene::LIMBO3_LIMBO2)
+            {
+                too::Limbo2 limbo2 = too::Limbo2();
+                scene = limbo2.execute(player, bn::fixed_point(960, 194));
+            }
+            else if(scene == too::Scene::LIMBO2_LIMBO3)
+            {
+                too::Limbo3 limbo3 = too::Limbo3();
+                scene = limbo3.execute(player, bn::fixed_point(208, 224));
             }
             cat_sprite.set_visible(false);
             loading.execute();

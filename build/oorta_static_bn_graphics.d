@@ -1,0 +1,1 @@
+oorta_static_bn_graphics.o: oorta_static_bn_graphics.s

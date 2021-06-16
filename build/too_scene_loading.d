@@ -45,6 +45,11 @@ too_scene_loading.o: \
  C:/butano/butano/include/bn_bpp_mode.h \
  C:/butano/butano/include/bn_compression_type.h \
  C:/butano/butano/include/bn_random.h \
+ C:/butano/homebrew/too-butano/build/bn_music_items.h \
+ C:/butano/butano/include/bn_music_item.h \
+ C:/butano/butano/include/bn_music_actions.h \
+ C:/butano/butano/include/bn_music.h \
+ C:/butano/butano/include/bn_template_actions.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h \
  C:/butano/butano/include/bn_sprite_item.h \
@@ -52,13 +57,13 @@ too_scene_loading.o: \
  C:/butano/butano/include/bn_sprite_palette_item.h \
  C:/butano/butano/include/bn_color.h \
  C:/butano/butano/include/bn_alignment.h \
- C:/butano/homebrew/too-butano/build/bn_affine_bg_items_loading_bg.h \
- C:/butano/butano/include/bn_affine_bg_item.h \
+ C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h \
+ C:/butano/butano/include/bn_regular_bg_item.h \
  C:/butano/butano/include/bn_bg_palette_item.h \
- C:/butano/butano/include/bn_affine_bg_map_item.h \
+ C:/butano/butano/include/bn_regular_bg_map_item.h \
  C:/butano/butano/include/bn_size.h \
- C:/butano/butano/include/bn_affine_bg_map_cell.h \
- C:/butano/butano/include/bn_affine_bg_tiles_item.h
+ C:/butano/butano/include/bn_regular_bg_map_cell.h \
+ C:/butano/butano/include/bn_regular_bg_tiles_item.h
 C:/butano/homebrew/too-butano/include/too_scene_loading.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/butano/include/bn_core.h:
@@ -106,6 +111,11 @@ C:/butano/butano/include/bn_tile.h:
 C:/butano/butano/include/bn_bpp_mode.h:
 C:/butano/butano/include/bn_compression_type.h:
 C:/butano/butano/include/bn_random.h:
+C:/butano/homebrew/too-butano/build/bn_music_items.h:
+C:/butano/butano/include/bn_music_item.h:
+C:/butano/butano/include/bn_music_actions.h:
+C:/butano/butano/include/bn_music.h:
+C:/butano/butano/include/bn_template_actions.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:
 C:/butano/butano/include/bn_sprite_item.h:
@@ -113,10 +123,10 @@ C:/butano/butano/include/bn_sprite_shape_size.h:
 C:/butano/butano/include/bn_sprite_palette_item.h:
 C:/butano/butano/include/bn_color.h:
 C:/butano/butano/include/bn_alignment.h:
-C:/butano/homebrew/too-butano/build/bn_affine_bg_items_loading_bg.h:
-C:/butano/butano/include/bn_affine_bg_item.h:
+C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h:
+C:/butano/butano/include/bn_regular_bg_item.h:
 C:/butano/butano/include/bn_bg_palette_item.h:
-C:/butano/butano/include/bn_affine_bg_map_item.h:
+C:/butano/butano/include/bn_regular_bg_map_item.h:
 C:/butano/butano/include/bn_size.h:
-C:/butano/butano/include/bn_affine_bg_map_cell.h:
-C:/butano/butano/include/bn_affine_bg_tiles_item.h:
+C:/butano/butano/include/bn_regular_bg_map_cell.h:
+C:/butano/butano/include/bn_regular_bg_tiles_item.h:

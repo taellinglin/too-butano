@@ -13,6 +13,8 @@
 #include "bn_affine_bg_map_ptr.h"
 
 
+#include "bn_fixed_point.h"
+
 namespace too
 {
     enum directions{up, down, left, right};

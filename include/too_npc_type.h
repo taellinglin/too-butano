@@ -7,7 +7,8 @@ namespace too
     {
         GOLEM,
         PENGUIN,
-        TORTOISE
+        TORTOISE,
+        FROG
     };
 }
 

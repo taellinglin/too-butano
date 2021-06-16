@@ -11,6 +11,7 @@
 #include "bn_sprite_items_golem_sprite.h"
 #include "bn_sprite_items_tortoise_sprite.h"
 #include "bn_sprite_items_penguin_sprite.h"
+#include "bn_sprite_items_frog_sprite.h"
 #include "variable_8x8_sprite_font.h"
 
 
@@ -39,6 +40,11 @@ namespace too
             _action = bn::create_sprite_animate_action_forever(
                             _sprite.value(), 60, bn::sprite_items::penguin_sprite.tiles_item(), 0,1);
             _lines = bn::span(_penguin_lines);
+        }else if(_type == NPC_TYPE::FROG){
+            _sprite = bn::sprite_items::frog_sprite.create_sprite(_pos.x(), _pos.y());
+            _action = bn::create_sprite_animate_action_forever(
+                            _sprite.value(), 40, bn::sprite_items::frog_sprite.tiles_item(), 0,1);
+            _lines = bn::span(_frog_lines);
         }
         _sprite.value().set_camera(_camera);
         _sprite.value().set_bg_priority(1);

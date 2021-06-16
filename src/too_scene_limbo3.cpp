@@ -15,7 +15,7 @@
 #include "bn_optional.h"
 #include "bn_span.h"
 #include "bn_affine_bg_map_cell.h"
-//#include"bn_format.h"
+#include"bn_format.h"
 
 //fe code
 #include "too_level.h"
@@ -69,20 +69,23 @@ namespace too
         // camera
         map.set_camera(camera);
         //map_background.set_camera(camera);
-        
+        NPC frog = NPC(bn::fixed_point(832, 144), camera, NPC_TYPE::FROG, text_generator);
+
         // bn::fixed max_cpu_usage;
         // int counter = 1;
 
                //Enemies
+
         bn::vector<Enemy, 32> enemies = {};
-        //enemies.push_back(Enemy(512+64, 512+176, camera, map, ENEMY_TYPE::SLIME, 2));
-        //enemies.push_back(Enemy(256+18*8, 256+23*8, camera, map, ENEMY_TYPE::BAT, 1));
+        //enemies.push_back(Enemy(656, 256, camera, map, ENEMY_TYPE::SLIME, 2));
+        //enemies.push_back(Enemy(656, 256, camera, map, ENEMY_TYPE::BAT, 1));
         //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
-
+        StorySave first_plaque = StorySave(bn::fixed_point(208, 224), STORY_TYPE::BEGINNING, camera, text_generator);
         // player
         player.spawn(spawn_location, camera, map, enemies);
+        player.set_can_wallrun(false);
         while(true)
         {
             
@@ -101,11 +104,32 @@ namespace too
                     enemy.set_visible(false);
                 }
             }
+            first_plaque.update();
 
+            if(bn::keypad::up_pressed())
+            {
+                if(player.pos().x() < 208+16 && player.pos().x() > 208-16){
+                    if(player.pos().y() < 224+16 && player.pos().y() > 224-16){
+                        return Scene::LIMBO3_LIMBO2;
+                    }
+                }
 
+            }
+             if(frog.check_trigger(player.pos()))
+            {
+                if(bn::keypad::up_pressed()){
+                    player.set_listening(true);
+                    frog.talk();
+                }else if(!frog.is_talking()){
+                    player.set_listening(false);
+                }
+            }
+
+            frog.update();
             player.update_position(map, level);
             player.apply_animation_state();
-            BN_LOG(bn::to_string<32>(player.pos().x())+" " + bn::to_string<32>(player.pos().y()));
+            BN_LOG("X: " +bn::to_string<32>(player.pos().x())+", Y:"+ bn::to_string<32>(player.pos().y()));
+
             
             
             bn::core::update();

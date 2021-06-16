@@ -12,13 +12,14 @@
 #include "bn_affine_bg_ptr.h"
 #include "bn_sprite_animate_actions.h"
 #include "bn_random.h"
-
+#include "bn_music_items.h"
+#include "bn_music_actions.h"
 //fe code
 #include "too_scene.h"
 
 //assets
 #include "bn_sprite_items_cat_sprite.h"
-#include "bn_affine_bg_items_loading_bg.h"
+#include "bn_regular_bg_items_background.h"
 
 namespace too
 {
@@ -26,6 +27,7 @@ namespace too
     {
         bn::fixed_point init_pos = bn::fixed_point(0, 0);
 
+        bn::music_items::options.play();
         // player sprite
         bn::sprite_ptr cat_sprite1 = bn::sprite_items::cat_sprite.create_sprite(init_pos.x(), init_pos.y()-50);
         bn::sprite_ptr cat_sprite2 = bn::sprite_items::cat_sprite.create_sprite(init_pos.x(), init_pos.y()-25);
@@ -47,7 +49,7 @@ namespace too
         bn::camera_ptr camera = bn::camera_ptr::create(init_pos.x()+100, init_pos.y());
 
         // map
-        bn::affine_bg_ptr map = bn::affine_bg_items::loading_bg.create_bg(512, 512);
+        bn::regular_bg_ptr map = bn::regular_bg_items::background.create_bg(0, 0);
         // map.set_horizontal_scale(2);
 
         // camera
