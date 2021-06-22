@@ -76,5 +76,7 @@ namespace too
 
             //If A is pressed, p
             bn::sound_items::spin_up.play();
+
+            Scene::LIMBO1;
         };
  }

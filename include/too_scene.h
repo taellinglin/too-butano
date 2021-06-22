@@ -5,6 +5,9 @@ namespace too
 {
     enum class Scene
     {
+        TITLESCREEN,
+        MAINMENU,
+        OPTIONS,
         LIMBO1,
         LIMBO1_LIMBO2,
         LIMBO2_LIMBO1,
@@ -12,6 +15,8 @@ namespace too
         LIMBO2,
         LIMBO3,
         LIMBO3_LIMBO2,
+        LIMBO3_SUMMER1,
+        SUMMER1_LIMBO3,
         LOADING
     };
 }

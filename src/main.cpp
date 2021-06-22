@@ -68,15 +68,19 @@
     int main()
     {
         bn::core::init();
-        too::Scene scene = too::Scene::LIMBO2;
-        too::Loading loading = too::Loading();
         bn::sprite_text_generator text_generator(variable_8x16_sprite_font);
         bn::bg_palettes::set_transparent_color(bn::color(13, 8, 14));
         while(true)
         {
-            too::TitleScreen titlescreen = too::TitleScreen(text_generator);
+            {
+                too::TitleScreen titlescreen = too::TitleScreen(text_generator);
+            }
+            {
             too::MainMenu mainmenu = too::MainMenu(text_generator);
+            }
+            {
             too::MainGame maingame = too::MainGame();
+            }
         };
     }
 

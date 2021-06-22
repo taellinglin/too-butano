@@ -82,6 +82,8 @@ namespace too
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
         StorySave first_plaque = StorySave(bn::fixed_point(208, 224), STORY_TYPE::BEGINNING, camera, text_generator);
+        StorySave portal_summer1 = StorySave(bn::fixed_point(896, 928), STORY_TYPE::BEGINNING, camera, text_generator);
+
         // player
         player.spawn(spawn_location, camera, map, enemies);
         player.set_can_wallrun(false);
@@ -105,12 +107,18 @@ namespace too
             }
 
             first_plaque.update();
+            portal_summer1.update();
 
             if(bn::keypad::up_pressed())
             {
                 if(player.pos().x() < 208+16 && player.pos().x() > 208-16){
                     if(player.pos().y() < 224+16 && player.pos().y() > 224-16){
                         return Scene::LIMBO3_LIMBO2;
+                    }
+                }
+                if(player.pos().x() < 896+16 && player.pos().x() > 896-16){
+                    if(player.pos().y() < 928+16 && player.pos().y() > 928-16){
+                        return Scene::LIMBO3_SUMMER1;
                     }
                 }
 

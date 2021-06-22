@@ -6,9 +6,17 @@
 #include "bn_sound_items.h"
 #include "bn_music_actions.h"
 #include "bn_fixed_point.h"
+#include "variable_8x16_sprite_font.h"
+
+//Scenes
+#include "too_scene_titlescreen.h"
+#include "too_scene_mainmenu.h"
 #include "too_scene_limbo1.h"
 #include "too_scene_limbo2.h"
 #include "too_scene_limbo3.h"
+#include "too_scene_loading.h"
+#include "too_scene_summer1.h"
+
 #include "too_player.h"
 #include "bn_sprite_items_cat.h"
 #include "bn_sprite_items_cat_sprite.h"
@@ -36,16 +44,15 @@ namespace too
     
     MainGame::MainGame()
     {
-        too::Scene scene = too::Scene::LIMBO2;
+        too::Scene scene = too::Scene::LIMBO1;
         too::Loading loading = too::Loading();
-
         bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
         too::Player player = too::Player(cat_sprite);
 
         while(true)
         {
            //Starting Room
-            if(scene == too::Scene::LIMBO1)
+        if(scene == too::Scene::LIMBO1)
             {
                 too::Limbo1 limbo1 = too::Limbo1();
                 scene = limbo1.execute(player, bn::fixed_point(112, 208));
@@ -79,6 +86,16 @@ namespace too
             {
                 too::Limbo3 to_limbo3_from_limbo2 = too::Limbo3();
                 scene = to_limbo3_from_limbo2.execute(player, bn::fixed_point(208, 224));
+            }
+            else if(scene == too::Scene::LIMBO3_SUMMER1)
+            {
+                too::Summer1 to_summer1_from_limbo3 = too::Summer1();
+                scene = to_summer1_from_limbo3.execute(player, bn::fixed_point(96, 960));
+            }
+            else if(scene == too::Scene::SUMMER1_LIMBO3)
+            {
+                too::Limbo3 to_limbo3_from_summer1 = too::Limbo3();
+                scene = to_limbo3_from_summer1.execute(player, bn::fixed_point(896, 928));
             }
             cat_sprite.set_visible(false);
             loading.execute();
