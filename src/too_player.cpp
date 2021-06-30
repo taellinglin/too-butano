@@ -11,6 +11,7 @@
 #include "bn_span.h"
 #include "bn_log.h"
 #include "bn_sound_items.h"
+#include "bn_vector.h"
 
 #include "bn_sprite_items_cat_sprite.h"
 #include "bn_sprite_items_text_bg.h"
@@ -23,8 +24,10 @@
 #include "too_enemy.h"
 #include "too_enemy_type.h"
 
-#include "bn_affine_bg_items_house.h"
-#include "bn_affine_bg_items_limbo2_midground.h"
+//#include "bn_affine_bg_items_house.h"
+#include "bn_affine_bg_items_level_palettes.h"
+
+//#include "bn_optional.h"
 
 namespace too
 {
@@ -86,7 +89,7 @@ namespace too
     Player::Player(bn::sprite_ptr sprite) :
         _sprite(sprite),
         _camera(bn::camera_ptr::create(0,0)),
-        _map(bn::affine_bg_items::limbo2_midground.create_bg(0, 0)),
+        _map(bn::affine_bg_items::level_palettes.create_bg(0,0)),
         _text_bg1(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _text_bg2(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _healthbar(too::Healthbar())

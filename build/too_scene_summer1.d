@@ -67,6 +67,10 @@ too_scene_summer1.o: \
  C:/butano/butano/include/bn_regular_bg_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
+ C:/butano/butano/include/bn_bg_palette_ptr.h \
+ C:/butano/butano/include/bn_bg_palette_actions.h \
+ C:/butano/butano/include/bn_bg_palette_ptr.h \
+ C:/butano/butano/include/bn_value_template_actions.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
@@ -182,6 +186,10 @@ C:/butano/butano/include/bn_keypad.h:
 C:/butano/butano/include/bn_regular_bg_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
+C:/butano/butano/include/bn_bg_palette_ptr.h:
+C:/butano/butano/include/bn_bg_palette_actions.h:
+C:/butano/butano/include/bn_bg_palette_ptr.h:
+C:/butano/butano/include/bn_value_template_actions.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:

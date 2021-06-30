@@ -12,8 +12,8 @@
 #include "bn_sprite_items_slime_sprite.h"
 #include "bn_affine_bg_map_ptr.h"
 
-
-#include "bn_fixed_point.h"
+//#include <bn_affine_bg_map_cell.h>
+//#include "bn_fixed_point.h"
 
 namespace too
 {

@@ -22,6 +22,7 @@ bn_sprite_tiles_manager.o: \
  C:/butano/butano/include/bn_compare.h \
  C:/butano/butano/include/bn_iterator.h \
  C:/butano/butano/include/bn_vector_fwd.h \
+ C:/butano/butano/include/bn_string_view.h \
  C:/butano/butano/include/bn_unordered_map.h \
  C:/butano/butano/include/bn_memory.h \
  C:/butano/butano/include/bn_alignment.h \
@@ -89,6 +90,7 @@ C:/butano/butano/include/bn_utility.h:
 C:/butano/butano/include/bn_compare.h:
 C:/butano/butano/include/bn_iterator.h:
 C:/butano/butano/include/bn_vector_fwd.h:
+C:/butano/butano/include/bn_string_view.h:
 C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_memory.h:
 C:/butano/butano/include/bn_alignment.h:

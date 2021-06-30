@@ -1,0 +1,1 @@
+level_palettes_bn_graphics.o: level_palettes_bn_graphics.s

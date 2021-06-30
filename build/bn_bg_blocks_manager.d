@@ -23,6 +23,7 @@ bn_bg_blocks_manager.o: C:/butano/butano/src/bn_bg_blocks_manager.cpp \
  C:/butano/butano/include/bn_compare.h \
  C:/butano/butano/include/bn_iterator.h \
  C:/butano/butano/include/bn_vector_fwd.h \
+ C:/butano/butano/include/bn_string_view.h \
  C:/butano/butano/src/bn_bgs_manager.h \
  C:/butano/butano/include/bn_limits.h \
  C:/butano/butano/include/bn_fixed_fwd.h \
@@ -122,6 +123,7 @@ C:/butano/butano/include/bn_utility.h:
 C:/butano/butano/include/bn_compare.h:
 C:/butano/butano/include/bn_iterator.h:
 C:/butano/butano/include/bn_vector_fwd.h:
+C:/butano/butano/include/bn_string_view.h:
 C:/butano/butano/src/bn_bgs_manager.h:
 C:/butano/butano/include/bn_limits.h:
 C:/butano/butano/include/bn_fixed_fwd.h:

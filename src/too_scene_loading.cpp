@@ -14,6 +14,7 @@
 #include "bn_random.h"
 #include "bn_music_items.h"
 #include "bn_music_actions.h"
+#include "bn_optional.h"
 //fe code
 #include "too_scene.h"
 
@@ -53,18 +54,28 @@ namespace too
 
         bn::camera_ptr camera = bn::camera_ptr::create(init_pos.x()+100, init_pos.y());
     */
+        {
         // map
-        bn::regular_bg_ptr loading_bg = bn::regular_bg_items::background.create_bg(64, 32);
-        bn::regular_bg_ptr loading_mg = bn::regular_bg_items::midground.create_bg(64, 64);
-        bn::regular_bg_ptr loading_fg = bn::regular_bg_items::foreground.create_bg(64, 64);
+            bn::optional<bn::regular_bg_ptr> loading_bg; 
+            loading_bg = bn::regular_bg_items::background.create_bg(64, 32);
+            bn::optional<bn::regular_bg_ptr> loading_mg; 
+            loading_mg = bn::regular_bg_items::midground.create_bg(64, 64);
+            bn::optional<bn::regular_bg_ptr> loading_fg; 
+            loading_fg = bn::regular_bg_items::foreground.create_bg(64, 64);
         // map.set_horizontal_scale(2);
 
-        for(int i = 0; i < 60; ++i)
-        {
-            loading_mg.set_x(loading_mg.x() - 1);
-            loading_fg.set_x(loading_fg.x() - 0.5);
-            bn::core::update();
+            for(int i = 0; i < 180; ++i)
+            {
+                if(loading_mg.has_value() && loading_fg.has_value())
+                {
+                    loading_mg->set_x(loading_mg->x() - 1);
+                    loading_fg->set_x(loading_fg->x() - 0.5);
+                }
+                bn::core::update();
+            }
+            loading_bg.reset();
+            loading_mg.reset();
+            loading_fg.reset();
         }
-    
     }
 }

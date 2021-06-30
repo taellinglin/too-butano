@@ -57,9 +57,6 @@ too_scene_limbo3.o: \
  C:/butano/butano/include/bn_sprite_shape_size.h \
  C:/butano/butano/include/bn_sprite_palette_item.h \
  C:/butano/butano/include/bn_color.h C:/butano/butano/include/bn_core.h \
- C:/butano/butano/include/bn_math.h C:/butano/butano/include/bn_sin_lut.h \
- C:/butano/butano/include/bn_reciprocal_lut.h \
- C:/butano/butano/include/bn_rule_of_three_approximation.h \
  C:/butano/butano/include/bn_log.h \
  C:/butano/butano/include/bn_config_log.h \
  C:/butano/butano/include/bn_log_backend.h \
@@ -67,6 +64,9 @@ too_scene_limbo3.o: \
  C:/butano/butano/include/bn_regular_bg_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
+ C:/butano/butano/include/bn_math.h C:/butano/butano/include/bn_sin_lut.h \
+ C:/butano/butano/include/bn_reciprocal_lut.h \
+ C:/butano/butano/include/bn_rule_of_three_approximation.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
@@ -83,8 +83,8 @@ too_scene_limbo3.o: \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
- C:/butano/homebrew/too-butano/include/too_tooltip.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
+ C:/butano/homebrew/too-butano/include/too_tooltip.h \
  C:/butano/homebrew/too-butano/include/too_enemy.h \
  C:/butano/homebrew/too-butano/include/too_enemy_type.h \
  C:/butano/homebrew/too-butano/include/too_data.h \
@@ -171,10 +171,6 @@ C:/butano/butano/include/bn_sprite_shape_size.h:
 C:/butano/butano/include/bn_sprite_palette_item.h:
 C:/butano/butano/include/bn_color.h:
 C:/butano/butano/include/bn_core.h:
-C:/butano/butano/include/bn_math.h:
-C:/butano/butano/include/bn_sin_lut.h:
-C:/butano/butano/include/bn_reciprocal_lut.h:
-C:/butano/butano/include/bn_rule_of_three_approximation.h:
 C:/butano/butano/include/bn_log.h:
 C:/butano/butano/include/bn_config_log.h:
 C:/butano/butano/include/bn_log_backend.h:
@@ -182,6 +178,10 @@ C:/butano/butano/include/bn_keypad.h:
 C:/butano/butano/include/bn_regular_bg_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
+C:/butano/butano/include/bn_math.h:
+C:/butano/butano/include/bn_sin_lut.h:
+C:/butano/butano/include/bn_reciprocal_lut.h:
+C:/butano/butano/include/bn_rule_of_three_approximation.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
@@ -198,8 +198,8 @@ C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
-C:/butano/homebrew/too-butano/include/too_tooltip.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
+C:/butano/homebrew/too-butano/include/too_tooltip.h:
 C:/butano/homebrew/too-butano/include/too_enemy.h:
 C:/butano/homebrew/too-butano/include/too_enemy_type.h:
 C:/butano/homebrew/too-butano/include/too_data.h:

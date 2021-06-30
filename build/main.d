@@ -78,30 +78,10 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/butano/include/bn_string_view.h \
  C:/butano/butano/include/bn_vector.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
- C:/butano/homebrew/too-butano/build/bn_affine_bg_items_summerstage.h \
- C:/butano/butano/include/bn_affine_bg_item.h \
- C:/butano/butano/include/bn_affine_bg_map_item.h \
- C:/butano/butano/include/bn_affine_bg_tiles_item.h \
- C:/butano/homebrew/too-butano/build/bn_affine_bg_items_summerstage2.h \
- C:/butano/homebrew/too-butano/build/bn_affine_bg_items_seasonstileset.h \
- C:/butano/homebrew/too-butano/include/summer_tilemap.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_types.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_memmap.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_memdef.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_bios.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_core.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_input.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_irq.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_math.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_oam.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_tte.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_surface.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_video.h \
- C:/butano/butano/hw/3rd_party/libtonc/include/tonc_nocash.h \
  C:/butano/butano/include/bn_camera_actions.h \
  C:/butano/butano/include/bn_sprite_animate_actions.h \
  C:/butano/butano/include/bn_sprite_tiles_ptr.h \
+ C:/butano/butano/include/bn_log.h \
  C:/butano/homebrew/too-butano/include/too_scene_mainmenu.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
@@ -122,6 +102,7 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/homebrew/too-butano/include/too_scene_maingame.h \
  C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h \
  C:/butano/homebrew/too-butano/include/too_scene_loading.h \
+ C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/include/too_story_save.h \
@@ -137,6 +118,10 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/homebrew/too-butano/include/too_npc.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
+ C:/butano/homebrew/too-butano/include/too_scene_limbo1.h \
+ C:/butano/homebrew/too-butano/include/too_scene_limbo2.h \
+ C:/butano/homebrew/too-butano/include/too_scene_limbo3.h \
+ C:/butano/homebrew/too-butano/include/too_scene_summer1.h \
  c:\butano\common\include\info.h C:/butano/butano/include/bn_span_fwd.h \
  c:\butano\common\include\variable_8x16_sprite_font.h \
  C:/butano/butano/include/bn_sprite_font.h \
@@ -222,30 +207,10 @@ C:/butano/butano/include/bn_affine_bg_map_cell.h:
 C:/butano/butano/include/bn_string_view.h:
 C:/butano/butano/include/bn_vector.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
-C:/butano/homebrew/too-butano/build/bn_affine_bg_items_summerstage.h:
-C:/butano/butano/include/bn_affine_bg_item.h:
-C:/butano/butano/include/bn_affine_bg_map_item.h:
-C:/butano/butano/include/bn_affine_bg_tiles_item.h:
-C:/butano/homebrew/too-butano/build/bn_affine_bg_items_summerstage2.h:
-C:/butano/homebrew/too-butano/build/bn_affine_bg_items_seasonstileset.h:
-C:/butano/homebrew/too-butano/include/summer_tilemap.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_types.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_memmap.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_memdef.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_bios.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_core.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_input.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_irq.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_math.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_oam.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_tte.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_surface.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_video.h:
-C:/butano/butano/hw/3rd_party/libtonc/include/tonc_nocash.h:
 C:/butano/butano/include/bn_camera_actions.h:
 C:/butano/butano/include/bn_sprite_animate_actions.h:
 C:/butano/butano/include/bn_sprite_tiles_ptr.h:
+C:/butano/butano/include/bn_log.h:
 C:/butano/homebrew/too-butano/include/too_scene_mainmenu.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
@@ -266,6 +231,7 @@ C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/homebrew/too-butano/include/too_scene_maingame.h:
 C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h:
 C:/butano/homebrew/too-butano/include/too_scene_loading.h:
+C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/include/too_story_save.h:
@@ -281,6 +247,10 @@ C:/butano/homebrew/too-butano/include/too_hitbox.h:
 C:/butano/homebrew/too-butano/include/too_npc.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
+C:/butano/homebrew/too-butano/include/too_scene_limbo1.h:
+C:/butano/homebrew/too-butano/include/too_scene_limbo2.h:
+C:/butano/homebrew/too-butano/include/too_scene_limbo3.h:
+C:/butano/homebrew/too-butano/include/too_scene_summer1.h:
 c:\butano\common\include\info.h:
 C:/butano/butano/include/bn_span_fwd.h:
 c:\butano\common\include\variable_8x16_sprite_font.h:

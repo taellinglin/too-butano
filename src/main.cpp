@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2020-2021 Gustavo Valiente gustavo.valiente@protonmail.com
- * zlib License, see LICENSE file.
- */
-
+//Butano Includes
 #include "bn_core.h"
 #include "bn_keypad.h"
 #include "bn_optional.h"
@@ -11,7 +7,6 @@
 #include "bn_sprite_actions.h"
 #include "bn_sprite_text_generator.h"
 #include "bn_display.h"
-
 #include "bn_regular_bg_ptr.h"
 #include "bn_regular_bg_actions.h"
 #include "bn_regular_bg_builder.h"
@@ -23,28 +18,18 @@
 #include "bn_vector.h"
 #include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
-
-//#include "bn_regular_bg_items_background.h"
-//#include "bn_regular_bg_items_foreground.h"
-//#include "bn_regular_bg_items_midground.h"
-#include "bn_affine_bg_items_summerstage.h"
-#include "bn_affine_bg_items_summerstage2.h"
-#include "bn_affine_bg_items_seasonstileset.h"
-#include "summer_tilemap.h"
 #include "bn_camera_actions.h"
 #include "bn_sprite_animate_actions.h"
-
+#include "bn_string_view.h"
+#include "bn_vector.h"
+#include "bn_log.h"
 
 //Scenes
 #include "too_scene_mainmenu.h"
 #include "too_scene_maingame.h"
 #include "too_scene_titlescreen.h"
 #include "too_scene_loading.h"
-
-//#include "bn_music_items.h"
-//#include "bn_sound_items.h"
-//#include "bn_sprite_items_bullet.h"
-
+#include "too_scene.h"
 #include "too_level.h"
 #include "too_player.h"
 #include "too_story_save.h"
@@ -58,6 +43,12 @@
 #include "too_hitbox.h"
 #include "too_npc.h"
 #include "too_npc_type.h"
+
+//Scenes
+#include "too_scene_limbo1.h"
+#include "too_scene_limbo2.h"
+#include "too_scene_limbo3.h"
+#include "too_scene_summer1.h"
 
 #include "info.h"
 #include "variable_8x16_sprite_font.h"
@@ -73,13 +64,13 @@
         while(true)
         {
             {
-                too::TitleScreen titlescreen = too::TitleScreen(text_generator);
+                too::TitleScreen scene = too::TitleScreen(text_generator);
             }
             {
-            too::MainMenu mainmenu = too::MainMenu(text_generator);
+                too::MainMenu scene = too::MainMenu(text_generator);
             }
             {
-            too::MainGame maingame = too::MainGame();
+                too::MainGame scene = too::MainGame();
             }
         };
     }

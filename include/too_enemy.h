@@ -1,5 +1,5 @@
-#ifndef TOO_ENEMY_H
-#define TOO_ENEMY_H
+#ifndef BF_ENEMY_H
+#define BF_ENEMY_H
 
 #include "bn_fixed_point.h"
 #include "bn_sprite_ptr.h"

@@ -47,46 +47,48 @@ namespace too
 {
     Scene Limbo2::execute(Player player, bn::fixed_point spawn_location)
     {
+        //Initialize Camera
         bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
 
+        //Play BGM
         bn::music_items::valley.play();
 
+        //Text Generator
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
-        // map
-
+        
+        //Tilemap and Backgrounds
         bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
         bn::affine_bg_ptr map = bn::affine_bg_items::limbo2.create_bg(512, 512);
         background.set_priority(2);
-        //map_background.set_priority(1);
         map.set_priority(0);
         too::Level level = too::Level(map);
-        //map_background.set_horizontal_scale(1);
-        //map_background.set_vertical_scale(1);
-        map.set_horizontal_scale(1);
-        map.set_vertical_scale(1);
-        // camera
-        map.set_camera(camera);
-        //map_background.set_camera(camera);
         
-        // bn::fixed max_cpu_usage;
-        // int counter = 1;
+        //Initialize Camera
+        map.set_camera(camera);
 
-               //Enemies
+        //Initialize Enemies
         bn::vector<Enemy, 32> enemies = {};
         //enemies.push_back(Enemy(256, 256, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+23*8, camera, map, ENEMY_TYPE::BAT, 1));
         //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
+
+        //Portals
         StorySave portal = StorySave(bn::fixed_point(960, 194), STORY_TYPE::BEGINNING, camera, text_generator);
         StorySave portal2 = StorySave(bn::fixed_point(80, 912), STORY_TYPE::BEGINNING, camera, text_generator);
 
-        // player
+        //Initialize Player
         player.spawn(spawn_location, camera, map, enemies);
+
+        //Game Loop
         while(true)
         {
+            //Update Portals
             portal.update();
             portal2.update();
+
+            //Portal hitboxes
             if(bn::keypad::up_pressed())
             {
                 if(player.pos().x() < 960+16 && player.pos().x() > 960-16){
@@ -101,14 +103,7 @@ namespace too
                 }
             }
             
-            // max_cpu_usage = bn::max(max_cpu_usage, bn::core::last_cpu_usage());
-            // --counter;
-            // if(! counter)
-            // {
-            //     BN_LOG("cpu:" + bn::to_string<32>((max_cpu_usage * 100).right_shift_integer()));
-            //     max_cpu_usage = 0;
-            //     counter = 60;
-            // }
+            // Check for Enemies and Update
             for(Enemy& enemy : enemies){
                 if(bn::abs(enemy.pos().x() - camera.x()) < 240 && bn::abs(enemy.pos().y() - camera.y()) < 160){
                     enemy.update();
@@ -117,12 +112,11 @@ namespace too
                 }
             }
 
-
+            //Update Player and Animations
             player.update_position(map, level);
             player.apply_animation_state();
-            // BN_LOG(bn::to_string<32>(player.pos().x())+" " + bn::to_string<32>(player.pos().y()));
             
-            
+            //Update Frame
             bn::core::update();
         }
     }

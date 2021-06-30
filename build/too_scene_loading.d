@@ -50,13 +50,15 @@ too_scene_loading.o: \
  C:/butano/butano/include/bn_music_actions.h \
  C:/butano/butano/include/bn_music.h \
  C:/butano/butano/include/bn_template_actions.h \
+ C:/butano/butano/include/bn_optional.h \
+ C:/butano/butano/include/bn_memory.h \
+ C:/butano/butano/include/bn_alignment.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h \
  C:/butano/butano/include/bn_sprite_item.h \
  C:/butano/butano/include/bn_sprite_shape_size.h \
  C:/butano/butano/include/bn_sprite_palette_item.h \
  C:/butano/butano/include/bn_color.h \
- C:/butano/butano/include/bn_alignment.h \
  C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h \
  C:/butano/butano/include/bn_regular_bg_item.h \
  C:/butano/butano/include/bn_bg_palette_item.h \
@@ -118,13 +120,15 @@ C:/butano/butano/include/bn_music_item.h:
 C:/butano/butano/include/bn_music_actions.h:
 C:/butano/butano/include/bn_music.h:
 C:/butano/butano/include/bn_template_actions.h:
+C:/butano/butano/include/bn_optional.h:
+C:/butano/butano/include/bn_memory.h:
+C:/butano/butano/include/bn_alignment.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:
 C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/butano/include/bn_sprite_shape_size.h:
 C:/butano/butano/include/bn_sprite_palette_item.h:
 C:/butano/butano/include/bn_color.h:
-C:/butano/butano/include/bn_alignment.h:
 C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h:
 C:/butano/butano/include/bn_regular_bg_item.h:
 C:/butano/butano/include/bn_bg_palette_item.h:

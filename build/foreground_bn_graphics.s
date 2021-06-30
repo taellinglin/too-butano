@@ -9,7 +9,7 @@
 @	+ regular map (flat), not compressed, 32x32 
 @	Total size: 32 + 6880 + 2048 = 8960
 @
-@	Time-stamp: 2021-06-22, 10:05:09
+@	Time-stamp: 2021-06-28, 12:58:19
 @	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 @	( http://www.coranac.com/projects/#grit )
 @
@@ -417,6 +417,6 @@ foreground_bn_graphicsMap:
 	.hidden foreground_bn_graphicsPal
 foreground_bn_graphicsPal:
 	.hword 0x03E0,0x24F0,0x2953,0x3195,0x15FF,0x3A39,0x165F,0x32FD
-	.hword 0x171F,0x235F,0x6F9A,0x33BF,0x53DF,0x7FFF,0x0000,0x0000
+	.hword 0x171F,0x235F,0x6F9A,0x33BF,0x53DF,0x7FFF,0x0001,0x0001
 
 @}}BLOCK(foreground_bn_graphics)
