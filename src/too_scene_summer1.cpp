@@ -77,6 +77,9 @@ namespace too
         //Enemies
         bn::vector<Enemy, 32> enemies = {};
             enemies.push_back(Enemy(784, 960, camera, map, ENEMY_TYPE::SLIME, 2));
+            enemies.push_back(Enemy(632, 960, camera, map, ENEMY_TYPE::SLIME, 2));
+            enemies.push_back(Enemy(760, 778, camera, map, ENEMY_TYPE::BAT, 1));
+            enemies.push_back(Enemy(656, 720, camera, map, ENEMY_TYPE::BAT, 1));
 
 
         // Initialize Player
