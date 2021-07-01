@@ -75,7 +75,7 @@ namespace too
 
         //Enemies
         bn::vector<Enemy, 32> enemies = {};
-        enemies.push_back(Enemy(191, 463, camera, map, ENEMY_TYPE::SLIME, 2));
+        //enemies.push_back(Enemy(191, 463, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(656, 256, camera, map, ENEMY_TYPE::BAT, 1));
         //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));

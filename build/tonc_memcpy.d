@@ -1,3 +1,0 @@
-tonc_memcpy.o: C:/butano/butano/hw/3rd_party/libtonc/asm/tonc_memcpy.s \
- c:\butano\butano\hw\3rd_party\libtonc\include\tonc_asminc.h
-c:\butano\butano\hw\3rd_party\libtonc\include\tonc_asminc.h:

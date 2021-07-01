@@ -59,11 +59,7 @@ too_tooltip.o: C:/butano/homebrew/too-butano/src/too_tooltip.cpp \
  C:/butano/butano/include/bn_log.h \
  C:/butano/butano/include/bn_config_log.h \
  C:/butano/butano/include/bn_log_backend.h \
- C:/butano/butano/include/bn_keypad.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_golem_sprite.h \
- C:/butano/butano/include/bn_sprite_item.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_tortoise_sprite.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_penguin_sprite.h
+ C:/butano/butano/include/bn_keypad.h
 C:/butano/homebrew/too-butano/include/too_tooltip.h:
 C:/butano/butano/include/bn_fixed_point.h:
 C:/butano/butano/include/bn_fixed.h:
@@ -130,7 +126,3 @@ C:/butano/butano/include/bn_log.h:
 C:/butano/butano/include/bn_config_log.h:
 C:/butano/butano/include/bn_log_backend.h:
 C:/butano/butano/include/bn_keypad.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_golem_sprite.h:
-C:/butano/butano/include/bn_sprite_item.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_tortoise_sprite.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_penguin_sprite.h:

@@ -1,3 +1,0 @@
-graphics/vines.bmp
-131190
-1623056530.35

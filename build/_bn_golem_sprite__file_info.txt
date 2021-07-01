@@ -1,3 +1,0 @@
-graphics/golem_sprite.bmp
-2166
-1623056530.31

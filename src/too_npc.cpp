@@ -7,10 +7,6 @@
 #include "bn_display.h"
 #include "bn_keypad.h"
 #include "bn_sprite_text_generator.h"
-
-#include "bn_sprite_items_golem_sprite.h"
-#include "bn_sprite_items_tortoise_sprite.h"
-#include "bn_sprite_items_penguin_sprite.h"
 #include "bn_sprite_items_frog_sprite.h"
 #include "variable_8x8_sprite_font.h"
 
@@ -23,24 +19,8 @@ namespace too
     {
         _text_generator.set_bg_priority(0);
         
-        if(_type == NPC_TYPE::GOLEM)
-        {
-            _sprite = bn::sprite_items::golem_sprite.create_sprite(_pos.x(), _pos.y());
-            _action = bn::create_sprite_animate_action_forever(
-                            _sprite.value(), 120, bn::sprite_items::golem_sprite.tiles_item(), 0,1);
-            _lines = bn::span(_golem_lines);
-        }else if(_type == NPC_TYPE::TORTOISE)
-        {
-            _sprite = bn::sprite_items::tortoise_sprite.create_sprite(_pos.x(), _pos.y());
-            _action = bn::create_sprite_animate_action_forever(
-                            _sprite.value(), 120, bn::sprite_items::tortoise_sprite.tiles_item(), 0,1);
-            _lines = bn::span(_tortoise_lines);
-        } else if(_type == NPC_TYPE::PENGUIN){
-            _sprite = bn::sprite_items::penguin_sprite.create_sprite(_pos.x(), _pos.y());
-            _action = bn::create_sprite_animate_action_forever(
-                            _sprite.value(), 60, bn::sprite_items::penguin_sprite.tiles_item(), 0,1);
-            _lines = bn::span(_penguin_lines);
-        }else if(_type == NPC_TYPE::FROG){
+
+        if(_type == NPC_TYPE::FROG){
             _sprite = bn::sprite_items::frog_sprite.create_sprite(_pos.x(), _pos.y());
             _action = bn::create_sprite_animate_action_forever(
                             _sprite.value(), 40, bn::sprite_items::frog_sprite.tiles_item(), 0,1);
@@ -78,7 +58,7 @@ namespace too
         } else if(_is_near_player && !_finished) {
             _text_generator.set_center_alignment();
             _text_sprites.clear();
-            _text_generator.generate(0, _text_y_limit, "press 'up' to interact", _text_sprites);
+            _text_generator.generate(0, _text_y_limit, "press 'up' to talk", _text_sprites);
         } else {
             _text_sprites.clear();
         }

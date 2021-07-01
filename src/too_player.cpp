@@ -166,6 +166,7 @@ namespace too
     {
         if(_grounded && !_listening){
             _dy-= jump_power;
+            bn::sound_items::jump.play();
             _grounded = false;
         } else if (_wall_running && !_wall_jumped){
             _dy-= jump_power;
@@ -175,6 +176,7 @@ namespace too
 
     void Player::attack()
     {
+        
         _attacking = true;
     }
 
@@ -209,13 +211,16 @@ namespace too
     }
 
     void Player::collide_with_enemies(){
+        
         Hitbox damage_hitbox = Hitbox(_pos.x(),_pos.y()+2, 8, 8);
         if(!_invulnerable){
+            
             for(int i = 0; i < _enemies->size(); i++)
             {
                 if(_enemies->at(i).is_hit(damage_hitbox))
                 {
-                    bn::sound_items::hurt.play(false);
+                    bn::sound_items::hurt.play();
+                    
                     _invulnerable = true;
                     _healthbar.set_hp(_healthbar.hp() - 1);
                     _dy -= 0.3;
@@ -417,7 +422,6 @@ namespace too
         if(bn::keypad::a_pressed())
         {
             
-            bn::sound_items::jump.play();
             jump();
         } 
 
@@ -439,8 +443,6 @@ namespace too
         
         // ouch
         if(_invulnerable){
-            
-            bn::sound_items::hurt.play();
             ++_inv_timer;
             if(modulo(_inv_timer/5, 2) == 0){
                 _sprite.set_visible(true);

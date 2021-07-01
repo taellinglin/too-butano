@@ -1,3 +1,0 @@
-graphics/house_bg.bmp
-131190
-1623056530.32

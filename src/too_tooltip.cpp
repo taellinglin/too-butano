@@ -6,10 +6,6 @@
 #include "bn_display.h"
 #include "bn_keypad.h"
 
-#include "bn_sprite_items_golem_sprite.h"
-#include "bn_sprite_items_tortoise_sprite.h"
-#include "bn_sprite_items_penguin_sprite.h"
-
 
 
 namespace too

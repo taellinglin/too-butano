@@ -1,1 +1,0 @@
-seasonstileset_bn_graphics.o: seasonstileset_bn_graphics.s

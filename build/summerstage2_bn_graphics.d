@@ -1,1 +1,0 @@
-summerstage2_bn_graphics.o: summerstage2_bn_graphics.s

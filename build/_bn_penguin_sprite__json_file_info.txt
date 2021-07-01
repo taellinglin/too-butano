@@ -1,3 +1,0 @@
-graphics/penguin_sprite.json
-44
-1623056530.33

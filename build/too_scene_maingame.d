@@ -93,7 +93,6 @@ too_scene_maingame.o: \
  C:/butano/homebrew/too-butano/include/too_scene_loading.h \
  C:/butano/homebrew/too-butano/include/too_scene_summer1.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_cat.h \
  C:/butano/butano/include/bn_regular_bg_ptr.h \
  C:/butano/butano/include/bn_regular_bg_actions.h \
  C:/butano/butano/include/bn_fixed_point.h \
@@ -206,7 +205,6 @@ C:/butano/homebrew/too-butano/include/too_scene_limbo3.h:
 C:/butano/homebrew/too-butano/include/too_scene_loading.h:
 C:/butano/homebrew/too-butano/include/too_scene_summer1.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_cat.h:
 C:/butano/butano/include/bn_regular_bg_ptr.h:
 C:/butano/butano/include/bn_regular_bg_actions.h:
 C:/butano/butano/include/bn_fixed_point.h:

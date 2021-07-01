@@ -1,3 +1,0 @@
-graphics/blimp_top.bmp
-630
-1623056530.28

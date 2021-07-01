@@ -1,3 +1,0 @@
-graphics/blimp_bottom.bmp
-630
-1623056530.27

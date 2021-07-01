@@ -18,7 +18,6 @@
 #include "too_scene_summer1.h"
 
 #include "too_player.h"
-#include "bn_sprite_items_cat.h"
 #include "bn_sprite_items_cat_sprite.h"
 
 

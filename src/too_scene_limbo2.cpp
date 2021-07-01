@@ -68,8 +68,9 @@ namespace too
 
         //Initialize Enemies
         bn::vector<Enemy, 32> enemies = {};
-        //enemies.push_back(Enemy(256, 256, camera, map, ENEMY_TYPE::SLIME, 2));
-        //enemies.push_back(Enemy(256+18*8, 256+23*8, camera, map, ENEMY_TYPE::BAT, 1));
+        enemies.push_back(Enemy(432, 706, camera, map, ENEMY_TYPE::SLIME, 2));
+        enemies.push_back(Enemy(672, 592, camera, map, ENEMY_TYPE::BAT, 1));
+        enemies.push_back(Enemy(384, 448, camera, map, ENEMY_TYPE::BAT, 1));
         //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));

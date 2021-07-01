@@ -1,3 +1,0 @@
-graphics/dungeon.bmp
-131190
-1623056530.29

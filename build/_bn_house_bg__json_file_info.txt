@@ -1,3 +1,0 @@
-graphics/house_bg.json
-32
-1623056530.32

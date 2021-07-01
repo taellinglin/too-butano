@@ -1,1 +1,0 @@
-blimp_bottom_bn_graphics.o: blimp_bottom_bn_graphics.s
