@@ -13,7 +13,7 @@
 //	+ affine map, not compressed, 128x128 
 //	Total size: 32 + 6848 + 16384 = 23264
 //
-//	Time-stamp: 2021-07-01, 11:37:15
+//	Time-stamp: 2021-07-05, 12:36:43
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -37,7 +37,7 @@ extern const bn::color limbo3_bn_graphicsPal[16];
 
 namespace bn::affine_bg_items
 {
-    constexpr affine_bg_item limbo3(
+    constexpr inline affine_bg_item limbo3(
             affine_bg_tiles_item(span<const tile>(limbo3_bn_graphicsTiles, 214), compression_type::NONE), 
             bg_palette_item(span<const color>(limbo3_bn_graphicsPal, 16), bpp_mode::BPP_8, compression_type::NONE),
             affine_bg_map_item(limbo3_bn_graphicsMap[0], size(128, 128), compression_type::NONE));

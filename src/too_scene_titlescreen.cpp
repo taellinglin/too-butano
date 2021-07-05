@@ -29,6 +29,7 @@
 #include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
 #include "info.h"
+#include "bn_optional.h"
 
 #include "too_scene_titlescreen.h"
 namespace too
@@ -38,10 +39,13 @@ namespace too
 
 
                 //Render BG0 BG1 BG2 with background, midground, and foreground
-                bn::regular_bg_ptr background_bg = bn::regular_bg_items::background.create_bg(64,32);
-                bn::regular_bg_ptr midground_bg = bn::regular_bg_items::midground.create_bg(64,64);
-                bn::regular_bg_ptr foreground_bg = bn::regular_bg_items::foreground.create_bg(64, 64);
-                foreground_bg.set_priority(0);
+                bn::optional <bn::regular_bg_ptr> background_bg;
+                background_bg = bn::regular_bg_items::background.create_bg(64,32);
+                bn::optional <bn::regular_bg_ptr> midground_bg;
+                midground_bg = bn::regular_bg_items::midground.create_bg(64,64);
+                bn::optional <bn::regular_bg_ptr> foreground_bg;
+                foreground_bg = bn::regular_bg_items::foreground.create_bg(64, 64);
+                foreground_bg->set_priority(0);
 
                 //Draw the Sprites for the logo
                 int sprite_y_range = 12;
@@ -77,8 +81,8 @@ namespace too
 
                 while(! bn::keypad::start_pressed())
                 {
-                    foreground_bg.set_x(foreground_bg.x() - 1);
-                    midground_bg.set_x(midground_bg.x() - 0.5);
+                    foreground_bg->set_x(foreground_bg->x() - 1);
+                    midground_bg->set_x(midground_bg->x() - 0.5);
                     info.update();
 
                     // Update the sprite for the logo (play the animated movement)
@@ -88,6 +92,9 @@ namespace too
                     sprite_p4_move_action.update();
                     bn::core::update();
                 }
+                background_bg.reset();
+                foreground_bg.reset();
+                midground_bg.reset();
                 bn::sound_items::spin_up.play();
             };
 }

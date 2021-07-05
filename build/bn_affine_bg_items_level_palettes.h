@@ -13,7 +13,7 @@
 //	+ affine map, not compressed, 128x128 
 //	Total size: 32 + 64 + 16384 = 16480
 //
-//	Time-stamp: 2021-07-01, 11:37:15
+//	Time-stamp: 2021-07-05, 12:36:43
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -37,7 +37,7 @@ extern const bn::color level_palettes_bn_graphicsPal[16];
 
 namespace bn::affine_bg_items
 {
-    constexpr affine_bg_item level_palettes(
+    constexpr inline affine_bg_item level_palettes(
             affine_bg_tiles_item(span<const tile>(level_palettes_bn_graphicsTiles, 2), compression_type::NONE), 
             bg_palette_item(span<const color>(level_palettes_bn_graphicsPal, 16), bpp_mode::BPP_8, compression_type::NONE),
             affine_bg_map_item(level_palettes_bn_graphicsMap[0], size(128, 128), compression_type::NONE));

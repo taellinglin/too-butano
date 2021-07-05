@@ -9,7 +9,7 @@
 @	+ affine map, not compressed, 128x128 
 @	Total size: 32 + 6848 + 16384 = 23264
 @
-@	Time-stamp: 2021-07-01, 11:37:15
+@	Time-stamp: 2021-07-05, 12:36:43
 @	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 @	( http://www.coranac.com/projects/#grit )
 @
@@ -1424,6 +1424,6 @@ limbo3_bn_graphicsMap:
 	.hidden limbo3_bn_graphicsPal
 limbo3_bn_graphicsPal:
 	.hword 0x03E0,0x2825,0x3075,0x353F,0x221F,0x237F,0x7FDF,0x0000
-	.hword 0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000
+	.hword 0x0001,0x0001,0x0001,0x0001,0x0001,0x0001,0x0001,0x0001
 
 @}}BLOCK(limbo3_bn_graphics)

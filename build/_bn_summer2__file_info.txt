@@ -1,0 +1,3 @@
+graphics/summer2.bmp
+524406
+1625187422.03

@@ -64,7 +64,7 @@ namespace too
             loading_fg = bn::regular_bg_items::foreground.create_bg(64, 64);
         // map.set_horizontal_scale(2);
 
-            for(int i = 0; i < 180; ++i)
+            for(int i = 0; i < 30; ++i)
             {
                 if(loading_mg.has_value() && loading_fg.has_value())
                 {

@@ -41,45 +41,6 @@ namespace too
             int _currentLine = 0;
             int _currentChar = 0;
             bn::string_view _currentChars = "";
-
-            bn::string_view _golem_lines[14] = {
-                ". . .",
-                "Oh, it's you!",
-                "Where have you come from?",
-                "A distant kingdom?",
-                "Well, welcome to the realm we call Limbo",
-                "What's the matter?",
-                ". . .",
-                "Oh.",
-                "Thats no good.",
-                "I am sorry to hear you don't like the fog",
-                "It is because it is a realm between realms",
-                "Things tend to dissappear and reapear here.",
-                "Well, you better be off now.",
-                ". . ."
-            };
-
-            bn::string_view _tortoise_lines[12] = {
-                "To be honest...",
-                "I have no idea what happened here.",
-                "It doesn't look like they took anything.",
-                ". . .",
-                "Oh.",
-                "Oh my . . .",
-                "You have kids and a wife?",
-                "Glad they weren't here then.",
-                ". . . ",
-                "Oh dear, they were here?",
-                "These bastards can't have gone far.",
-                "The tortoise brigade is on the case."
-            };
-
-            bn::string_view _penguin_lines[4] = {
-                "Oh to fly..",
-                "To soar through the sky",
-                "There is nothing I want to do more",
-                ". . ."
-            };
             
             bn::string_view _frog_lines[3] = {
                 "Ribbit...",

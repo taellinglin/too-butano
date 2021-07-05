@@ -12,7 +12,7 @@
 //	+ 24 tiles not compressed
 //	Total size: 32 + 768 = 800
 //
-//	Time-stamp: 2021-07-01, 11:40:00
+//	Time-stamp: 2021-07-05, 12:36:43
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -33,7 +33,7 @@ extern const bn::color stone_plaque_bn_graphicsPal[16];
 
 namespace bn::sprite_items
 {
-    constexpr sprite_item stone_plaque(sprite_shape_size(sprite_shape::TALL, sprite_size::BIG), 
+    constexpr inline sprite_item stone_plaque(sprite_shape_size(sprite_shape::TALL, sprite_size::BIG), 
             sprite_tiles_item(span<const tile>(stone_plaque_bn_graphicsTiles, 24), bpp_mode::BPP_4, compression_type::NONE, 3), 
             sprite_palette_item(span<const color>(stone_plaque_bn_graphicsPal, 16), bpp_mode::BPP_4, compression_type::NONE));
 }

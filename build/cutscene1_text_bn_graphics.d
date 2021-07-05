@@ -1,0 +1,1 @@
+cutscene1_text_bn_graphics.o: cutscene1_text_bn_graphics.s

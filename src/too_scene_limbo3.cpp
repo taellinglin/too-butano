@@ -58,8 +58,8 @@ namespace too
         //Tilemaps and Backgrounds
         bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
         bn::affine_bg_ptr map = bn::affine_bg_items::limbo3.create_bg(512, 512);
-        background.set_priority(1);
-        map.set_priority(0);
+        background.set_priority(3);
+        map.set_priority(2);
 
         //Process Tiles
         Level level = Level(map);
@@ -125,7 +125,7 @@ namespace too
 
             //Update NPCs and Player
             frog.update();
-            player.update_position(map, level);
+            player.update_position(map, level, text_generator);
             player.apply_animation_state();
             
             //Update Frame

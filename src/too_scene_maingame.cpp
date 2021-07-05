@@ -16,6 +16,7 @@
 #include "too_scene_limbo3.h"
 #include "too_scene_loading.h"
 #include "too_scene_summer1.h"
+#include "too_scene_summer2.h"
 
 #include "too_player.h"
 #include "bn_sprite_items_cat_sprite.h"
@@ -41,12 +42,12 @@
 namespace too
 {
     
-    MainGame::MainGame()
+    MainGame::MainGame(bn::sprite_text_generator& text_generator)
     {
         too::Scene scene = too::Scene::LIMBO3_SUMMER1;
         too::Loading loading = too::Loading();
         bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
-        too::Player player = too::Player(cat_sprite);
+        too::Player player = too::Player(cat_sprite, text_generator);
 
         while(true)
         {
@@ -95,6 +96,16 @@ namespace too
             {
                 too::Limbo3 to_limbo3_from_summer1 = too::Limbo3();
                 scene = to_limbo3_from_summer1.execute(player, bn::fixed_point(896, 928));
+            }
+            else if(scene == too::Scene::SUMMER1_SUMMER2)
+            {
+                too::Summer2 to_summer2_from_summer1 = too::Summer2();
+                scene = to_summer2_from_summer1.execute(player, bn::fixed_point(128, 912));
+            }
+            else if(scene == too::Scene::SUMMER2_SUMMER1)
+            {
+                too::Summer1 to_summer1_from_summer2 = too::Summer1();
+                scene = to_summer1_from_summer2.execute(player, bn::fixed_point(600, 288));
             }
             cat_sprite.set_visible(false);
             loading.execute();

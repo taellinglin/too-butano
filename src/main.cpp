@@ -28,6 +28,7 @@
 #include "too_scene_mainmenu.h"
 #include "too_scene_maingame.h"
 #include "too_scene_titlescreen.h"
+#include "too_scene_cutscene1.h"
 #include "too_scene_loading.h"
 #include "too_scene.h"
 #include "too_level.h"
@@ -49,6 +50,7 @@
 #include "too_scene_limbo2.h"
 #include "too_scene_limbo3.h"
 #include "too_scene_summer1.h"
+#include "too_scene_cutscene1.h"
 
 #include "info.h"
 #include "variable_8x16_sprite_font.h"
@@ -66,12 +68,19 @@
             {
                 too::TitleScreen scene = too::TitleScreen(text_generator);
             }
+             bn::core::update();
             {
                 too::MainMenu scene = too::MainMenu(text_generator);
             }
+             bn::core::update();
             {
-                too::MainGame scene = too::MainGame();
+                too::Cutscene1 scene = too::Cutscene1(text_generator);
             }
+             bn::core::update();
+            {
+                too::MainGame scene = too::MainGame(text_generator);
+            }
+             bn::core::update();
         };
     }
 

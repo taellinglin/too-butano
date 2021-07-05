@@ -13,7 +13,7 @@
 //	+ regular map (flat), not compressed, 32x32 
 //	Total size: 32 + 2848 + 2048 = 4928
 //
-//	Time-stamp: 2021-07-01, 11:37:15
+//	Time-stamp: 2021-07-05, 12:36:43
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -37,7 +37,7 @@ extern const bn::color midground_bn_graphicsPal[16];
 
 namespace bn::regular_bg_items
 {
-    constexpr regular_bg_item midground(
+    constexpr inline regular_bg_item midground(
             regular_bg_tiles_item(span<const tile>(midground_bn_graphicsTiles, 89), bpp_mode::BPP_4, compression_type::NONE), 
             bg_palette_item(span<const color>(midground_bn_graphicsPal, 16), bpp_mode::BPP_4, compression_type::NONE),
             regular_bg_map_item(midground_bn_graphicsMap[0], size(32, 32), compression_type::NONE));

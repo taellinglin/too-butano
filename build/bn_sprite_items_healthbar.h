@@ -12,7 +12,7 @@
 //	+ 13 tiles not compressed
 //	Total size: 32 + 416 = 448
 //
-//	Time-stamp: 2021-07-01, 11:37:15
+//	Time-stamp: 2021-07-05, 12:36:43
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -33,7 +33,7 @@ extern const bn::color healthbar_bn_graphicsPal[16];
 
 namespace bn::sprite_items
 {
-    constexpr sprite_item healthbar(sprite_shape_size(sprite_shape::SQUARE, sprite_size::SMALL), 
+    constexpr inline sprite_item healthbar(sprite_shape_size(sprite_shape::SQUARE, sprite_size::SMALL), 
             sprite_tiles_item(span<const tile>(healthbar_bn_graphicsTiles, 13), bpp_mode::BPP_4, compression_type::NONE, 13), 
             sprite_palette_item(span<const color>(healthbar_bn_graphicsPal, 16), bpp_mode::BPP_4, compression_type::NONE));
 }

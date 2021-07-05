@@ -7,6 +7,7 @@ namespace too
     {
         TITLESCREEN,
         MAINMENU,
+        CUTSCENE1,
         OPTIONS,
         LIMBO1,
         LIMBO1_LIMBO2,
@@ -17,6 +18,8 @@ namespace too
         LIMBO3_LIMBO2,
         LIMBO3_SUMMER1,
         SUMMER1_LIMBO3,
+        SUMMER1_SUMMER2,
+        SUMMER2_SUMMER1,
         LOADING
     };
 }

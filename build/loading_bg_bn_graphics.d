@@ -1,1 +1,0 @@
-loading_bg_bn_graphics.o: loading_bg_bn_graphics.s
