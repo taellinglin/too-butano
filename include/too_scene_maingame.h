@@ -10,7 +10,7 @@ namespace too
     class MainGame
     {       
         public:
-            MainGame();
+            MainGame(bn::sprite_text_generator& text_generator);
     };
 }
 

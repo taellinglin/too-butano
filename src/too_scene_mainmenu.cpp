@@ -32,8 +32,8 @@ namespace too
 {
 
         bool main_menu_mode_enabled = false; //Is menu mode enabled?
-        int cursor_index; // The index that the cursor is at
-        int num_options; // How many options there are
+        int cursor_index =0; // The index that the cursor is at
+        int num_options = 4; // How many options there are
 
         MainMenu::MainMenu(bn::sprite_text_generator& text_generator )
         {
@@ -77,6 +77,6 @@ namespace too
             //If A is pressed, p
             bn::sound_items::spin_up.play();
 
-            Scene::LIMBO1;
+            //Scene::LIMBO1;
         };
  }

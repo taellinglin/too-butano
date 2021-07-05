@@ -12,7 +12,7 @@
 //	+ 16 tiles not compressed
 //	Total size: 32 + 512 = 544
 //
-//	Time-stamp: 2021-07-01, 11:37:15
+//	Time-stamp: 2021-07-05, 12:36:42
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -33,7 +33,7 @@ extern const bn::color cursor_right_bn_graphicsPal[16];
 
 namespace bn::sprite_items
 {
-    constexpr sprite_item cursor_right(sprite_shape_size(sprite_shape::SQUARE, sprite_size::BIG), 
+    constexpr inline sprite_item cursor_right(sprite_shape_size(sprite_shape::SQUARE, sprite_size::BIG), 
             sprite_tiles_item(span<const tile>(cursor_right_bn_graphicsTiles, 16), bpp_mode::BPP_4, compression_type::NONE, 1), 
             sprite_palette_item(span<const color>(cursor_right_bn_graphicsPal, 16), bpp_mode::BPP_4, compression_type::NONE));
 }

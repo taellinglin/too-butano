@@ -1,0 +1,3 @@
+graphics/cutscene1_text.json
+32
+1625370932.2

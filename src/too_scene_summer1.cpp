@@ -87,6 +87,7 @@ namespace too
 
         //Initialize Portals/Savepoints
         StorySave portal_limbo3 = StorySave(bn::fixed_point(96, 960), STORY_TYPE::BEGINNING, camera, text_generator);
+        StorySave summer1_summer2 = StorySave(bn::fixed_point(600, 288), STORY_TYPE::BEGINNING, camera, text_generator);
 
 
         //Game Loop
@@ -103,6 +104,7 @@ namespace too
 
             //Spawn Points and Portals
             portal_limbo3.update();
+            summer1_summer2.update();
             if(bn::keypad::up_pressed())
             {
                 if(player.pos().x() < 96+16 && player.pos().x() > 96-16){
@@ -111,8 +113,16 @@ namespace too
                     }
                 }
             }
+            if(bn::keypad::up_pressed())
+            {
+                if(player.pos().x() < 600+16 && player.pos().x() > 600-16){
+                    if(player.pos().y() < 288+16 && player.pos().y() > 288-16){
+                        return Scene::SUMMER1_SUMMER2;
+                    }
+                }
+            }
             //Player Updatess
-            player.update_position(map, level);
+            player.update_position(map, level, text_generator);
             player.apply_animation_state();
             
             //Update Frame

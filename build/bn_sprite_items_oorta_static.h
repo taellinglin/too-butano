@@ -12,7 +12,7 @@
 //	+ 16 tiles not compressed
 //	Total size: 32 + 512 = 544
 //
-//	Time-stamp: 2021-07-01, 11:37:15
+//	Time-stamp: 2021-07-05, 12:36:43
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -33,7 +33,7 @@ extern const bn::color oorta_static_bn_graphicsPal[16];
 
 namespace bn::sprite_items
 {
-    constexpr sprite_item oorta_static(sprite_shape_size(sprite_shape::WIDE, sprite_size::BIG), 
+    constexpr inline sprite_item oorta_static(sprite_shape_size(sprite_shape::WIDE, sprite_size::BIG), 
             sprite_tiles_item(span<const tile>(oorta_static_bn_graphicsTiles, 16), bpp_mode::BPP_4, compression_type::NONE, 2), 
             sprite_palette_item(span<const color>(oorta_static_bn_graphicsPal, 16), bpp_mode::BPP_4, compression_type::NONE));
 }

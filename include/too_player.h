@@ -16,6 +16,7 @@
 #include "too_healthbar.h"
 
 #include "bn_sprite_items_cat_sprite.h"
+#include "bn_sprite_text_generator.h"
 
 namespace too
 {
@@ -30,7 +31,6 @@ namespace too
             bn::sprite_ptr _text_bg1;
             bn::sprite_ptr _text_bg2;
             too::Healthbar _healthbar;
-            
             bool _can_wallrun = false;
 
             //used for state management
@@ -44,6 +44,7 @@ namespace too
             bool _wall_jumped = false;
             bool _already_running = false;
             bool _attacking = false;
+
 
             bool _invulnerable = false;
             int _inv_timer = 0;
@@ -62,16 +63,17 @@ namespace too
             
 
         public:
-            Player(bn::sprite_ptr sprite);
+            Player(bn::sprite_ptr sprite,bn::sprite_text_generator& text_generator );
 
             Data data;
+
             
             [[nodiscard]] bn::fixed_point pos();
 
             void jump();
             void attack();
             void collide_with_objects(bn::affine_bg_ptr map, too::Level level);
-            void collide_with_enemies();
+            void collide_with_enemies(bn::sprite_text_generator& text_generator);
             void move_right();
             void move_left();
             void check_attack();
@@ -79,7 +81,7 @@ namespace too
             bool is_listening();
             void set_can_wallrun(bool can_wallrun);
             void apply_animation_state();
-            void update_position(bn::affine_bg_ptr map, too::Level level);
+            void update_position(bn::affine_bg_ptr map, too::Level level, bn::sprite_text_generator& text_generator);
 
             void spawn(bn::fixed_point pos, bn::camera_ptr camera, bn::affine_bg_ptr map, bn::vector<Enemy,32>& enemies);
             void reset();

@@ -15,7 +15,7 @@
 #include "bn_optional.h"
 #include "bn_span.h"
 #include "bn_affine_bg_map_cell.h"
-#include"bn_format.h"
+//#include<bn_format.h>
 
 //fe code
 #include "too_level.h"
@@ -59,8 +59,8 @@ namespace too
         //Tilemap and Backgrounds
         bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
         bn::affine_bg_ptr map = bn::affine_bg_items::limbo2.create_bg(512, 512);
-        background.set_priority(2);
-        map.set_priority(0);
+        background.set_priority(3);
+        map.set_priority(2);
         too::Level level = too::Level(map);
         
         //Initialize Camera
@@ -114,7 +114,7 @@ namespace too
             }
 
             //Update Player and Animations
-            player.update_position(map, level);
+            player.update_position(map, level, text_generator);
             player.apply_animation_state();
             
             //Update Frame
