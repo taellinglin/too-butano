@@ -5,9 +5,6 @@ namespace too
 {
     enum class NPC_TYPE
     {
-        GOLEM,
-        PENGUIN,
-        TORTOISE,
         FROG
     };
 }

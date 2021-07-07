@@ -14,10 +14,13 @@ namespace bn::sound_items
     constexpr inline sound_item hurt(183);
     constexpr inline sound_item jump(184);
     constexpr inline sound_item select(430);
-    constexpr inline sound_item spin(431);
-    constexpr inline sound_item spin_down(432);
-    constexpr inline sound_item spin_up(433);
-    constexpr inline sound_item start(496);
+    constexpr inline sound_item slime_die(431);
+    constexpr inline sound_item slime_take_damage(432);
+    constexpr inline sound_item spin(433);
+    constexpr inline sound_item spin_down(434);
+    constexpr inline sound_item spin_up(435);
+    constexpr inline sound_item start(498);
+    constexpr inline sound_item type(668);
 }
 
 #endif

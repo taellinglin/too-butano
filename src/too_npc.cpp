@@ -9,6 +9,7 @@
 #include "bn_sprite_text_generator.h"
 #include "bn_sprite_items_frog_sprite.h"
 #include "variable_8x8_sprite_font.h"
+#include "bn_sound_items.h"
 
 
 namespace too
@@ -49,6 +50,7 @@ namespace too
                     }
                 }
             } else {
+                bn::sound_items::type.play();
                 _currentChars = _lines.at(_currentLine).substr(0,(_currentChar/2)+1);
                 ++_currentChar;
             }
@@ -58,7 +60,7 @@ namespace too
         } else if(_is_near_player && !_finished) {
             _text_generator.set_center_alignment();
             _text_sprites.clear();
-            _text_generator.generate(0, _text_y_limit, "press 'up' to talk", _text_sprites);
+            _text_generator.generate(0, _text_y_limit, "Up: Talk", _text_sprites);
         } else {
             _text_sprites.clear();
         }

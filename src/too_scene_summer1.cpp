@@ -50,7 +50,7 @@
 namespace too
 {
     //Scene Summer1
-    Scene Summer1::execute(Player player, bn::fixed_point spawn_location)
+    Scene Summer1::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Camera
         bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());

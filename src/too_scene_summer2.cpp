@@ -1,7 +1,7 @@
-//Summer1 Header File
+//Scene Level Header
 #include "too_scene_summer2.h"
 
-//Butano includes
+//Butano Includes
 #include "bn_core.h"
 #include "bn_math.h"
 #include "bn_log.h"
@@ -34,12 +34,15 @@
 //Map Cell
 #include <bn_affine_bg_map_cell.h>
 
-//Debug and Assets
+//Debug
 #include "bn_sprite_items_debug.h"
-#include "bn_sprite_items_cat_sprite.h"
+
+
+//Asset Item Includes (Backgrounds, Tilemaps, Sprites, Palettes, etc)
 #include "bn_regular_bg_items_background.h"
 #include "bn_affine_bg_items_summer2.h"
-//#include "bn_bg_palette_items_summer1.h"
+
+//Music Items and Actions
 #include "bn_music_items.h"
 #include "bn_music_actions.h"
 
@@ -50,7 +53,7 @@
 namespace too
 {
     //Scene Summer1
-    Scene Summer2::execute(Player player, bn::fixed_point spawn_location)
+    Scene Summer2::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Camera
         bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());

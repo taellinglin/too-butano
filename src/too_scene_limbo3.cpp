@@ -44,13 +44,13 @@
 
 namespace too
 {
-    Scene Limbo3::execute(Player player, bn::fixed_point spawn_location)
+    Scene Limbo3::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Initialize Camera
         bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
 
         //Play BGM
-        bn::music_items::limbo.play(0.5);
+        bn::music_items::limbo.play(0.25);
 
         //Text
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
@@ -75,8 +75,8 @@ namespace too
 
         //Enemies
         bn::vector<Enemy, 32> enemies = {};
-        //enemies.push_back(Enemy(191, 463, camera, map, ENEMY_TYPE::SLIME, 2));
-        //enemies.push_back(Enemy(656, 256, camera, map, ENEMY_TYPE::BAT, 1));
+        enemies.push_back(Enemy(191, 463, camera, map, ENEMY_TYPE::SLIME, 2));
+        enemies.push_back(Enemy(656, 256, camera, map, ENEMY_TYPE::BAT, 1));
         //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
