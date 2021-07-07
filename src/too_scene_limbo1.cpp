@@ -15,7 +15,7 @@
 #include "bn_optional.h"
 #include "bn_span.h"
 #include "bn_affine_bg_map_cell.h"
-//#include"bn_format.h"
+#include "bn_optional.h"
 
 //fe code
 #include "too_level.h"
@@ -41,32 +41,28 @@
 
 
 #include "bn_sprite_text_generator.h"
-#include "variable_8x16_sprite_font.h"
+#include "variable_8x8_sprite_font.h"
 
 namespace too
 {
-    Scene Limbo1::execute(Player player, bn::fixed_point spawn_location)
+    Scene Limbo1::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Initialize Camera
         bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
 
         //Text Generator
-        bn::sprite_text_generator text_generator(variable_8x16_sprite_font);
+        bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
 
         //Play BGM
         bn::music_items::maze.play();
         
         // Tilemap and Background
-        bn::regular_bg_ptr map_bg = bn::regular_bg_items::background.create_bg(0, 0);
+        bn::optional <bn::regular_bg_ptr> map_bg;
+        map_bg = bn::regular_bg_items::background.create_bg(0, 0);
         bn::affine_bg_ptr map = bn::affine_bg_items::limbo1.create_bg(512, 512);
-        map_bg.set_priority(3);
-        //map_background.set_priority(1);
+        map_bg->set_priority(3);
         map.set_priority(2);
         too::Level level = too::Level(map);
-
-        //bn::music_items::secret_room.play(0.5);
-        //map_background.set_horizontal_scale(1);
-        //map_background.set_vertical_scale(1);
         map.set_horizontal_scale(1);
         map.set_vertical_scale(1);
         // camera
@@ -77,6 +73,19 @@ namespace too
         
 
         bn::vector<Enemy, 32> enemies = {};
+        enemies.push_back(Enemy(352, 224, camera, map, ENEMY_TYPE::SLIME, 10));
+        enemies.push_back(Enemy(608, 224, camera, map, ENEMY_TYPE::SLIME, 10));
+        enemies.push_back(Enemy(832, 208, camera, map, ENEMY_TYPE::BAT, 2));
+        enemies.push_back(Enemy(656, 352, camera, map, ENEMY_TYPE::SLIME, 20));
+        enemies.push_back(Enemy(352, 352, camera, map, ENEMY_TYPE::SLIME, 20));
+        enemies.push_back(Enemy(176, 368, camera, map, ENEMY_TYPE::BAT, 4));
+        enemies.push_back(Enemy(352, 480, camera, map, ENEMY_TYPE::SLIME, 30));
+        enemies.push_back(Enemy(592, 480, camera, map, ENEMY_TYPE::SLIME, 30));
+        enemies.push_back(Enemy(832, 512, camera, map, ENEMY_TYPE::BAT, 8));
+        enemies.push_back(Enemy(592, 608, camera, map, ENEMY_TYPE::SLIME, 40));
+        enemies.push_back(Enemy(352, 608, camera, map, ENEMY_TYPE::SLIME, 40));
+        enemies.push_back(Enemy(144, 608, camera, map, ENEMY_TYPE::BAT, 8));
+        enemies.push_back(Enemy(208, 656, camera, map, ENEMY_TYPE::BAT, 8));
 
         // player
         player.spawn(spawn_location, camera, map, enemies);
@@ -107,6 +116,7 @@ namespace too
             {
                 if(player.pos().x() < 944+16 && player.pos().x() > 944-16){
                     if(player.pos().y() < 736+16 && player.pos().y() > 736-16){
+                        map_bg.reset();
                         return Scene::LIMBO1_LIMBO2;
                     }
                 }

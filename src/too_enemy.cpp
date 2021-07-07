@@ -11,6 +11,7 @@
 #include "bn_sprite_items_bat_sprite.h"
 #include "bn_sprite_items_slime_sprite.h"
 #include "bn_affine_bg_map_ptr.h"
+#include "bn_sound_items.h"
 
 //#include <bn_affine_bg_map_cell.h>
 //#include "bn_fixed_point.h"
@@ -114,10 +115,14 @@ namespace too
     bool Enemy::_take_damage(int damage){
         if(!_invulnerable)
         {
+            if(_type == ENEMY_TYPE::SLIME){
+                bn::sound_items::slime_take_damage.play();
+            }
             _hp -= damage;
             _invulnerable = true;
             if(_hp <= 0){
                 if(_type == ENEMY_TYPE::SLIME){
+                    bn::sound_items::slime_die.play();
                     _action = bn::create_sprite_animate_action_once(
                         _sprite.value(), 5, bn::sprite_items::slime_sprite.tiles_item(), 2,3,3,3);
                 }

@@ -41,11 +41,11 @@
 
 
 #include "bn_sprite_text_generator.h"
-#include "variable_8x8_sprite_font.h"
+#include "variable_8x16_sprite_font.h"
 
 namespace too
 {
-    Scene Limbo2::execute(Player player, bn::fixed_point spawn_location)
+    Scene Limbo2::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Initialize Camera
         bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
@@ -54,7 +54,7 @@ namespace too
         bn::music_items::valley.play();
 
         //Text Generator
-        bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
+        bn::sprite_text_generator text_generator(variable_8x16_sprite_font);
         
         //Tilemap and Backgrounds
         bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
@@ -71,9 +71,9 @@ namespace too
         enemies.push_back(Enemy(432, 706, camera, map, ENEMY_TYPE::SLIME, 2));
         enemies.push_back(Enemy(672, 592, camera, map, ENEMY_TYPE::BAT, 1));
         enemies.push_back(Enemy(384, 448, camera, map, ENEMY_TYPE::BAT, 1));
-        //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
-        //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
-        //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
+        enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
+        enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
+        enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
 
         //Portals
         StorySave portal = StorySave(bn::fixed_point(960, 194), STORY_TYPE::BEGINNING, camera, text_generator);

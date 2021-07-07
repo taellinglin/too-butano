@@ -10,7 +10,7 @@ namespace too
     class Limbo1
     {       
         public:
-            Scene execute(Player player, bn::fixed_point spawn);
+            Scene execute(Player& player, bn::fixed_point spawn);
     };
 }
 

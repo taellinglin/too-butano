@@ -67,6 +67,12 @@ audio/secret_room.it
 audio/select.wav
 651968
 1599242131.08
+audio/slime_die.wav
+26800
+1625618562.38
+audio/slime_take_damage.wav
+22736
+1625618513.37
 audio/spin.wav
 651506
 1599244267.66
@@ -88,6 +94,9 @@ audio/sudden_attack.it
 audio/summer_stage_1.it
 1744969
 1622316788.32
+audio/type.wav
+22402
+1625618471.19
 audio/valley.it
 530105
 1598810056.12

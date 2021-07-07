@@ -44,7 +44,7 @@ namespace too
     
     MainGame::MainGame(bn::sprite_text_generator& text_generator)
     {
-        too::Scene scene = too::Scene::LIMBO3_SUMMER1;
+        too::Scene scene = too::Scene::LIMBO1;
         too::Loading loading = too::Loading();
         bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
         too::Player player = too::Player(cat_sprite, text_generator);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="4">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="19">
  <tileset firstgid="1" name="Limbo_Tileset" tilewidth="16" tileheight="16" tilecount="338" columns="26">
-  <image source="C:/Users/kazun/Downloads/starry_night_by_quintino_pixels/Tileset.png" trans="ff00ff" width="416" height="208"/>
+  <image source="../../../../../../Users/kazun/Downloads/starry_night_by_quintino_pixels/Tileset.png" trans="ff00ff" width="416" height="208"/>
  </tileset>
  <layer id="1" name="Tiles" width="64" height="64">
   <data encoding="csv">
@@ -76,6 +76,48 @@
    <point/>
   </object>
   <object id="3" name="to_Limbo2" x="944" y="720">
+   <point/>
+  </object>
+  <object id="5" x="352" y="224">
+   <point/>
+  </object>
+  <object id="6" x="608" y="224">
+   <point/>
+  </object>
+  <object id="7" x="832" y="208">
+   <point/>
+  </object>
+  <object id="8" x="656" y="352">
+   <point/>
+  </object>
+  <object id="9" x="352" y="352">
+   <point/>
+  </object>
+  <object id="10" x="176" y="368">
+   <point/>
+  </object>
+  <object id="11" x="352" y="480">
+   <point/>
+  </object>
+  <object id="12" x="592" y="480">
+   <point/>
+  </object>
+  <object id="13" x="832" y="512">
+   <point/>
+  </object>
+  <object id="14" x="592" y="608">
+   <point/>
+  </object>
+  <object id="15" x="352" y="608">
+   <point/>
+  </object>
+  <object id="16" x="144" y="608">
+   <point/>
+  </object>
+  <object id="17" x="144" y="608">
+   <point/>
+  </object>
+  <object id="18" x="208" y="656">
    <point/>
   </object>
  </objectgroup>

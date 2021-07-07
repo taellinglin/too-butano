@@ -20,7 +20,6 @@ namespace too
 
     Healthbar::Healthbar(bn::sprite_text_generator& text_generator)
     {
-        bn::optional <bn::sprite_ptr> button; 
         button = bn::sprite_items::button_status.create_sprite_optional(x, y);
         button->set_bg_priority(0);
     

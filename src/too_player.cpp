@@ -88,16 +88,14 @@ namespace too
     constexpr const bn::fixed acc = 0.4;
     constexpr const bn::fixed max_dy = 6;
     constexpr const bn::fixed friction = 0.85;
-
     Player::Player(bn::sprite_ptr sprite, bn::sprite_text_generator& text_generator ) :
         _sprite(sprite),
         _camera(bn::camera_ptr::create(0,0)),
-        _map(bn::affine_bg_items::level_palettes.create_bg(0,0)),
         _text_bg1(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _text_bg2(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _healthbar(too::Healthbar(text_generator))
     {
-        _map.set_visible(false); // why can't I leave something uninitialised
+        //_map.set_visible(false); // why can't I leave something uninitialised
         _sprite.put_above();
         _text_bg1.set_scale(2);
         _text_bg1.set_bg_priority(0);
@@ -110,7 +108,6 @@ namespace too
     void Player::spawn(bn::fixed_point pos, bn::camera_ptr camera, bn::affine_bg_ptr map, bn::vector<Enemy,32>& enemies){
         _pos = pos;
         _camera = camera;
-        _map = map;
         _map_cells = map.map().cells_ref().value();
         _enemies = &enemies;
         map.set_visible(true);

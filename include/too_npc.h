@@ -41,12 +41,15 @@ namespace too
             int _currentLine = 0;
             int _currentChar = 0;
             bn::string_view _currentChars = "";
-            
+
+
+            //Frog Dialog Text Lines
             bn::string_view _frog_lines[3] = {
                 "Ribbit...",
                 ". . .",
                 "You remind me of myself..."
             };
+
 
         public:
             NPC(bn::fixed_point pos, bn::camera_ptr& camera, NPC_TYPE type, bn::sprite_text_generator& text_generator);

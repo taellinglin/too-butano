@@ -67,7 +67,9 @@ too_enemy.o: C:/butano/homebrew/too-butano/src/too_enemy.cpp \
  C:/butano/butano/include/bn_color.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_slime_sprite.h \
  C:/butano/butano/include/bn_affine_bg_map_ptr.h \
- C:/butano/butano/include/bn_affine_bg_map_cell.h
+ C:/butano/butano/include/bn_affine_bg_map_cell.h \
+ C:/butano/homebrew/too-butano/build/bn_sound_items.h \
+ C:/butano/butano/include/bn_sound_item.h
 C:/butano/homebrew/too-butano/include/too_enemy.h:
 C:/butano/butano/include/bn_fixed_point.h:
 C:/butano/butano/include/bn_fixed.h:
@@ -142,3 +144,5 @@ C:/butano/butano/include/bn_color.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_slime_sprite.h:
 C:/butano/butano/include/bn_affine_bg_map_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
+C:/butano/homebrew/too-butano/build/bn_sound_items.h:
+C:/butano/butano/include/bn_sound_item.h:
