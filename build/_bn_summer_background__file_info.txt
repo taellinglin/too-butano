@@ -1,0 +1,3 @@
+graphics/summer_background.bmp
+32886
+1625624819.27

@@ -1,0 +1,3 @@
+graphics/town1_foreground.bmp
+524390
+1625692261.3

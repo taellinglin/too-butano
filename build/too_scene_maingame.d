@@ -99,6 +99,7 @@ too_scene_maingame.o: \
  C:/butano/homebrew/too-butano/include/too_scene_loading.h \
  C:/butano/homebrew/too-butano/include/too_scene_summer1.h \
  C:/butano/homebrew/too-butano/include/too_scene_summer2.h \
+ C:/butano/homebrew/too-butano/include/too_scene_town1.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/butano/include/bn_regular_bg_ptr.h \
  C:/butano/butano/include/bn_regular_bg_actions.h \
@@ -218,6 +219,7 @@ C:/butano/homebrew/too-butano/include/too_scene_limbo3.h:
 C:/butano/homebrew/too-butano/include/too_scene_loading.h:
 C:/butano/homebrew/too-butano/include/too_scene_summer1.h:
 C:/butano/homebrew/too-butano/include/too_scene_summer2.h:
+C:/butano/homebrew/too-butano/include/too_scene_town1.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/butano/include/bn_regular_bg_ptr.h:
 C:/butano/butano/include/bn_regular_bg_actions.h:

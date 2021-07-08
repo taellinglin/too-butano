@@ -20,6 +20,8 @@ namespace too
         SUMMER1_LIMBO3,
         SUMMER1_SUMMER2,
         SUMMER2_SUMMER1,
+        TOWN1_LIMBO3,
+        LIMBO3_TOWN1,
         LOADING
     };
 }

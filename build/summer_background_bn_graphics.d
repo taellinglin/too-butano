@@ -1,0 +1,1 @@
+summer_background_bn_graphics.o: summer_background_bn_graphics.s

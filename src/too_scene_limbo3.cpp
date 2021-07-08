@@ -72,6 +72,7 @@ namespace too
         //Portals/savepoints
         StorySave first_plaque = StorySave(bn::fixed_point(208, 224), STORY_TYPE::BEGINNING, camera, text_generator);
         StorySave portal_summer1 = StorySave(bn::fixed_point(896, 928), STORY_TYPE::BEGINNING, camera, text_generator);
+        StorySave town1_limbo3 = StorySave(bn::fixed_point(816, 368), STORY_TYPE::BEGINNING, camera, text_generator);
 
         //Enemies
         bn::vector<Enemy, 32> enemies = {};
@@ -97,6 +98,7 @@ namespace too
             //Update Portals
             first_plaque.update();
             portal_summer1.update();
+            town1_limbo3.update();
             if(bn::keypad::up_pressed())
             {
                 if(player.pos().x() < 208+16 && player.pos().x() > 208-16){
@@ -104,9 +106,14 @@ namespace too
                         return Scene::LIMBO3_LIMBO2;
                     }
                 }
-                if(player.pos().x() < 896+16 && player.pos().x() > 896-16){
+                else if(player.pos().x() < 896+16 && player.pos().x() > 896-16){
                     if(player.pos().y() < 928+16 && player.pos().y() > 928-16){
                         return Scene::LIMBO3_SUMMER1;
+                    }
+                }
+                else if(player.pos().x() < 816+16 && player.pos().x() > 816-16){
+                    if(player.pos().y() < 368+16 && player.pos().y() > 368-16){
+                        return Scene::LIMBO3_TOWN1;
                     }
                 }
 

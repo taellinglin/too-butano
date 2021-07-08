@@ -17,6 +17,7 @@
 #include "too_scene_loading.h"
 #include "too_scene_summer1.h"
 #include "too_scene_summer2.h"
+#include "too_scene_town1.h"
 
 #include "too_player.h"
 #include "bn_sprite_items_cat_sprite.h"
@@ -44,7 +45,7 @@ namespace too
     
     MainGame::MainGame(bn::sprite_text_generator& text_generator)
     {
-        too::Scene scene = too::Scene::LIMBO1;
+        too::Scene scene = too::Scene::TOWN1_LIMBO3;
         too::Loading loading = too::Loading();
         bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
         too::Player player = too::Player(cat_sprite, text_generator);
@@ -106,6 +107,16 @@ namespace too
             {
                 too::Summer1 to_summer1_from_summer2 = too::Summer1();
                 scene = to_summer1_from_summer2.execute(player, bn::fixed_point(600, 288));
+            }
+            else if(scene == too::Scene::TOWN1_LIMBO3)
+            {
+                too::Town1 to_town1_from_limbo3 = too::Town1();
+                scene = to_town1_from_limbo3.execute(player, bn::fixed_point(96, 976));
+            }
+             else if(scene == too::Scene::LIMBO3_TOWN1)
+            {
+                too::Limbo3 to_limbo3_from_town1 = too::Limbo3();
+                scene = to_limbo3_from_town1.execute(player, bn::fixed_point(816, 368));
             }
             cat_sprite.set_visible(false);
             loading.execute();

@@ -96,7 +96,7 @@ too_scene_summer1.o: \
  C:/butano/homebrew/too-butano/include/too_story_save.h \
  C:/butano/homebrew/too-butano/include/too_story_type.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_debug.h \
- C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h \
+ C:/butano/homebrew/too-butano/build/bn_regular_bg_items_summer_background.h \
  C:/butano/butano/include/bn_regular_bg_item.h \
  C:/butano/butano/include/bn_bg_palette_item.h \
  C:/butano/butano/include/bn_regular_bg_map_item.h \
@@ -215,7 +215,7 @@ C:/butano/homebrew/too-butano/include/too_data.h:
 C:/butano/homebrew/too-butano/include/too_story_save.h:
 C:/butano/homebrew/too-butano/include/too_story_type.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_debug.h:
-C:/butano/homebrew/too-butano/build/bn_regular_bg_items_background.h:
+C:/butano/homebrew/too-butano/build/bn_regular_bg_items_summer_background.h:
 C:/butano/butano/include/bn_regular_bg_item.h:
 C:/butano/butano/include/bn_bg_palette_item.h:
 C:/butano/butano/include/bn_regular_bg_map_item.h:

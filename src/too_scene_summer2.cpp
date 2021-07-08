@@ -39,7 +39,7 @@
 
 
 //Asset Item Includes (Backgrounds, Tilemaps, Sprites, Palettes, etc)
-#include "bn_regular_bg_items_background.h"
+#include "bn_regular_bg_items_summer_background.h"
 #include "bn_affine_bg_items_summer2.h"
 
 //Music Items and Actions
@@ -62,10 +62,10 @@ namespace too
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
 
         //Play BGM
-        bn::music_items::mountains.play();
+        bn::music_items::mountains.play(0.3);
         
         // Tilemaps and Backgrounds
-        bn::regular_bg_ptr map_bg = bn::regular_bg_items::background.create_bg(0, 0);
+        bn::regular_bg_ptr map_bg = bn::regular_bg_items::summer_background.create_bg(0, 0);
         bn::affine_bg_ptr map = bn::affine_bg_items::summer2.create_bg(512, 512);
         
 
