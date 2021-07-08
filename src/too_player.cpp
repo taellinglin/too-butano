@@ -90,7 +90,7 @@ namespace too
     constexpr const bn::fixed friction = 0.85;
     Player::Player(bn::sprite_ptr sprite, bn::sprite_text_generator& text_generator ) :
         _sprite(sprite),
-        _camera(bn::camera_ptr::create(0,0)),
+        //_camera(bn::camera_ptr::create_optional(0,0)),
         _text_bg1(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _text_bg2(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _healthbar(too::Healthbar(text_generator))
@@ -100,12 +100,14 @@ namespace too
         _text_bg1.set_scale(2);
         _text_bg1.set_bg_priority(0);
         _text_bg1.put_above();
+        _text_bg1.set_visible(false);
+        _text_bg2.set_visible(false);
         _text_bg2.set_scale(2);
         _text_bg2.set_bg_priority(0);
         _text_bg2.put_above();
     }
 
-    void Player::spawn(bn::fixed_point pos, bn::camera_ptr camera, bn::affine_bg_ptr map, bn::vector<Enemy,32>& enemies){
+    void Player::spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::affine_bg_ptr map, bn::vector<Enemy,32>& enemies){
         _pos = pos;
         _camera = camera;
         _map_cells = map.map().cells_ref().value();
@@ -347,27 +349,29 @@ namespace too
     }
 
     void Player::_update_camera(int lerp){
-        // update camera
-        if(_pos.x() < 122+30)
-        {
-            _camera.set_x(_camera.x()+ (122-_camera.x()) /lerp);
-        } else if (_pos.x() > 922-30){
-            _camera.set_x(_camera.x()+ (922-20-_camera.x()) /lerp);
-        }
-        else
-        {
-            if(_sprite.horizontal_flip()){
-                _camera.set_x(_camera.x()+ (_pos.x() - 30-_camera.x() + _dx*8) /lerp);
-            } else {
-                _camera.set_x(_camera.x()+ (_pos.x() +30 -_camera.x() + _dx*8) /lerp);
-            }            
-        }
+               // update camera
+            if(_pos.x() < 122+30)
+            {
+                _camera->set_x(_camera->x()+ (122-_camera->x()) /lerp);
+            } else if(_pos.x() > 922-30){
+                _camera->set_x(_camera->x()+ (922-20-_camera->x()) /lerp);
+            }
+            else
+            {
+                if(_sprite.horizontal_flip()){
+                    _camera->set_x(_camera->x()+ (_pos.x() - 30-_camera->x() + _dx*8) /lerp);
+                } else {
+                    _camera->set_x(_camera->x()+ (_pos.x() +30 -_camera->x() + _dx*8) /lerp);
+                }            
+            }
 
-        if(_pos.y() < 942){
-            _camera.set_y(_camera.y()+ (_pos.y()-10-_camera.y()) /lerp);
-        } else {
-            _camera.set_y(_camera.y()+(942-_camera.y()) /lerp);
-        }
+            if(_pos.y() > 942){
+                _camera->set_y(_camera->y()+(942-_camera->y()) /lerp);
+            } else if(_pos.y() < 90){
+                _camera->set_y(_camera->y()+(90-_camera->y()) /lerp);
+            } else {
+                _camera->set_y(_camera->y()+ (_pos.y()-10-_camera->y()) /lerp);
+            }
     }
 
     void Player::update_position(bn::affine_bg_ptr map, too::Level level, bn::sprite_text_generator& text_generator){
@@ -413,8 +417,8 @@ namespace too
         }
         
         if(_listening){
-            _text_bg1.set_position(_camera.x()+64+8, _camera.y() + 40+24);
-            _text_bg2.set_position(_camera.x()-64+8, _camera.y() + 40+24);
+            _text_bg1.set_position(_camera->x()+64+8, _camera->y() + 40+24);
+            _text_bg2.set_position(_camera->x()-64+8, _camera->y() + 40+24);
         }
 
         // jump

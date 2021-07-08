@@ -27,7 +27,7 @@ namespace too
             bn::fixed _dx;
             bn::fixed _dy;
             bn::fixed_point _pos;
-            bn::camera_ptr _camera;
+            bn::optional<bn::camera_ptr>_camera;
             bn::optional <bn::affine_bg_ptr> _map;
             bn::sprite_ptr _text_bg1;
             bn::sprite_ptr _text_bg2;
@@ -84,7 +84,7 @@ namespace too
             void apply_animation_state();
             void update_position(bn::affine_bg_ptr map, too::Level level, bn::sprite_text_generator& text_generator);
 
-            void spawn(bn::fixed_point pos, bn::camera_ptr camera, bn::affine_bg_ptr map, bn::vector<Enemy,32>& enemies);
+            void spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::affine_bg_ptr map, bn::vector<Enemy,32>& enemies);
             void reset();
 
             bool is_right();

@@ -15,7 +15,7 @@
 namespace too
 {
 
-    NPC::NPC(bn::fixed_point pos, bn::camera_ptr& camera, NPC_TYPE type, bn::sprite_text_generator& text_generator) :
+    NPC::NPC(bn::fixed_point pos, bn::optional <bn::camera_ptr>& camera, NPC_TYPE type, bn::sprite_text_generator& text_generator) :
         _pos(pos), _camera(camera), _type(type), _text_generator(text_generator)
     {
         _text_generator.set_bg_priority(0);
@@ -27,7 +27,7 @@ namespace too
                             _sprite.value(), 40, bn::sprite_items::frog_sprite.tiles_item(), 0,1);
             _lines = bn::span(_frog_lines);
         }
-        _sprite.value().set_camera(_camera);
+        _sprite.value().set_camera(camera);
         _sprite.value().set_bg_priority(1);
         _sprite.value().set_z_order(2);
     }

@@ -23,7 +23,7 @@ namespace too
         private:
             STORY_TYPE _type; 
             bn::fixed_point _pos;
-            bn::camera_ptr& _camera;
+            bn::optional<bn::camera_ptr> _camera;
             bn::optional<bn::sprite_ptr> _sprite;
             bn::optional<bn::sprite_animate_action<3>> _action;
             bool _is_active = false;
@@ -34,7 +34,7 @@ namespace too
             bn::sprite_text_generator& _text_generator;
 
         public:
-            StorySave(bn::fixed_point pos, STORY_TYPE type, bn::camera_ptr& camera, bn::sprite_text_generator& text_generator);
+            StorySave(bn::fixed_point pos, STORY_TYPE type, bn::optional<bn::camera_ptr>& camera, bn::sprite_text_generator& text_generator);
             void update();
             // bool check_trigger(bn::fixed_point player_pos);
             // bool is_active();

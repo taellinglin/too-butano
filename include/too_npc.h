@@ -23,7 +23,7 @@ namespace too
         private:
             NPC_TYPE _type;
             bn::fixed_point _pos;
-            bn::camera_ptr& _camera;
+            bn::optional<bn::camera_ptr> _camera;
             bn::optional<bn::sprite_ptr> _sprite;
             bn::optional<bn::sprite_animate_action<2>> _action;
             bool _is_talking = false;
@@ -52,7 +52,7 @@ namespace too
 
 
         public:
-            NPC(bn::fixed_point pos, bn::camera_ptr& camera, NPC_TYPE type, bn::sprite_text_generator& text_generator);
+            NPC(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, NPC_TYPE type, bn::sprite_text_generator& text_generator);
             void update();
             bn::fixed_point pos();
             bool check_trigger(bn::fixed_point player_pos);

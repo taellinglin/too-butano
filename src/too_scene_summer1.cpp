@@ -39,7 +39,6 @@
 #include "bn_sprite_items_cat_sprite.h"
 #include "bn_regular_bg_items_summer_background.h"
 #include "bn_affine_bg_items_summer1.h"
-//#include "bn_bg_palette_items_summer1.h"
 #include "bn_music_items.h"
 #include "bn_music_actions.h"
 
@@ -53,7 +52,7 @@ namespace too
     Scene Summer1::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Camera
-        bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
+        bn::optional<bn::camera_ptr> camera = bn::camera_ptr::create_optional(spawn_location.x(), spawn_location.y());
 
         //Text Generator
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
@@ -95,7 +94,7 @@ namespace too
         {
             //Enemies
             for(Enemy& enemy : enemies){
-                if(bn::abs(enemy.pos().x() - camera.x()) < 240 && bn::abs(enemy.pos().y() - camera.y()) < 160){
+                if(bn::abs(enemy.pos().x() - camera->x()) < 240 && bn::abs(enemy.pos().y() - camera->y()) < 160){
                     enemy.update();
                 } else {
                     enemy.set_visible(false);

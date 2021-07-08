@@ -15,7 +15,7 @@
 namespace too
 {
 
-    StorySave::StorySave(bn::fixed_point pos, STORY_TYPE type, bn::camera_ptr& camera, bn::sprite_text_generator& text_generator):
+    StorySave::StorySave(bn::fixed_point pos, STORY_TYPE type, bn::optional<bn::camera_ptr>& camera, bn::sprite_text_generator& text_generator):
         _pos(pos), _type(type), _camera(camera), _text_generator(text_generator)
     {
         _text_generator.set_bg_priority(0);

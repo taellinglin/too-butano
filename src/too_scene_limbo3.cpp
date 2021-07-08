@@ -47,7 +47,8 @@ namespace too
     Scene Limbo3::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Initialize Camera
-        bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
+        bn::optional<bn::camera_ptr> camera;
+        camera = bn::camera_ptr::create_optional(spawn_location.x(), spawn_location.y());
 
         //Play BGM
         bn::music_items::limbo.play(0.25);
@@ -56,14 +57,14 @@ namespace too
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
     
         //Tilemaps and Backgrounds
-        bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
+        bn::optional <bn::regular_bg_ptr> background;
+        background = bn::regular_bg_items::background.create_bg_optional(0, 0);
         bn::affine_bg_ptr map = bn::affine_bg_items::limbo3.create_bg(512, 512);
-        background.set_priority(3);
+        background->set_priority(3);
         map.set_priority(2);
 
         //Process Tiles
         Level level = Level(map);
-        //too::Level level = too::Level(map);
         map.set_camera(camera);
 
         //NPCs
@@ -88,7 +89,7 @@ namespace too
         {
             //Update Enemeies
             for(Enemy& enemy : enemies){
-                if(bn::abs(enemy.pos().x() - camera.x()) < 240 && bn::abs(enemy.pos().y() - camera.y()) < 160){
+                if(bn::abs(enemy.pos().x() - camera->x()) < 240 && bn::abs(enemy.pos().y() - camera->y()) < 160){
                     enemy.update();
                 } else {
                     enemy.set_visible(false);
@@ -113,7 +114,7 @@ namespace too
                 }
                 else if(player.pos().x() < 816+16 && player.pos().x() > 816-16){
                     if(player.pos().y() < 368+16 && player.pos().y() > 368-16){
-                        return Scene::LIMBO3_TOWN1;
+                        return Scene::TOWN1_LIMBO3;
                     }
                 }
 

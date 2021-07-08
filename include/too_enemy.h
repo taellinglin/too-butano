@@ -25,7 +25,7 @@ namespace too
             bn::fixed_point _pos;
             bn::fixed _dy = 0;
             bn::fixed _dx = 0;
-            bn::camera_ptr _camera;
+            bn::optional<bn::camera_ptr> _camera;
             ENEMY_TYPE _type;
             int _dir;
             int _hp;
@@ -47,7 +47,7 @@ namespace too
             bool _will_fall();
 
         public:
-            Enemy(int x, int y, bn::camera_ptr camera, bn::affine_bg_ptr map, ENEMY_TYPE type, int hp);
+            Enemy(int x, int y, bn::optional<bn::camera_ptr>& camera, bn::affine_bg_ptr map, ENEMY_TYPE type, int hp);
             void update();
             bn::fixed_point pos();
             bool is_hit(Hitbox attack);

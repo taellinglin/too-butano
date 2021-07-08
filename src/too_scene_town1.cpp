@@ -57,7 +57,8 @@ namespace too
     Scene Town1::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Camera
-        bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
+        bn::optional <bn::camera_ptr> camera; 
+        camera = bn::camera_ptr::create_optional(spawn_location.x(), spawn_location.y());
 
         //Text Generator
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
@@ -99,7 +100,7 @@ namespace too
         {
             //Enemies
             for(Enemy& enemy : enemies){
-                if(bn::abs(enemy.pos().x() - camera.x()) < 240 && bn::abs(enemy.pos().y() - camera.y()) < 160){
+                if(bn::abs(enemy.pos().x() - camera->x()) < 240 && bn::abs(enemy.pos().y() - camera->y()) < 160){
                     enemy.update();
                 } else {
                     enemy.set_visible(false);

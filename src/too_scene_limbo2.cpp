@@ -48,7 +48,7 @@ namespace too
     Scene Limbo2::execute(Player& player, bn::fixed_point spawn_location)
     {
         //Initialize Camera
-        bn::camera_ptr camera = bn::camera_ptr::create(spawn_location.x(), spawn_location.y());
+        bn::optional<bn::camera_ptr> camera = bn::camera_ptr::create_optional(spawn_location.x(), spawn_location.y());
 
         //Play BGM
         bn::music_items::valley.play();
@@ -106,7 +106,7 @@ namespace too
             
             // Check for Enemies and Update
             for(Enemy& enemy : enemies){
-                if(bn::abs(enemy.pos().x() - camera.x()) < 240 && bn::abs(enemy.pos().y() - camera.y()) < 160){
+                if(bn::abs(enemy.pos().x() - camera->x()) < 240 && bn::abs(enemy.pos().y() - camera->y()) < 160){
                     enemy.update();
                 } else {
                     enemy.set_visible(false);
