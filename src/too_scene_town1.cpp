@@ -64,7 +64,7 @@ namespace too
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
 
         //Play BGM
-        bn::music_items::metronome_march.play(0.6);
+        bn::music_items::castle.play(0.6);
         
         // Tilemaps and Backgrounds
         bn::regular_bg_ptr map_bg = bn::regular_bg_items::town_background.create_bg(512, 512);

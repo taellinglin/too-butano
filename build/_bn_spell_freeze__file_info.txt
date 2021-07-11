@@ -1,0 +1,3 @@
+graphics/spell_freeze.bmp
+630
+1626023802.66

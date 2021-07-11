@@ -20,7 +20,8 @@ namespace too
     {
         private:
             bn::optional<bn::sprite_ptr> button;
-            bn::vector<bn::sprite_ptr, 32> _text_sprites;
+            bn::vector<bn::sprite_ptr, 32> _hud_sprites;
+            //bn::sprite_text_generator& _text_generator;
             int _hp;
             bool _is_visible;
             

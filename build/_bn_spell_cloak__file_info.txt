@@ -1,0 +1,3 @@
+graphics/spell_cloak.bmp
+630
+1626023951.51

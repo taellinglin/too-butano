@@ -1,0 +1,1 @@
+spell_quake_bn_graphics.o: spell_quake_bn_graphics.s

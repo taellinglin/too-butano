@@ -69,6 +69,7 @@ too_scene_limbo3.o: \
  C:/butano/butano/include/bn_unordered_map.h \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
+ C:/butano/homebrew/too-butano/include/too_spellbar.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h \
  C:/butano/butano/include/bn_sprite_item.h \
  C:/butano/butano/include/bn_core.h C:/butano/butano/include/bn_keypad.h \
@@ -182,6 +183,7 @@ C:/butano/butano/include/bn_config_sprite_text.h:
 C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
+C:/butano/homebrew/too-butano/include/too_spellbar.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:
 C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/butano/include/bn_core.h:

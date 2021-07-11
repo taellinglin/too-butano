@@ -10,7 +10,7 @@ namespace too
     class MainMenu
     {       
         public:
-            MainMenu(bn::sprite_text_generator& text_generator);
+            MainMenu(int cursor_index, bn::sprite_text_generator& text_generator);
     };
 }
 

@@ -16,13 +16,11 @@
 #include "bn_affine_bg_map_ptr.h"
 #include "bn_string_view.h"
 #include "bn_vector.h"
-#include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
 #include "bn_camera_actions.h"
 #include "bn_sprite_animate_actions.h"
-#include "bn_string_view.h"
-#include "bn_vector.h"
 #include "bn_log.h"
+//#include <bn_format.h>
 
 //Scenes
 #include "too_scene_mainmenu.h"
@@ -44,6 +42,7 @@
 #include "too_hitbox.h"
 #include "too_npc.h"
 #include "too_npc_type.h"
+#include "too_spellbar.h"
 
 //Scenes
 #include "too_scene_limbo1.h"
@@ -70,7 +69,7 @@
             }
              bn::core::update();
             {
-                too::MainMenu scene = too::MainMenu(text_generator);
+                too::MainMenu scene = too::MainMenu(0, text_generator);
             }
              bn::core::update();
             {

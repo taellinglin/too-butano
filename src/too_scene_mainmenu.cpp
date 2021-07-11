@@ -16,6 +16,7 @@
 #include "info.h"
 #include "bn_regular_bg_ptr.h"
 #include "bn_regular_bg_actions.h"
+#include "bn_sprite_ptr.h"
 #include "bn_regular_bg_builder.h"
 #include "bn_regular_bg_attributes.h"
 #include "bn_regular_bg_position_hbe_ptr.h"
@@ -31,12 +32,16 @@
 namespace too 
 {
 
-        bool main_menu_mode_enabled = false; //Is menu mode enabled?
-        int cursor_index =0; // The index that the cursor is at
-        int num_options = 4; // How many options there are
-
-        MainMenu::MainMenu(bn::sprite_text_generator& text_generator )
+        bool main_menu_mode_enabled = true; //Is menu mode enabled?
+        int cursor_index =1; // The index that the cursor is at
+        int num_options = 2; // How many options there are
+        int selected_option = 0;
+        int cursor_x_offset = -72;
+        int cursor_y_offset = -22;
+        MainMenu::MainMenu(int cursor_index, bn::sprite_text_generator& text_generator )
         {
+            bn::optional<bn::sprite_ptr> cursor_icon;
+            cursor_icon = bn::sprite_items::cursor_right.create_sprite_optional(cursor_x_offset,cursor_y_offset);
             //BG0 BG1 BG2 render the background, midground, and foreground on 3 layers.
             bn::regular_bg_ptr background_bg = bn::regular_bg_items::background.create_bg(64,32);
             bn::regular_bg_ptr midground_bg = bn::regular_bg_items::midground.create_bg(64,64);
@@ -48,11 +53,10 @@ namespace too
                 "",
                 "Main Menu",
                 "",
-                "Continue",
-                "New Game",
-                "Options",
-                "Credits",
-                "",
+                "Continue", // 01
+                "New Game", //02
+                "Options", //03
+                "Credits", //04
                 "",
             };
 
@@ -65,6 +69,27 @@ namespace too
 
             while(! bn::keypad::a_pressed())
             {
+                if(bn::keypad::up_pressed()){
+                    if(cursor_index > 0){
+                        bn::sound_items::cursor.play();
+                        cursor_index--;
+                    }
+                    else {
+                        bn::sound_items::disabled.play();
+                    }
+                }
+                if(bn::keypad::down_pressed()){
+                    if(cursor_index <= num_options){
+                        bn::sound_items::cursor.play();
+                        cursor_index++;
+                    }
+                    else {
+                        bn::sound_items::disabled.play();
+                    }
+                }
+                cursor_icon->set_y(cursor_y_offset+cursor_index*15);
+                selected_option = cursor_index;
+
                 //Scroll the Backgrounds
                 foreground_bg.set_x(foreground_bg.x() - 1);
                 midground_bg.set_x(midground_bg.x() - 0.5);

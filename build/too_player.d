@@ -78,6 +78,7 @@ too_player.o: C:/butano/homebrew/too-butano/src/too_player.cpp \
  C:/butano/butano/include/bn_unordered_map.h \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
+ C:/butano/homebrew/too-butano/include/too_spellbar.h \
  C:/butano/homebrew/too-butano/include/too_elevator.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_extras.h \
@@ -176,6 +177,7 @@ C:/butano/butano/include/bn_config_sprite_text.h:
 C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
+C:/butano/homebrew/too-butano/include/too_spellbar.h:
 C:/butano/homebrew/too-butano/include/too_elevator.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_extras.h:

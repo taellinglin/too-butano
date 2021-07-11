@@ -1,0 +1,1 @@
+spell_freeze_bn_graphics.o: spell_freeze_bn_graphics.s

@@ -14,6 +14,7 @@
 #include "too_enemy.h"
 #include "too_data.h"
 #include "too_healthbar.h"
+#include "too_spellbar.h"
 
 #include "bn_sprite_items_cat_sprite.h"
 #include "bn_sprite_text_generator.h"
@@ -32,7 +33,9 @@ namespace too
             bn::sprite_ptr _text_bg1;
             bn::sprite_ptr _text_bg2;
             too::Healthbar _healthbar;
+            too::Spellbar _spellbar;
             bool _can_wallrun = false;
+            int _spell_selected= 0;
 
             //used for state management
             bool _jumping = false;

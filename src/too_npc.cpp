@@ -2,6 +2,7 @@
 #include "too_npc_type.h"
 
 #include "bn_optional.h"
+#include "bn_camera_ptr.h"
 #include "bn_math.h"
 #include "bn_log.h"
 #include "bn_display.h"
@@ -15,10 +16,10 @@
 namespace too
 {
 
-    NPC::NPC(bn::fixed_point pos, bn::optional <bn::camera_ptr>& camera, NPC_TYPE type, bn::sprite_text_generator& text_generator) :
-        _pos(pos), _camera(camera), _type(type), _text_generator(text_generator)
+    NPC::NPC(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, NPC_TYPE type, bn::sprite_text_generator& text_generator) :
+        _pos(pos), _type(type), _text_generator(text_generator)
     {
-        _text_generator.set_bg_priority(0);
+        //_text_generator.set_bg_priority(0);
         
 
         if(_type == NPC_TYPE::FROG){
@@ -27,13 +28,13 @@ namespace too
                             _sprite.value(), 40, bn::sprite_items::frog_sprite.tiles_item(), 0,1);
             _lines = bn::span(_frog_lines);
         }
-        _sprite.value().set_camera(camera);
-        _sprite.value().set_bg_priority(1);
-        _sprite.value().set_z_order(2);
+        _sprite->set_camera(camera);
+        _sprite->set_bg_priority(1);
+        _sprite->set_z_order(2);
     }
     
     void NPC::update(){
-        _action.value().update();
+        _action->update();
         if(_is_talking){
             if(_currentChar == _lines.at(_currentLine).size() * 2){
                 if(bn::keypad::up_pressed() || bn::keypad::a_pressed())

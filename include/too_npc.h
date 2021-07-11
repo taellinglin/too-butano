@@ -23,7 +23,7 @@ namespace too
         private:
             NPC_TYPE _type;
             bn::fixed_point _pos;
-            bn::optional<bn::camera_ptr> _camera;
+            //bn::optional<bn::camera_ptr>& _camera;
             bn::optional<bn::sprite_ptr> _sprite;
             bn::optional<bn::sprite_animate_action<2>> _action;
             bool _is_talking = false;

@@ -1,0 +1,3 @@
+graphics/spell_quake.json
+44
+1626024234.65

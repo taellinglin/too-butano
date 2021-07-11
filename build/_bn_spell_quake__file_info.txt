@@ -1,0 +1,3 @@
+graphics/spell_quake.bmp
+630
+1626023677.74

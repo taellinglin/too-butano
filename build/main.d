@@ -97,6 +97,7 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/homebrew/too-butano/include/too_enemy_type.h \
  C:/butano/homebrew/too-butano/include/too_data.h \
  C:/butano/homebrew/too-butano/include/too_healthbar.h \
+ C:/butano/homebrew/too-butano/include/too_spellbar.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h \
  C:/butano/butano/include/bn_sprite_item.h \
  C:/butano/homebrew/too-butano/include/too_scene_maingame.h \
@@ -119,6 +120,7 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/homebrew/too-butano/include/too_npc.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
+ C:/butano/homebrew/too-butano/include/too_spellbar.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo1.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo2.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo3.h \
@@ -227,6 +229,7 @@ C:/butano/butano/include/bn_string.h:
 C:/butano/homebrew/too-butano/include/too_enemy_type.h:
 C:/butano/homebrew/too-butano/include/too_data.h:
 C:/butano/homebrew/too-butano/include/too_healthbar.h:
+C:/butano/homebrew/too-butano/include/too_spellbar.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:
 C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/homebrew/too-butano/include/too_scene_maingame.h:
@@ -249,6 +252,7 @@ C:/butano/homebrew/too-butano/include/too_hitbox.h:
 C:/butano/homebrew/too-butano/include/too_npc.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
+C:/butano/homebrew/too-butano/include/too_spellbar.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo1.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo2.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo3.h:

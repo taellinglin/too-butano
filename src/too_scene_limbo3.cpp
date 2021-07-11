@@ -55,6 +55,7 @@ namespace too
 
         //Text
         bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
+        
     
         //Tilemaps and Backgrounds
         bn::optional <bn::regular_bg_ptr> background;
@@ -68,7 +69,7 @@ namespace too
         map.set_camera(camera);
 
         //NPCs
-        NPC frog = NPC(bn::fixed_point(832, 144), camera, NPC_TYPE::FROG, text_generator);
+        //NPC frog = NPC(bn::fixed_point(832, 144), camera, NPC_TYPE::FROG, text_generator);
 
         //Portals/savepoints
         StorySave first_plaque = StorySave(bn::fixed_point(208, 224), STORY_TYPE::BEGINNING, camera, text_generator);
@@ -119,7 +120,7 @@ namespace too
                 }
 
             }
-
+            /*
             //Update NPCs and Check for tooltip
              if(frog.check_trigger(player.pos()))
             {
@@ -130,9 +131,9 @@ namespace too
                     player.set_listening(false);
                 }
             }
-
+          */  
             //Update NPCs and Player
-            frog.update();
+            //frog.update();
             player.update_position(map, level, text_generator);
             player.apply_animation_state();
             

@@ -103,6 +103,7 @@ too_scene_cuscene1.o: \
  C:/butano/butano/include/bn_display.h \
  c:\butano\butano\hw\include\bn_hw_display_constants.h \
  C:/butano/butano/include/bn_common.h \
+ C:/butano/homebrew/too-butano/include/too_spellbar.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cursor_right.h:
 C:/butano/butano/include/bn_sprite_item.h:
@@ -211,4 +212,5 @@ C:/butano/butano/include/bn_log_backend.h:
 C:/butano/butano/include/bn_display.h:
 c:\butano\butano\hw\include\bn_hw_display_constants.h:
 C:/butano/butano/include/bn_common.h:
+C:/butano/homebrew/too-butano/include/too_spellbar.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:

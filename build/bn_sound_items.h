@@ -9,18 +9,18 @@ namespace bn::sound_items
     constexpr inline sound_item attack(1);
     constexpr inline sound_item back(2);
     constexpr inline sound_item cancel(3);
-    constexpr inline sound_item cursor(90);
-    constexpr inline sound_item disabled(182);
-    constexpr inline sound_item hurt(183);
-    constexpr inline sound_item jump(184);
-    constexpr inline sound_item select(430);
-    constexpr inline sound_item slime_die(431);
-    constexpr inline sound_item slime_take_damage(432);
-    constexpr inline sound_item spin(433);
-    constexpr inline sound_item spin_down(434);
-    constexpr inline sound_item spin_up(435);
-    constexpr inline sound_item start(498);
-    constexpr inline sound_item type(668);
+    constexpr inline sound_item cursor(116);
+    constexpr inline sound_item disabled(203);
+    constexpr inline sound_item hurt(204);
+    constexpr inline sound_item jump(205);
+    constexpr inline sound_item select(446);
+    constexpr inline sound_item slime_die(447);
+    constexpr inline sound_item slime_take_damage(448);
+    constexpr inline sound_item spin(449);
+    constexpr inline sound_item spin_down(450);
+    constexpr inline sound_item spin_up(451);
+    constexpr inline sound_item start(514);
+    constexpr inline sound_item type(684);
 }
 
 #endif

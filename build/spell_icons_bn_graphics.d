@@ -1,0 +1,1 @@
+spell_icons_bn_graphics.o: spell_icons_bn_graphics.s

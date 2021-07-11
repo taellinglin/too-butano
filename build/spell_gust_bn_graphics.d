@@ -1,0 +1,1 @@
+spell_gust_bn_graphics.o: spell_gust_bn_graphics.s

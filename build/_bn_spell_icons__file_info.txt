@@ -1,0 +1,3 @@
+graphics/spell_icons.bmp
+3190
+1625962689.34

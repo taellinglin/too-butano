@@ -12,7 +12,6 @@
 #include "bn_log.h"
 #include "bn_sound_items.h"
 #include "bn_vector.h"
-
 #include "bn_sprite_items_cat_sprite.h"
 #include "bn_sprite_items_text_bg.h"
 
@@ -93,7 +92,8 @@ namespace too
         //_camera(bn::camera_ptr::create_optional(0,0)),
         _text_bg1(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _text_bg2(bn::sprite_items::text_bg.create_sprite(0, 0)),
-        _healthbar(too::Healthbar(text_generator))
+        _healthbar(too::Healthbar(text_generator)),
+        _spellbar(too::Spellbar(text_generator))
     {
         //_map.set_visible(false); // why can't I leave something uninitialised
         _sprite.put_above();
@@ -137,7 +137,6 @@ namespace too
         _wall_jumped = false;
         _already_running = false;
         _attacking = false;
-
         _can_wallrun = false;
     }
 
@@ -435,6 +434,27 @@ namespace too
             bn::sound_items::attack.play();
             attack();
         } 
+        if(bn::keypad::r_pressed()){
+            BN_LOG("Cast Spell[R]: ", _spell_selected);
+
+            if( _spell_selected >0){
+                bn::sound_items::cursor.play();
+                _spell_selected--;
+            _spellbar.set_current_spell_index(_spell_selected, text_generator);
+            }else{
+                bn::sound_items::disabled.play();
+            }
+        }
+         if(bn::keypad::l_pressed()){
+            BN_LOG("Cast Spell[R]: ", _spell_selected);
+            if( _spell_selected < 5){
+                bn::sound_items::cursor.play();
+            _spell_selected++;
+            _spellbar.set_current_spell_index(_spell_selected, text_generator);
+            }else{
+                bn::sound_items::disabled.play();
+            }
+        }
 
         check_attack();
 
