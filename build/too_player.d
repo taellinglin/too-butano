@@ -89,10 +89,7 @@ too_player.o: C:/butano/homebrew/too-butano/src/too_player.cpp \
  C:/butano/butano/include/bn_bg_palette_item.h \
  C:/butano/butano/include/bn_affine_bg_map_item.h \
  C:/butano/butano/include/bn_size.h \
- C:/butano/butano/include/bn_affine_bg_tiles_item.h \
- c:\butano\common\include\variable_8x16_sprite_font.h \
- C:/butano/butano/include/bn_sprite_font.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x16_font.h
+ C:/butano/butano/include/bn_affine_bg_tiles_item.h
 C:/butano/butano/include/bn_fixed_point.h:
 C:/butano/butano/include/bn_fixed.h:
 C:/butano/butano/include/bn_limits.h:
@@ -189,6 +186,3 @@ C:/butano/butano/include/bn_bg_palette_item.h:
 C:/butano/butano/include/bn_affine_bg_map_item.h:
 C:/butano/butano/include/bn_size.h:
 C:/butano/butano/include/bn_affine_bg_tiles_item.h:
-c:\butano\common\include\variable_8x16_sprite_font.h:
-C:/butano/butano/include/bn_sprite_font.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x16_font.h:

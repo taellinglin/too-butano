@@ -115,20 +115,14 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/homebrew/too-butano/include/too_enemy.h \
  C:/butano/homebrew/too-butano/include/too_enemy_type.h \
  C:/butano/homebrew/too-butano/include/too_extras.h \
- C:/butano/homebrew/too-butano/include/too_healthbar.h \
  C:/butano/homebrew/too-butano/include/too_hitbox.h \
  C:/butano/homebrew/too-butano/include/too_npc.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
  C:/butano/homebrew/too-butano/include/too_npc_type.h \
- C:/butano/homebrew/too-butano/include/too_spellbar.h \
- C:/butano/homebrew/too-butano/include/too_scene_limbo1.h \
- C:/butano/homebrew/too-butano/include/too_scene_limbo2.h \
- C:/butano/homebrew/too-butano/include/too_scene_limbo3.h \
- C:/butano/homebrew/too-butano/include/too_scene_summer1.h \
  c:\butano\common\include\info.h C:/butano/butano/include/bn_span_fwd.h \
- c:\butano\common\include\variable_8x16_sprite_font.h \
+ C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h \
  C:/butano/butano/include/bn_sprite_font.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x16_font.h
+ C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h
 C:/butano/butano/include/bn_core.h:
 C:/butano/butano/include/bn_span_fwd.h:
 C:/butano/butano/include/bn_common.h:
@@ -247,18 +241,12 @@ C:/butano/homebrew/too-butano/include/too_data.h:
 C:/butano/homebrew/too-butano/include/too_enemy.h:
 C:/butano/homebrew/too-butano/include/too_enemy_type.h:
 C:/butano/homebrew/too-butano/include/too_extras.h:
-C:/butano/homebrew/too-butano/include/too_healthbar.h:
 C:/butano/homebrew/too-butano/include/too_hitbox.h:
 C:/butano/homebrew/too-butano/include/too_npc.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
 C:/butano/homebrew/too-butano/include/too_npc_type.h:
-C:/butano/homebrew/too-butano/include/too_spellbar.h:
-C:/butano/homebrew/too-butano/include/too_scene_limbo1.h:
-C:/butano/homebrew/too-butano/include/too_scene_limbo2.h:
-C:/butano/homebrew/too-butano/include/too_scene_limbo3.h:
-C:/butano/homebrew/too-butano/include/too_scene_summer1.h:
 c:\butano\common\include\info.h:
 C:/butano/butano/include/bn_span_fwd.h:
-c:\butano\common\include\variable_8x16_sprite_font.h:
+C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h:
 C:/butano/butano/include/bn_sprite_font.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x16_font.h:
+C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h:

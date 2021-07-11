@@ -1,5 +1,5 @@
-#ifndef BF_SCENE_H
-#define BF_SCENE_H
+#ifndef TOO_SCENE_H
+#define TOO_SCENE_H
 
 namespace too
 {

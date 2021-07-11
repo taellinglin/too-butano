@@ -20,7 +20,7 @@
 #include "bn_camera_actions.h"
 #include "bn_sprite_animate_actions.h"
 #include "bn_log.h"
-//#include <bn_format.h>
+//#include "bn_format.h"
 
 //Scenes
 #include "too_scene_mainmenu.h"
@@ -38,21 +38,21 @@
 #include "too_enemy.h"
 #include "too_enemy_type.h"
 #include "too_extras.h"
-#include "too_healthbar.h"
+//#include "too_healthbar.h"
 #include "too_hitbox.h"
 #include "too_npc.h"
 #include "too_npc_type.h"
-#include "too_spellbar.h"
+//#include "too_spellbar.h"
 
 //Scenes
-#include "too_scene_limbo1.h"
-#include "too_scene_limbo2.h"
-#include "too_scene_limbo3.h"
-#include "too_scene_summer1.h"
-#include "too_scene_cutscene1.h"
+//#include "too_scene_limbo1.h"
+//#include "too_scene_limbo2.h"
+//#include "too_scene_limbo3.h"
+//#include "too_scene_summer1.h"
+//#include "too_scene_cutscene1.h"
 
 #include "info.h"
-#include "variable_8x16_sprite_font.h"
+#include "variable_8x8_sprite_font.h"
 
 
 
@@ -60,7 +60,7 @@
     int main()
     {
         bn::core::init();
-        bn::sprite_text_generator text_generator(variable_8x16_sprite_font);
+        bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
         bn::bg_palettes::set_transparent_color(bn::color(13, 8, 14));
         while(true)
         {

@@ -26,7 +26,6 @@
 //#include "bn_affine_bg_items_house.h"
 #include "bn_affine_bg_items_level_palettes.h"
 #include "bn_sprite_text_generator.h"
-#include "variable_8x16_sprite_font.h"
 
 
 //#include "bn_optional.h"
