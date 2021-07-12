@@ -11,7 +11,7 @@ namespace too
     class MainMenu
     {   
         private:
-        bn::optional <bn::sprite_ptr> _cat_sprite;
+        //bn::optional <bn::sprite_ptr> _cat_sprite;
         
         public:
         MainMenu(int cursor_index, bn::sprite_text_generator& text_generator);

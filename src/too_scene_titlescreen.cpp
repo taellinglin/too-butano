@@ -39,11 +39,11 @@ namespace too
 
                 //Render BG0 BG1 BG2 with background, midground, and foreground
                 bn::optional <bn::regular_bg_ptr> background_bg;
-                background_bg = bn::regular_bg_items::background.create_bg(64,32);
+                background_bg = bn::regular_bg_items::background.create_bg_optional(64,32);
                 bn::optional <bn::regular_bg_ptr> midground_bg;
-                midground_bg = bn::regular_bg_items::midground.create_bg(64,64);
+                midground_bg = bn::regular_bg_items::midground.create_bg_optional(64,64);
                 bn::optional <bn::regular_bg_ptr> foreground_bg;
-                foreground_bg = bn::regular_bg_items::foreground.create_bg(64, 64);
+                foreground_bg = bn::regular_bg_items::foreground.create_bg_optional(64, 64);
                 foreground_bg->set_priority(0);
 
                 //Draw the Sprites for the logo
