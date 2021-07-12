@@ -24,7 +24,7 @@ namespace too
     class Player
     {
         private:
-            bn::sprite_ptr _sprite;
+            bn::optional<bn::sprite_ptr> _sprite;
             bn::fixed _dx;
             bn::fixed _dy;
             bn::fixed_point _pos;
@@ -62,12 +62,12 @@ namespace too
             too::Hitbox _hitbox_right = Hitbox(8,0,8,16);
             too::Hitbox _hitbox_jump = Hitbox(0,8,16,8);
             bn::sprite_animate_action<10> _action = bn::create_sprite_animate_action_forever(
-                        _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 0,1,0,1,0,1,0,1,0,1);
+                        _sprite.value(), 6, bn::sprite_items::cat_sprite.tiles_item(), 0,1,0,1,0,1,0,1,0,1);
             void _update_camera(int lerp);
             
 
         public:
-            Player(bn::sprite_ptr sprite,bn::sprite_text_generator& text_generator );
+            Player(bn::optional<bn::sprite_ptr> sprite, bn::sprite_text_generator& text_generator );
 
             Data data;
 
@@ -76,7 +76,7 @@ namespace too
 
             void jump();
             void attack();
-            void collide_with_objects(bn::affine_bg_ptr map, too::Level level);
+            void collide_with_objects(bn::optional<bn::affine_bg_ptr>& map, too::Level level);
             void collide_with_enemies(bn::sprite_text_generator& text_generator);
             void move_right();
             void move_left();
@@ -85,9 +85,9 @@ namespace too
             bool is_listening();
             void set_can_wallrun(bool can_wallrun);
             void apply_animation_state();
-            void update_position(bn::affine_bg_ptr map, too::Level level, bn::sprite_text_generator& text_generator);
+            void update_position(bn::optional<bn::affine_bg_ptr>& map, too::Level level, bn::sprite_text_generator& text_generator);
 
-            void spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::affine_bg_ptr map, bn::vector<Enemy,32>& enemies);
+            void spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::optional<bn::affine_bg_ptr> map, bn::vector<Enemy,32>& enemies);
             void reset();
 
             bool is_right();

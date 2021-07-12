@@ -31,17 +31,17 @@
 #include "too_scene.h"
 #include "too_level.h"
 #include "too_player.h"
-#include "too_story_save.h"
-#include "too_story_type.h"
-#include "too_tooltip.h"
+//#include "too_story_save.h"
+//#include "too_story_type.h"
+//#include "too_tooltip.h"
 #include "too_data.h"
-#include "too_enemy.h"
-#include "too_enemy_type.h"
-#include "too_extras.h"
+//#include "too_enemy.h"
+//#include "too_enemy_type.h"
+//#include "too_extras.h"
 //#include "too_healthbar.h"
 #include "too_hitbox.h"
-#include "too_npc.h"
-#include "too_npc_type.h"
+//#include "too_npc.h"
+//#include "too_npc_type.h"
 //#include "too_spellbar.h"
 
 //Scenes
@@ -51,8 +51,8 @@
 //#include "too_scene_summer1.h"
 //#include "too_scene_cutscene1.h"
 
-#include "info.h"
-#include "variable_8x8_sprite_font.h"
+#include "common_info.h"
+#include "common_variable_8x8_sprite_font.h"
 
 
 
@@ -60,7 +60,7 @@
     int main()
     {
         bn::core::init();
-        bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
+        bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
         bn::bg_palettes::set_transparent_color(bn::color(13, 8, 14));
         while(true)
         {

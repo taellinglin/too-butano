@@ -26,9 +26,9 @@ namespace too
             _action = bn::create_sprite_animate_action_forever(
                             _sprite.value(), 10, bn::sprite_items::stone_plaque.tiles_item(), 0,1,2);
         }
-        _sprite.value().set_camera(_camera);
-        _sprite.value().set_bg_priority(1);
-        _sprite.value().set_z_order(2);
+        _sprite->set_camera(_camera);
+        _sprite->set_bg_priority(1);
+        _sprite->set_z_order(2);
     }
     
     void StorySave::update(){

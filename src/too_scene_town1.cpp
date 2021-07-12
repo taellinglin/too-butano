@@ -49,7 +49,7 @@
 
 //Text and Font Includes
 #include "bn_sprite_text_generator.h"
-#include "variable_8x8_sprite_font.h"
+#include "common_variable_8x8_sprite_font.h"
 
 namespace too
 {
@@ -61,23 +61,25 @@ namespace too
         camera = bn::camera_ptr::create_optional(spawn_location.x(), spawn_location.y());
 
         //Text Generator
-        bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
+        bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
 
         //Play BGM
         bn::music_items::castle.play(0.6);
         
         // Tilemaps and Backgrounds
-        bn::regular_bg_ptr map_bg = bn::regular_bg_items::town_background.create_bg(512, 512);
-        bn::affine_bg_ptr map = bn::affine_bg_items::town1.create_bg(512, 512);
+        bn::optional <bn::regular_bg_ptr> map_bg;
+        map_bg = bn::regular_bg_items::town_background.create_bg(512, 512);
+        bn::optional <bn::affine_bg_ptr> map;
+        map = bn::affine_bg_items::town1.create_bg_optional(512, 512);
 
 
         //Background Priorities and Scale
-        map_bg.set_priority(3);
-        map.set_priority(2);
+        map_bg->set_priority(3);
+        map->set_priority(2);
         too::Level level = too::Level(map);
 
         // Camera
-        map.set_camera(camera);
+        map->set_camera(camera);
 
         //Enemies
         bn::vector<Enemy, 32> enemies = {};

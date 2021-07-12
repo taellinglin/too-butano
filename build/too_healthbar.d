@@ -58,11 +58,10 @@ too_healthbar.o: C:/butano/homebrew/too-butano/src/too_healthbar.cpp \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
  C:/butano/butano/include/bn_fixed.h \
- C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h \
- C:/butano/butano/include/bn_sprite_font.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h \
+ C:/butano/homebrew/too-butano/build/bn_sprite_items_button_status.h \
  C:/butano/butano/include/bn_sprite_item.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_button_status.h
+ C:/butano/butano/include/bn_format.h \
+ C:/butano/butano/include/bn_string.h
 C:/butano/homebrew/too-butano/include/too_healthbar.h:
 C:/butano/butano/include/bn_sprite_ptr.h:
 C:/butano/butano/include/bn_utility.h:
@@ -125,8 +124,7 @@ C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
 C:/butano/butano/include/bn_fixed.h:
-C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h:
-C:/butano/butano/include/bn_sprite_font.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h:
-C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_button_status.h:
+C:/butano/butano/include/bn_sprite_item.h:
+C:/butano/butano/include/bn_format.h:
+C:/butano/butano/include/bn_string.h:

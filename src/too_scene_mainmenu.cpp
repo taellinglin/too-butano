@@ -13,7 +13,7 @@
 #include "bn_sprite_text_generator.h"
 #include "bn_core.h"
 #include "bn_keypad.h"
-#include "info.h"
+#include "common_info.h"
 #include "bn_regular_bg_ptr.h"
 #include "bn_regular_bg_actions.h"
 #include "bn_sprite_ptr.h"
@@ -60,7 +60,7 @@ namespace too
                 "",
             };
 
-            info info("", info_text_lines, text_generator);
+            common::info info("", info_text_lines, text_generator);
             info.set_show_always(true);
 
             //Play "spin_down" sfx when the logo scrolls down.

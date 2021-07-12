@@ -58,12 +58,8 @@ too_spellbar.o: C:/butano/homebrew/too-butano/src/too_spellbar.cpp \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
  C:/butano/butano/include/bn_fixed.h \
- C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h \
- C:/butano/butano/include/bn_sprite_font.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h \
- C:/butano/butano/include/bn_sprite_item.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_icons.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_rain.h \
+ C:/butano/butano/include/bn_sprite_item.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_quake.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_freeze.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_gust.h \
@@ -133,12 +129,8 @@ C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
 C:/butano/butano/include/bn_fixed.h:
-C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h:
-C:/butano/butano/include/bn_sprite_font.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h:
-C:/butano/butano/include/bn_sprite_item.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_icons.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_rain.h:
+C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_quake.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_freeze.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_spell_gust.h:

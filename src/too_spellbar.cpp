@@ -16,7 +16,7 @@
 #include "bn_sprite_items_spell_gust.h"
 #include "bn_sprite_items_spell_cloak.h"
 #include "bn_sprite_items_spell_flash.h"
-//#include <bn_format.h>
+#include <bn_format.h>
 
 namespace too
 {

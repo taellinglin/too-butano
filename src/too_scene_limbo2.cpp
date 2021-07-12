@@ -41,7 +41,7 @@
 
 
 #include "bn_sprite_text_generator.h"
-#include "variable_8x16_sprite_font.h"
+#include "common_variable_8x8_sprite_font.h"
 
 namespace too
 {
@@ -54,26 +54,26 @@ namespace too
         bn::music_items::valley.play();
 
         //Text Generator
-        bn::sprite_text_generator text_generator(variable_8x16_sprite_font);
+        bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
         
         //Tilemap and Backgrounds
-        bn::regular_bg_ptr background = bn::regular_bg_items::background.create_bg(0, 0);
-        bn::affine_bg_ptr map = bn::affine_bg_items::limbo2.create_bg(512, 512);
-        background.set_priority(3);
-        map.set_priority(2);
+        bn::optional <bn::regular_bg_ptr> background = bn::regular_bg_items::background.create_bg_optional(0, 0);
+        bn::optional <bn::affine_bg_ptr> map = bn::affine_bg_items::limbo2.create_bg_optional(512, 512);
+        background->set_priority(3);
+        map->set_priority(2);
         too::Level level = too::Level(map);
         
         //Initialize Camera
-        map.set_camera(camera);
+        map->set_camera(camera);
 
         //Initialize Enemies
         bn::vector<Enemy, 32> enemies = {};
-        enemies.push_back(Enemy(432, 706, camera, map, ENEMY_TYPE::SLIME, 2));
-        enemies.push_back(Enemy(672, 592, camera, map, ENEMY_TYPE::BAT, 1));
-        enemies.push_back(Enemy(384, 448, camera, map, ENEMY_TYPE::BAT, 1));
-        enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
-        enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
-        enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
+        enemies.push_back(Enemy(432, 706, camera, map.value(), ENEMY_TYPE::SLIME, 2));
+        enemies.push_back(Enemy(672, 592, camera, map.value(), ENEMY_TYPE::BAT, 1));
+        enemies.push_back(Enemy(384, 448, camera, map.value(), ENEMY_TYPE::BAT, 1));
+        enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map.value(), ENEMY_TYPE::SLIME, 2));
+        enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map.value(), ENEMY_TYPE::SLIME, 2));
+        enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map.value(), ENEMY_TYPE::BAT, 1));
 
         //Portals
         StorySave portal = StorySave(bn::fixed_point(960, 194), STORY_TYPE::BEGINNING, camera, text_generator);

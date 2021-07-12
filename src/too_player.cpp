@@ -26,9 +26,7 @@
 //#include "bn_affine_bg_items_house.h"
 #include "bn_affine_bg_items_level_palettes.h"
 #include "bn_sprite_text_generator.h"
-
-
-//#include "bn_optional.h"
+#include "bn_optional.h"
 
 namespace too
 {
@@ -53,7 +51,7 @@ namespace too
         return false;
     }
 
-    [[nodiscard]] bool check_collisions_map(bn::fixed_point pos, directions direction, Hitbox hitbox,bn::affine_bg_ptr& map, too::Level level, bn::span<const bn::affine_bg_map_cell> cells)
+    [[nodiscard]] bool check_collisions_map(bn::fixed_point pos, directions direction, Hitbox hitbox,bn::optional <bn::affine_bg_ptr>& map, too::Level level, bn::span<const bn::affine_bg_map_cell> cells)
     {
         bn::fixed l = pos.x() - hitbox.width() / 2 + hitbox.x();
         bn::fixed r = pos.x() + hitbox.width() / 2 + hitbox.x();
@@ -69,10 +67,10 @@ namespace too
             tiles = level.ceil_tiles();
         }
 
-        if(contains_cell(get_map_cell(l, u, map, cells), tiles) ||
-        contains_cell(get_map_cell(l, d, map, cells), tiles) ||
-        contains_cell(get_map_cell(r, u, map, cells), tiles) ||
-        contains_cell(get_map_cell(l, d, map, cells), tiles)){
+        if(contains_cell(get_map_cell(l, u, map.value(), cells), tiles) ||
+        contains_cell(get_map_cell(l, d, map.value(), cells), tiles) ||
+        contains_cell(get_map_cell(r, u, map.value(), cells), tiles) ||
+        contains_cell(get_map_cell(l, d, map.value(), cells), tiles)){
             return true;
         } else {
             return false;
@@ -86,7 +84,7 @@ namespace too
     constexpr const bn::fixed acc = 0.4;
     constexpr const bn::fixed max_dy = 6;
     constexpr const bn::fixed friction = 0.85;
-    Player::Player(bn::sprite_ptr sprite, bn::sprite_text_generator& text_generator ) :
+    Player::Player(bn::optional<bn::sprite_ptr> sprite, bn::sprite_text_generator& text_generator ) :
         _sprite(sprite),
         //_camera(bn::camera_ptr::create_optional(0,0)),
         _text_bg1(bn::sprite_items::text_bg.create_sprite(0, 0)),
@@ -95,7 +93,7 @@ namespace too
         _spellbar(too::Spellbar(text_generator))
     {
         //_map.set_visible(false); // why can't I leave something uninitialised
-        _sprite.put_above();
+        _sprite->put_above();
         _text_bg1.set_scale(2);
         _text_bg1.set_bg_priority(0);
         _text_bg1.put_above();
@@ -106,21 +104,21 @@ namespace too
         _text_bg2.put_above();
     }
 
-    void Player::spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::affine_bg_ptr map, bn::vector<Enemy,32>& enemies){
+    void Player::spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::optional <bn::affine_bg_ptr> map, bn::vector<Enemy,32>& enemies){
         _pos = pos;
         _camera = camera;
-        _map_cells = map.map().cells_ref().value();
+        _map_cells = map->map().cells_ref().value();
         _enemies = &enemies;
-        map.set_visible(true);
-        _sprite.set_visible(true);
+        map->set_visible(true);
+        _sprite->set_visible(true);
 
         reset();
     }
 
     void Player::reset(){
-        _sprite.set_camera(_camera);
-        _sprite.set_bg_priority(1);
-        _sprite.put_above();
+        _sprite->set_camera(_camera);
+        _sprite->set_bg_priority(1);
+        _sprite->put_above();
         _text_bg1.set_camera(_camera);
         _text_bg2.set_camera(_camera);
         _update_camera(1);
@@ -181,13 +179,13 @@ namespace too
 
     bool Player::is_right()
     {
-        return !_sprite.horizontal_flip();
+        return !_sprite->horizontal_flip();
     }
 
     void Player::check_attack(){
         if(_attacking){
             Hitbox attack_hitbox = Hitbox(_pos.x(),_pos.y(), 20, 20);
-            if(_sprite.horizontal_flip()){
+            if(_sprite->horizontal_flip()){
                 attack_hitbox.set_x(_pos.x() - 8);
             } else {
                 attack_hitbox.set_x(_pos.x() + 8);
@@ -197,7 +195,7 @@ namespace too
             {
                 if(_enemies->at(i).is_hit(attack_hitbox))
                 {
-                    if(_sprite.horizontal_flip()){
+                    if(_sprite->horizontal_flip()){
                         _enemies->at(i).damage_from_left(1);
                     } else {
                         _enemies->at(i).damage_from_right(1);
@@ -223,7 +221,7 @@ namespace too
                     _invulnerable = true;
                     _healthbar.set_hp(_healthbar.hp() - 5, text_generator);
                     _dy -= 0.3;
-                    if(_sprite.horizontal_flip()){
+                    if(_sprite->horizontal_flip()){
                         _dx += 5;
                     } else {
                         _dx -= 5;
@@ -233,7 +231,7 @@ namespace too
         }
     }
 
-    void Player::collide_with_objects(bn::affine_bg_ptr map, too::Level level){
+    void Player::collide_with_objects(bn::optional<bn::affine_bg_ptr>& map, too::Level level){
         // if falling
         if(_dy > 0){
             if(!_wall_running){
@@ -291,14 +289,14 @@ namespace too
     }
 
     void Player::move_right(){
-        _sprite.set_horizontal_flip(false);
+        _sprite->set_horizontal_flip(false);
         _dx+= acc;
         _running = true;
         _sliding = false;
     }
 
     void Player::move_left(){
-        _sprite.set_horizontal_flip(true);
+        _sprite->set_horizontal_flip(true);
         _dx-= acc;
         _running = true;
         _sliding = false;
@@ -309,37 +307,37 @@ namespace too
         if(_attacking && _action.done()){
             _attacking = false;
         }
-        _sprite.set_vertical_scale(1);
+        _sprite->set_vertical_scale(1);
         if(_attacking){
             if(_action.graphics_indexes().front() !=8 ){
                 _action = bn::create_sprite_animate_action_once(
-                            _sprite, 4, bn::sprite_items::cat_sprite.tiles_item(), 8, 9, 10, 11, 12, 12, 13, 13, 14, 15);
+                            _sprite.value(), 4, bn::sprite_items::cat_sprite.tiles_item(), 8, 9, 10, 11, 12, 12, 13, 13, 14, 15);
             }
         } else if(_jumping){
             _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
+                            _sprite.value(), 6, bn::sprite_items::cat_sprite.tiles_item(), 5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
         } else if(_wall_running){
             if(_action.graphics_indexes().front() != 4){
                 _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 4, 5, 5, 5, 6, 6, 5, 5, 6, 6);
+                            _sprite.value(), 2.5, bn::sprite_items::cat_sprite.tiles_item(), 4, 5, 5, 5, 6, 6, 5, 5, 6, 6);
             }
-            _sprite.set_vertical_scale(0.9);
+            _sprite->set_vertical_scale(0.9);
         } else if(_falling){
             _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 6, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 3, 5, 4, 3);
+                            _sprite.value(), 6, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 3, 5, 4, 3);
         } else if(_sliding){
             _action = bn::create_sprite_animate_action_forever(
-                            _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 6, 5, 4, 3);
+                            _sprite.value(), 2.5, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 6, 5, 4, 3);
         } else if(_running){
             if(_action.graphics_indexes().front() != 2){
                 _action = bn::create_sprite_animate_action_forever(
-                        _sprite, 2.5, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 3, 5, 4, 3);
+                        _sprite.value(), 2.5, bn::sprite_items::cat_sprite.tiles_item(), 2, 3, 4, 5, 6, 7, 3, 5, 4, 3);
             }
         } else {
             //idle
             if(_action.graphics_indexes().front() != 0){
                 _action = bn::create_sprite_animate_action_forever(
-                        _sprite, 30, bn::sprite_items::cat_sprite.tiles_item(), 0,1,0,1,0,1,0,1,0,1);
+                        _sprite.value(), 30, bn::sprite_items::cat_sprite.tiles_item(), 0,1,0,1,0,1,0,1,0,1);
             }
         }
 
@@ -356,7 +354,7 @@ namespace too
             }
             else
             {
-                if(_sprite.horizontal_flip()){
+                if(_sprite->horizontal_flip()){
                     _camera->set_x(_camera->x()+ (_pos.x() - 30-_camera->x() + _dx*8) /lerp);
                 } else {
                     _camera->set_x(_camera->x()+ (_pos.x() +30 -_camera->x() + _dx*8) /lerp);
@@ -372,7 +370,7 @@ namespace too
             }
     }
 
-    void Player::update_position(bn::affine_bg_ptr map, too::Level level, bn::sprite_text_generator& text_generator){
+    void Player::update_position(bn::optional<bn::affine_bg_ptr>& map, too::Level level, bn::sprite_text_generator& text_generator){
         _update_camera(10);
 
         // apply friction
@@ -467,14 +465,14 @@ namespace too
         if(_invulnerable){
             ++_inv_timer;
             if(modulo(_inv_timer/5, 2) == 0){
-                _sprite.set_visible(true);
+                _sprite->set_visible(true);
             } else {
-                _sprite.set_visible(false);
+                _sprite->set_visible(false);
             }
             if(_inv_timer > 120){
                 _invulnerable = false;
                 _inv_timer = 0;
-                _sprite.set_visible(true);
+                _sprite->set_visible(true);
             }
         }
 
@@ -490,8 +488,8 @@ namespace too
         }
 
         // update sprite position
-        _sprite.set_x(_pos.x());
-        _sprite.set_y(_pos.y());
+        _sprite->set_x(_pos.x());
+        _sprite->set_y(_pos.y());
 
     }
 }

@@ -11,7 +11,7 @@
 #include "bn_sprite_text_generator.h"
 #include "bn_core.h"
 #include "bn_keypad.h"
-#include "info.h"
+#include "common_info.h"
 #include "bn_optional.h"
 #include "bn_regular_bg_ptr.h"
 #include "bn_regular_bg_actions.h"
@@ -53,7 +53,7 @@ namespace too
                 "", 
             };
 
-            info info("", info_text_lines, text_generator);
+            common::info info("", info_text_lines, text_generator);
             info.set_show_always(true);
 
             //Play Cutscene1 BGM

@@ -5,11 +5,12 @@
 #include "bn_camera_ptr.h"
 #include "bn_math.h"
 #include "bn_log.h"
+#include "bn_fixed_point.h"
 #include "bn_display.h"
 #include "bn_keypad.h"
 #include "bn_sprite_text_generator.h"
 #include "bn_sprite_items_frog_sprite.h"
-#include "variable_8x8_sprite_font.h"
+#include "common_variable_8x8_sprite_font.h"
 #include "bn_sound_items.h"
 
 
@@ -23,12 +24,12 @@ namespace too
         
 
         if(_type == NPC_TYPE::FROG){
-            _sprite = bn::sprite_items::frog_sprite.create_sprite(_pos.x(), _pos.y());
+            _sprite = bn::sprite_items::frog_sprite.create_sprite_optional(_pos.x(), _pos.y());
             _action = bn::create_sprite_animate_action_forever(
                             _sprite.value(), 40, bn::sprite_items::frog_sprite.tiles_item(), 0,1);
             _lines = bn::span(_frog_lines);
         }
-        _sprite->set_camera(camera);
+        //_sprite->set_camera(camera);
         _sprite->set_bg_priority(1);
         _sprite->set_z_order(2);
     }

@@ -14,7 +14,7 @@ namespace too
             bn::vector<int,32> _ceil_tiles;
             
         public:
-            Level(bn::affine_bg_ptr bg);
+            Level(bn::optional <bn::affine_bg_ptr> bg);
 
             [[nodiscard]] bn::vector<int,32> floor_tiles();
             [[nodiscard]] bn::vector<int,32> wall_tiles();

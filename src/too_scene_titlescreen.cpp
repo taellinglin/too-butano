@@ -26,9 +26,8 @@
 #include "bn_affine_bg_map_ptr.h"
 #include "bn_string_view.h"
 #include "bn_vector.h"
-#include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
-#include "info.h"
+#include "common_info.h"
 #include "bn_optional.h"
 
 #include "too_scene_titlescreen.h"
@@ -73,7 +72,7 @@ namespace too
                     "Press Start",
                 };
 
-                info info("", info_text_lines, text_generator);
+                common::info info("", info_text_lines, text_generator);
                 info.set_show_always(true);
 
                 bn::sound_items::spin_down.play();

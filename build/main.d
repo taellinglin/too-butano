@@ -107,22 +107,13 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
- C:/butano/homebrew/too-butano/include/too_story_save.h \
- C:/butano/homebrew/too-butano/include/too_story_type.h \
- C:/butano/homebrew/too-butano/include/too_story_type.h \
- C:/butano/homebrew/too-butano/include/too_tooltip.h \
  C:/butano/homebrew/too-butano/include/too_data.h \
- C:/butano/homebrew/too-butano/include/too_enemy.h \
- C:/butano/homebrew/too-butano/include/too_enemy_type.h \
- C:/butano/homebrew/too-butano/include/too_extras.h \
  C:/butano/homebrew/too-butano/include/too_hitbox.h \
- C:/butano/homebrew/too-butano/include/too_npc.h \
- C:/butano/homebrew/too-butano/include/too_npc_type.h \
- C:/butano/homebrew/too-butano/include/too_npc_type.h \
- c:\butano\common\include\info.h C:/butano/butano/include/bn_span_fwd.h \
- C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h \
+ c:\butano\common\include\common_info.h \
+ C:/butano/butano/include/bn_span_fwd.h \
+ c:\butano\common\include\common_variable_8x8_sprite_font.h \
  C:/butano/butano/include/bn_sprite_font.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h
+ C:/butano/homebrew/too-butano/build/bn_sprite_items_common_variable_8x8_font.h
 C:/butano/butano/include/bn_core.h:
 C:/butano/butano/include/bn_span_fwd.h:
 C:/butano/butano/include/bn_common.h:
@@ -233,20 +224,10 @@ C:/butano/homebrew/too-butano/include/too_scene_loading.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
-C:/butano/homebrew/too-butano/include/too_story_save.h:
-C:/butano/homebrew/too-butano/include/too_story_type.h:
-C:/butano/homebrew/too-butano/include/too_story_type.h:
-C:/butano/homebrew/too-butano/include/too_tooltip.h:
 C:/butano/homebrew/too-butano/include/too_data.h:
-C:/butano/homebrew/too-butano/include/too_enemy.h:
-C:/butano/homebrew/too-butano/include/too_enemy_type.h:
-C:/butano/homebrew/too-butano/include/too_extras.h:
 C:/butano/homebrew/too-butano/include/too_hitbox.h:
-C:/butano/homebrew/too-butano/include/too_npc.h:
-C:/butano/homebrew/too-butano/include/too_npc_type.h:
-C:/butano/homebrew/too-butano/include/too_npc_type.h:
-c:\butano\common\include\info.h:
+c:\butano\common\include\common_info.h:
 C:/butano/butano/include/bn_span_fwd.h:
-C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h:
+c:\butano\common\include\common_variable_8x8_sprite_font.h:
 C:/butano/butano/include/bn_sprite_font.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h:
+C:/butano/homebrew/too-butano/build/bn_sprite_items_common_variable_8x8_font.h:

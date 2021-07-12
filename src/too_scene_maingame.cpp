@@ -6,7 +6,7 @@
 #include "bn_sound_items.h"
 #include "bn_music_actions.h"
 #include "bn_fixed_point.h"
-#include "variable_8x16_sprite_font.h"
+//#include "variable_8x16_sprite_font.h"
 
 //Scenes
 #include "too_scene_titlescreen.h"
@@ -36,7 +36,7 @@
 #include "bn_vector.h"
 #include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
-#include "info.h"
+#include "common_info.h"
 
 #include "too_scene_maingame.h"
 
@@ -47,8 +47,8 @@ namespace too
     {
         too::Scene scene = too::Scene::TOWN1_LIMBO3;
         too::Loading loading = too::Loading();
-        bn::sprite_ptr cat_sprite = bn::sprite_items::cat_sprite.create_sprite(0,0);
-        too::Player player = too::Player(cat_sprite, text_generator);
+        _cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
+        too::Player player = too::Player(_cat_sprite, text_generator);
 
         while(true)
         {
@@ -118,7 +118,7 @@ namespace too
                 too::Limbo3 to_limbo3_from_town1 = too::Limbo3();
                 scene = to_limbo3_from_town1.execute(player, bn::fixed_point(816, 368));
             }
-            cat_sprite.set_visible(false);
+            _cat_sprite->set_visible(false);
             loading.execute();
             bn::core::update();
             

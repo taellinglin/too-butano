@@ -2,13 +2,13 @@
 #include "bn_fixed.h"
 #include "bn_sprite_ptr.h"
 #include "bn_sprite_text_generator.h"
-#include "variable_8x8_sprite_font.h"
+//#include "common_variable_8x8_sprite_font.h"
 #include "bn_vector.h"
 #include "bn_string.h"
 #include "bn_string_view.h"
 #include "bn_optional.h"
 #include "bn_sprite_items_button_status.h"
-//#include <bn_format.h>
+#include <bn_format.h>
 
 namespace too
 {
@@ -26,7 +26,7 @@ namespace too
         text_generator.set_bg_priority(0);
         _hud_sprites.clear();
         BN_LOG("HP: ", too::_hp);
-        //text_generator.generate(-78, -64, bn::format<20>("HP : {}", too::_hp), _hud_sprites);
+        text_generator.generate(-78, -64, bn::format<10>("HP : {}", too::_hp), _hud_sprites);
     }
 
     int Healthbar::hp(){
@@ -37,7 +37,7 @@ namespace too
         _hp = hp;
         _hud_sprites.clear();
         BN_LOG("HP: ", _hp);
-        //text_generator.generate(-78, -64, bn::format<20>("HP : {}", _hp), _hud_sprites);
+        text_generator.generate(-78, -64, bn::format<10>("HP : {}", _hp), _hud_sprites);
     }
 
     void Healthbar::set_visible(bool is_visible){

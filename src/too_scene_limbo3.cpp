@@ -40,7 +40,7 @@
 
 
 #include "bn_sprite_text_generator.h"
-#include "variable_8x8_sprite_font.h"
+#include "common_variable_8x8_sprite_font.h"
 
 namespace too
 {
@@ -54,19 +54,19 @@ namespace too
         bn::music_items::limbo.play(0.25);
 
         //Text
-        bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
+        bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
         
     
         //Tilemaps and Backgrounds
         bn::optional <bn::regular_bg_ptr> background;
         background = bn::regular_bg_items::background.create_bg_optional(0, 0);
-        bn::affine_bg_ptr map = bn::affine_bg_items::limbo3.create_bg(512, 512);
+        bn::optional <bn::affine_bg_ptr> map = bn::affine_bg_items::limbo3.create_bg(512, 512);
         background->set_priority(3);
-        map.set_priority(2);
+        map->set_priority(2);
 
         //Process Tiles
         Level level = Level(map);
-        map.set_camera(camera);
+        map->set_camera(camera);
 
         //NPCs
         //NPC frog = NPC(bn::fixed_point(832, 144), camera, NPC_TYPE::FROG, text_generator);
@@ -78,8 +78,8 @@ namespace too
 
         //Enemies
         bn::vector<Enemy, 32> enemies = {};
-        enemies.push_back(Enemy(191, 463, camera, map, ENEMY_TYPE::SLIME, 2));
-        enemies.push_back(Enemy(656, 256, camera, map, ENEMY_TYPE::BAT, 1));
+        enemies.push_back(Enemy(191, 463, camera, map.value(), ENEMY_TYPE::SLIME, 2));
+        enemies.push_back(Enemy(656, 256, camera, map.value(), ENEMY_TYPE::BAT, 1));
         //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
@@ -120,7 +120,8 @@ namespace too
                 }
 
             }
-            /*
+
+          /*  
             //Update NPCs and Check for tooltip
              if(frog.check_trigger(player.pos()))
             {
@@ -131,7 +132,7 @@ namespace too
                     player.set_listening(false);
                 }
             }
-          */  
+          */
             //Update NPCs and Player
             //frog.update();
             player.update_position(map, level, text_generator);

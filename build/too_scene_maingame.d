@@ -44,7 +44,11 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_template_actions.h \
  C:/butano/butano/include/bn_fixed_point.h \
  C:/butano/butano/include/bn_point.h \
- c:\butano\common\include\variable_8x16_sprite_font.h \
+ C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h \
+ C:/butano/homebrew/too-butano/include/too_scene.h \
+ C:/butano/butano/include/bn_sprite_text_generator.h \
+ C:/butano/butano/include/bn_vector.h \
+ C:/butano/butano/include/bn_vector_fwd.h \
  C:/butano/butano/include/bn_sprite_font.h \
  C:/butano/butano/include/bn_string_view.h \
  C:/butano/butano/include/bn_sprite_item.h \
@@ -53,14 +57,6 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_sprite_palette_item.h \
  C:/butano/butano/include/bn_utf8_character.h \
  C:/butano/butano/include/bn_config_sprite_text.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x16_font.h \
- C:/butano/butano/include/bn_sprite_item.h \
- C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h \
- C:/butano/homebrew/too-butano/include/too_scene.h \
- C:/butano/butano/include/bn_sprite_text_generator.h \
- C:/butano/butano/include/bn_vector.h \
- C:/butano/butano/include/bn_vector_fwd.h \
- C:/butano/butano/include/bn_sprite_font.h \
  C:/butano/butano/include/bn_unordered_map.h \
  C:/butano/butano/include/bn_memory.h \
  C:/butano/butano/include/bn_power_of_two.h \
@@ -94,6 +90,7 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_common.h \
  C:/butano/homebrew/too-butano/include/too_spellbar.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h \
+ C:/butano/butano/include/bn_sprite_item.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo1.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo2.h \
  C:/butano/homebrew/too-butano/include/too_scene_limbo3.h \
@@ -117,7 +114,8 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_hbe_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_ptr.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
- c:\butano\common\include\info.h C:/butano/butano/include/bn_span_fwd.h \
+ c:\butano\common\include\common_info.h \
+ C:/butano/butano/include/bn_span_fwd.h \
  C:/butano/homebrew/too-butano/include/too_scene_maingame.h
 C:/butano/butano/include/bn_core.h:
 C:/butano/butano/include/bn_span_fwd.h:
@@ -165,7 +163,11 @@ C:/butano/butano/include/bn_music.h:
 C:/butano/butano/include/bn_template_actions.h:
 C:/butano/butano/include/bn_fixed_point.h:
 C:/butano/butano/include/bn_point.h:
-c:\butano\common\include\variable_8x16_sprite_font.h:
+C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h:
+C:/butano/homebrew/too-butano/include/too_scene.h:
+C:/butano/butano/include/bn_sprite_text_generator.h:
+C:/butano/butano/include/bn_vector.h:
+C:/butano/butano/include/bn_vector_fwd.h:
 C:/butano/butano/include/bn_sprite_font.h:
 C:/butano/butano/include/bn_string_view.h:
 C:/butano/butano/include/bn_sprite_item.h:
@@ -174,14 +176,6 @@ C:/butano/butano/include/bn_sprite_tiles_item.h:
 C:/butano/butano/include/bn_sprite_palette_item.h:
 C:/butano/butano/include/bn_utf8_character.h:
 C:/butano/butano/include/bn_config_sprite_text.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x16_font.h:
-C:/butano/butano/include/bn_sprite_item.h:
-C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h:
-C:/butano/homebrew/too-butano/include/too_scene.h:
-C:/butano/butano/include/bn_sprite_text_generator.h:
-C:/butano/butano/include/bn_vector.h:
-C:/butano/butano/include/bn_vector_fwd.h:
-C:/butano/butano/include/bn_sprite_font.h:
 C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_memory.h:
 C:/butano/butano/include/bn_power_of_two.h:
@@ -215,6 +209,7 @@ c:\butano\butano\hw\include\bn_hw_display_constants.h:
 C:/butano/butano/include/bn_common.h:
 C:/butano/homebrew/too-butano/include/too_spellbar.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:
+C:/butano/butano/include/bn_sprite_item.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo1.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo2.h:
 C:/butano/homebrew/too-butano/include/too_scene_limbo3.h:
@@ -238,6 +233,6 @@ C:/butano/butano/include/bn_regular_bg_position_hbe_ptr.h:
 C:/butano/butano/include/bn_hbe_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
-c:\butano\common\include\info.h:
+c:\butano\common\include\common_info.h:
 C:/butano/butano/include/bn_span_fwd.h:
 C:/butano/homebrew/too-butano/include/too_scene_maingame.h:

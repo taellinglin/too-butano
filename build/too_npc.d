@@ -64,9 +64,9 @@ too_npc.o: C:/butano/homebrew/too-butano/src/too_npc.cpp \
  C:/butano/butano/include/bn_keypad.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_frog_sprite.h \
  C:/butano/butano/include/bn_sprite_item.h \
- C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h \
+ c:\butano\common\include\common_variable_8x8_sprite_font.h \
  C:/butano/butano/include/bn_sprite_font.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h \
+ C:/butano/homebrew/too-butano/build/bn_sprite_items_common_variable_8x8_font.h \
  C:/butano/homebrew/too-butano/build/bn_sound_items.h \
  C:/butano/butano/include/bn_sound_item.h
 C:/butano/homebrew/too-butano/include/too_npc.h:
@@ -139,8 +139,8 @@ C:/butano/butano/include/bn_log_backend.h:
 C:/butano/butano/include/bn_keypad.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_frog_sprite.h:
 C:/butano/butano/include/bn_sprite_item.h:
-C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h:
+c:\butano\common\include\common_variable_8x8_sprite_font.h:
 C:/butano/butano/include/bn_sprite_font.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h:
+C:/butano/homebrew/too-butano/build/bn_sprite_items_common_variable_8x8_font.h:
 C:/butano/homebrew/too-butano/build/bn_sound_items.h:
 C:/butano/butano/include/bn_sound_item.h:

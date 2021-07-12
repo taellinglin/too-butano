@@ -57,7 +57,8 @@ too_scene_cuscene1.o: \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
  C:/butano/butano/include/bn_core.h C:/butano/butano/include/bn_keypad.h \
- c:\butano\common\include\info.h C:/butano/butano/include/bn_vector.h \
+ c:\butano\common\include\common_info.h \
+ C:/butano/butano/include/bn_vector.h \
  C:/butano/butano/include/bn_span_fwd.h \
  C:/butano/butano/include/bn_sprite_ptr.h \
  C:/butano/butano/include/bn_optional.h \
@@ -165,7 +166,7 @@ C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
 C:/butano/butano/include/bn_core.h:
 C:/butano/butano/include/bn_keypad.h:
-c:\butano\common\include\info.h:
+c:\butano\common\include\common_info.h:
 C:/butano/butano/include/bn_vector.h:
 C:/butano/butano/include/bn_span_fwd.h:
 C:/butano/butano/include/bn_sprite_ptr.h:

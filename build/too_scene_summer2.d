@@ -113,9 +113,9 @@ too_scene_summer2.o: \
  C:/butano/butano/include/bn_music_actions.h \
  C:/butano/butano/include/bn_music.h \
  C:/butano/butano/include/bn_template_actions.h \
- C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h \
+ c:\butano\common\include\common_variable_8x8_sprite_font.h \
  C:/butano/butano/include/bn_sprite_font.h \
- C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h
+ C:/butano/homebrew/too-butano/build/bn_sprite_items_common_variable_8x8_font.h
 C:/butano/homebrew/too-butano/include/too_scene_summer2.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
@@ -233,6 +233,6 @@ C:/butano/butano/include/bn_music_item.h:
 C:/butano/butano/include/bn_music_actions.h:
 C:/butano/butano/include/bn_music.h:
 C:/butano/butano/include/bn_template_actions.h:
-C:/butano/homebrew/too-butano/include/variable_8x8_sprite_font.h:
+c:\butano\common\include\common_variable_8x8_sprite_font.h:
 C:/butano/butano/include/bn_sprite_font.h:
-C:/butano/homebrew/too-butano/build/bn_sprite_items_variable_8x8_font.h:
+C:/butano/homebrew/too-butano/build/bn_sprite_items_common_variable_8x8_font.h:

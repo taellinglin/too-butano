@@ -10,7 +10,7 @@
 
 namespace too
 {
-    Level::Level(bn::affine_bg_ptr bg)
+    Level::Level(bn::optional <bn::affine_bg_ptr> bg)
     {
         bool processed_map = false;
         int index = 0;
@@ -18,7 +18,7 @@ namespace too
         _floor_tiles = {};
         _wall_tiles = {};
         _ceil_tiles = {};
-        bn::span<const bn::affine_bg_map_cell> cells = bg.map().cells_ref().value();
+        bn::span<const bn::affine_bg_map_cell> cells = bg->map().cells_ref().value();
         
         while (!processed_map)
         {
