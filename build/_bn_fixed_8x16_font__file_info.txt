@@ -1,3 +1,0 @@
-../../common/graphics/fixed_8x16_font.bmp
-7158
-1622242887.25

@@ -13,7 +13,7 @@ namespace too
             bn::optional <bn::regular_bg_ptr> cutscene_bg;
             
         public:
-            Cutscene1(bn::sprite_text_generator& text_generator);
+            Scene execute(bn::sprite_text_generator& text_generator);
     };
 }
 

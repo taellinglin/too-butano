@@ -26,8 +26,17 @@
 #include "bn_vector.h"
 #include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
+#include "bn_optional.h"
 
 #include "too_scene_mainmenu.h"
+#include "too_scene_limbo1.h"
+#include "too_scene_limbo2.h"
+#include "too_scene_options.h"
+#include "too_scene_cutscene1.h"
+#include "too_scene_credits.h"
+
+#include "bn_sprite_items_cat_sprite.h"
+#include "too_scene_town1.h"
 
 namespace too 
 {
@@ -38,15 +47,15 @@ namespace too
         int selected_option = 0;
         int cursor_x_offset = -72;
         int cursor_y_offset = -22;
-        MainMenu::MainMenu(int cursor_index, bn::sprite_text_generator& text_generator )
+        Scene MainMenu::execute(int cursor_index, bn::sprite_text_generator& text_generator, too::Player player )
         {
             bn::optional<bn::sprite_ptr> cursor_icon;
             cursor_icon = bn::sprite_items::cursor_right.create_sprite_optional(cursor_x_offset,cursor_y_offset);
             //BG0 BG1 BG2 render the background, midground, and foreground on 3 layers.
-            bn::regular_bg_ptr background_bg = bn::regular_bg_items::background.create_bg(64,32);
-            bn::regular_bg_ptr midground_bg = bn::regular_bg_items::midground.create_bg(64,64);
-            bn::regular_bg_ptr foreground_bg = bn::regular_bg_items::foreground.create_bg(64, 64);
-            foreground_bg.set_priority(0); //Set the foreground to have priority depth.
+            bn::optional <bn::regular_bg_ptr> background_bg = bn::regular_bg_items::background.create_bg(64,32);
+            bn::optional <bn::regular_bg_ptr> midground_bg = bn::regular_bg_items::midground.create_bg(64,64);
+            bn::optional <bn::regular_bg_ptr> foreground_bg = bn::regular_bg_items::foreground.create_bg(64, 64);
+            foreground_bg->set_priority(0); //Set the foreground to have priority depth.
 
             //Options
             constexpr bn::string_view info_text_lines[] = {
@@ -66,7 +75,9 @@ namespace too
             //Play "spin_down" sfx when the logo scrolls down.
             bn::sound_items::spin_down.play();
             bn::music_items::options.play(0.5);
-
+            //bn::optional<bn_sprite_ptr> _cat_sprite;
+            //_cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
+           // too::Player player = too::Player(_cat_sprite, text_generator);
             while(! bn::keypad::a_pressed())
             {
                 if(bn::keypad::up_pressed()){
@@ -89,10 +100,27 @@ namespace too
                 }
                 cursor_icon->set_y(cursor_y_offset+cursor_index*15);
                 selected_option = cursor_index;
+                if(selected_option == 0){
 
+                too::Limbo1 limbo1 = too::Limbo1();
+                limbo1.execute(player, bn::fixed_point(112, 208));
+
+                }
+                if(selected_option ==1 ){
+                    too::Cutscene1 cutscene1 = too::Cutscene1();
+                    cutscene1.execute(text_generator);
+                }
+                if(selected_option == 2){
+                    too::Options options = too::Options();
+                    options.execute(0, text_generator);
+                }
+                if(selected_option == 3){
+                    too::Credits credits = too::Credits();
+                    credits.execute(0, text_generator);
+                }
                 //Scroll the Backgrounds
-                foreground_bg.set_x(foreground_bg.x() - 1);
-                midground_bg.set_x(midground_bg.x() - 0.5);
+                foreground_bg->set_x(foreground_bg->x() - 1);
+                midground_bg->set_x(midground_bg->x() - 0.5);
 
                 //Update the frame
                 info.update();

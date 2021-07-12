@@ -1,1 +1,0 @@
-fixed_8x8_font_bn_graphics.o: fixed_8x8_font_bn_graphics.s

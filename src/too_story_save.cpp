@@ -9,7 +9,7 @@
 #include "bn_sprite_text_generator.h"
 
 #include "bn_sprite_items_stone_plaque.h"
-#include "variable_8x8_sprite_font.h"
+#include "common_variable_8x8_sprite_font.h"
 
 
 namespace too

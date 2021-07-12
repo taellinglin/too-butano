@@ -31,7 +31,7 @@ namespace too
 {
 
 
-        Cutscene1::Cutscene1(bn::sprite_text_generator& text_generator )
+        Scene Cutscene1::execute(bn::sprite_text_generator& text_generator )
         {
             //BG0 BG1 BG2 render the background, midground, and foreground on 3 layers.
             bn::optional <bn::regular_bg_ptr> cutscene_bg;

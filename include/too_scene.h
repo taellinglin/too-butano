@@ -7,8 +7,11 @@ namespace too
     {
         TITLESCREEN,
         MAINMENU,
+        MAINMENU_OPTIONS,
+        MAINMENU_CREDITS,
         CUTSCENE1,
         OPTIONS,
+        CREDITS,
         LIMBO1,
         LIMBO1_LIMBO2,
         LIMBO2_LIMBO1,
@@ -24,6 +27,7 @@ namespace too
         LIMBO3_TOWN1,
         LOADING
     };
+
 }
 
 #endif

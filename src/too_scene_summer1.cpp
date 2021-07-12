@@ -108,6 +108,8 @@ namespace too
             {
                 if(player.pos().x() < 96+16 && player.pos().x() > 96-16){
                     if(player.pos().y() < 960+16 && player.pos().y() > 960-16){
+                        map_bg.reset();
+                        map.reset();
                         return Scene::SUMMER1_LIMBO3;
                     }
                 }
@@ -116,6 +118,8 @@ namespace too
             {
                 if(player.pos().x() < 600+16 && player.pos().x() > 600-16){
                     if(player.pos().y() < 288+16 && player.pos().y() > 288-16){
+                        map_bg.reset();
+                        map.reset();
                         return Scene::SUMMER1_SUMMER2;
                     }
                 }

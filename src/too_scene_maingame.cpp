@@ -11,6 +11,8 @@
 //Scenes
 #include "too_scene_titlescreen.h"
 #include "too_scene_mainmenu.h"
+#include "too_scene_options.h"
+#include"too_scene_credits.h"
 #include "too_scene_limbo1.h"
 #include "too_scene_limbo2.h"
 #include "too_scene_limbo3.h"
@@ -39,6 +41,8 @@
 #include "common_info.h"
 
 #include "too_scene_maingame.h"
+#include "too_scene_cutscene1.h"
+
 
 namespace too
 {
@@ -52,8 +56,24 @@ namespace too
 
         while(true)
         {
+        if(scene == too::Scene::MAINMENU){
+            too::MainMenu mainmenu = too::MainMenu();
+            scene = mainmenu.execute(0, text_generator, player);
+        }
+        else if(scene == too::Scene::MAINMENU_OPTIONS){
+            too::MainMenu mainmenu = too::MainMenu();
+            scene = mainmenu.execute(2, text_generator, player);
+        }
+        else if(scene == too::Scene::MAINMENU_CREDITS){
+            too::MainMenu mainmenu = too::MainMenu();
+            scene = mainmenu.execute(3, text_generator, player);
+        }
            //Starting Room
-        if(scene == too::Scene::LIMBO1)
+        else if(scene == too::Scene::CUTSCENE1){
+            too::Cutscene1 cutscene1 = too::Cutscene1();
+            scene = cutscene1.execute(text_generator);
+        }
+        else if(scene == too::Scene::LIMBO1)
             {
                 too::Limbo1 limbo1 = too::Limbo1();
                 scene = limbo1.execute(player, bn::fixed_point(112, 208));

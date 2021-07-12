@@ -9,7 +9,7 @@
 @	+ regular map (flat), lz77 compressed, 32x32 
 @	Total size: 32 + 8424 + 1848 = 10304
 @
-@	Time-stamp: 2021-07-10, 19:45:20
+@	Time-stamp: 2021-07-11, 23:04:21
 @	Exported by Cearn's GBA Image Transmogrifier, v0.8.16
 @	( http://www.coranac.com/projects/#grit )
 @
@@ -315,7 +315,7 @@ cutscene_background_bn_graphicsTiles:
 	.word 0x43D723D7,0x9E13FDDF,0x3B613751,0x56D00590,0x043EB913,0x233E7D08,0xF0FF90CA,0x120B3001
 	.word 0x9523660F,0x169D238D,0x03006161,0xA2F62650,0x16D600BE,0x5EEEED11,0x05036610,0x101616ED
 	.word 0xD62D1261,0x8927807C,0x11111001,0x0F566FDD,0xE6116151,0xEE0A9F32,0x15030395,0x19132278
-	.word 0x20F3FF05,0x09092FC5
+	.word 0x20F3FF05,0x00002FC5
 
 	.section .rodata
 	.align	2

@@ -69,7 +69,7 @@ namespace too
         map->set_camera(camera);
 
         //NPCs
-        //NPC frog = NPC(bn::fixed_point(832, 144), camera, NPC_TYPE::FROG, text_generator);
+        NPC frog = NPC(bn::fixed_point(832, 144), camera, NPC_TYPE::FROG, text_generator);
 
         //Portals/savepoints
         StorySave first_plaque = StorySave(bn::fixed_point(208, 224), STORY_TYPE::BEGINNING, camera, text_generator);
@@ -78,8 +78,8 @@ namespace too
 
         //Enemies
         bn::vector<Enemy, 32> enemies = {};
-        enemies.push_back(Enemy(191, 463, camera, map.value(), ENEMY_TYPE::SLIME, 2));
-        enemies.push_back(Enemy(656, 256, camera, map.value(), ENEMY_TYPE::BAT, 1));
+        //enemies.push_back(Enemy(191, 463, camera, map.value(), ENEMY_TYPE::SLIME, 2));
+        //enemies.push_back(Enemy(656, 256, camera, map.value(), ENEMY_TYPE::BAT, 1));
         //enemies.push_back(Enemy(256+9*8, 256+9*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+18*8, 256+7*8, camera, map, ENEMY_TYPE::SLIME, 2));
         //enemies.push_back(Enemy(256+25*8, 256+17*8, camera, map, ENEMY_TYPE::BAT, 1));
@@ -115,13 +115,15 @@ namespace too
                 }
                 else if(player.pos().x() < 816+16 && player.pos().x() > 816-16){
                     if(player.pos().y() < 368+16 && player.pos().y() > 368-16){
+                        map.reset();
+                        background.reset();
                         return Scene::TOWN1_LIMBO3;
                     }
                 }
 
             }
 
-          /*  
+          
             //Update NPCs and Check for tooltip
              if(frog.check_trigger(player.pos()))
             {
@@ -132,9 +134,9 @@ namespace too
                     player.set_listening(false);
                 }
             }
-          */
+          
             //Update NPCs and Player
-            //frog.update();
+            frog.update();
             player.update_position(map, level, text_generator);
             player.apply_animation_state();
             

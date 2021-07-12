@@ -69,14 +69,6 @@
             }
              bn::core::update();
             {
-                too::MainMenu scene = too::MainMenu(0, text_generator);
-            }
-             bn::core::update();
-            {
-                too::Cutscene1 scene = too::Cutscene1(text_generator);
-            }
-             bn::core::update();
-            {
                 too::MainGame scene = too::MainGame(text_generator);
             }
              bn::core::update();
