@@ -68,7 +68,7 @@ namespace too
         
         // Tilemaps and Backgrounds
         bn::optional <bn::regular_bg_ptr> map_bg;
-        map_bg = bn::regular_bg_items::town_background.create_bg(512, 512);
+        map_bg = bn::regular_bg_items::town_background.create_bg_optional(512, 512);
         bn::optional <bn::affine_bg_ptr> map;
         map = bn::affine_bg_items::town1.create_bg_optional(512, 512);
 

@@ -24,39 +24,37 @@
 #include "bn_affine_bg_map_ptr.h"
 #include "bn_string_view.h"
 #include "bn_vector.h"
-#include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
 #include "bn_optional.h"
 
 #include "too_scene.h"
 #include "too_scene_mainmenu.h"
 #include "too_scene_maingame.h"
-#include "too_scene_limbo1.h"
-#include "too_scene_limbo2.h"
+//#include "too_scene_limbo1.h"
+//#include "too_scene_limbo2.h"
 #include "too_scene_options.h"
 #include "too_scene_cutscene1.h"
 #include "too_scene_credits.h"
 
-#include "bn_sprite_items_cat_sprite.h"
+//#include "bn_sprite_items_cat_sprite.h"
 #include "too_scene_town1.h"
 
 namespace too 
 {
 
         bool main_menu_mode_enabled = true; //Is menu mode enabled?
-        int cursor_index =1; // The index that the cursor is at
+        //int cursor_index =1; // The index that the cursor is at
         int num_options = 2; // How many options there are
         int selected_option = 0;
         int cursor_x_offset = -72;
         int cursor_y_offset = -22;
         MainMenu::MainMenu(int cursor_index, bn::sprite_text_generator& text_generator )
         {
-            bn::optional<bn::sprite_ptr> cursor_icon;
-            cursor_icon = bn::sprite_items::cursor_right.create_sprite_optional(cursor_x_offset,cursor_y_offset);
+            _cursor_icon = bn::sprite_items::cursor_right.create_sprite_optional(cursor_x_offset, cursor_y_offset);
             //BG0 BG1 BG2 render the background, midground, and foreground on 3 layers.
-            bn::optional <bn::regular_bg_ptr> background_bg = bn::regular_bg_items::background.create_bg_optional(64,32);
-            bn::optional <bn::regular_bg_ptr> midground_bg = bn::regular_bg_items::midground.create_bg_optional(64,64);
-            bn::optional <bn::regular_bg_ptr> foreground_bg = bn::regular_bg_items::foreground.create_bg_optional(64, 64);
+            background_bg = bn::regular_bg_items::background.create_bg_optional(64,32);
+            midground_bg = bn::regular_bg_items::midground.create_bg_optional(64,64);
+            foreground_bg = bn::regular_bg_items::foreground.create_bg_optional(64, 64);
             foreground_bg->set_priority(0); //Set the foreground to have priority depth.
 
             //Options
@@ -101,7 +99,7 @@ namespace too
                     }
                 }
                 //Update the cursor index to be 15xPixels in the y directions relative to the cursor index
-                cursor_icon->set_y(cursor_y_offset+cursor_index*15);
+                _cursor_icon->set_y(cursor_y_offset+cursor_index*15);
 
                 //We've pressed A so we have selected an option
                 selected_option = cursor_index;

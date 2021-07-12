@@ -54,7 +54,7 @@ namespace too
         //too::Scene scene = too::Scene::TOWN1_LIMBO3;
         // bn::optional <bn::sprite_ptr> _cat_sprite;
          _cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
-        too::Player player = too::Player(_cat_sprite, text_generator);
+        Player player = Player(_cat_sprite, text_generator);
         
 
         while(true)
@@ -129,7 +129,7 @@ namespace too
                 too::Limbo3 to_limbo3_from_town1 = too::Limbo3();
                 scene = to_limbo3_from_town1.execute(player, bn::fixed_point(816, 368));
             }
-            //_cat_sprite->set_visible(false);
+            _cat_sprite->set_visible(false);
             loading.execute();
             bn::core::update();
             

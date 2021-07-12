@@ -61,6 +61,8 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_memory.h \
  C:/butano/butano/include/bn_power_of_two.h \
  C:/butano/butano/include/bn_unordered_map_fwd.h \
+ C:/butano/butano/include/bn_optional.h \
+ C:/butano/butano/include/bn_regular_bg_ptr.h \
  C:/butano/homebrew/too-butano/include/too_scene_mainmenu.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/butano/include/bn_sprite_ptr.h \
@@ -76,7 +78,6 @@ too_scene_maingame.o: \
  C:/butano/homebrew/too-butano/include/too_hitbox.h \
  C:/butano/butano/include/bn_fixed.h \
  C:/butano/homebrew/too-butano/include/too_enemy.h \
- C:/butano/butano/include/bn_optional.h \
  C:/butano/butano/include/bn_string.h \
  C:/butano/butano/include/bn_string_view.h \
  C:/butano/homebrew/too-butano/include/too_enemy_type.h \
@@ -101,7 +102,6 @@ too_scene_maingame.o: \
  C:/butano/homebrew/too-butano/include/too_scene_summer2.h \
  C:/butano/homebrew/too-butano/include/too_scene_town1.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
- C:/butano/butano/include/bn_regular_bg_ptr.h \
  C:/butano/butano/include/bn_regular_bg_actions.h \
  C:/butano/butano/include/bn_fixed_point.h \
  C:/butano/butano/include/bn_regular_bg_ptr.h \
@@ -183,6 +183,8 @@ C:/butano/butano/include/bn_unordered_map.h:
 C:/butano/butano/include/bn_memory.h:
 C:/butano/butano/include/bn_power_of_two.h:
 C:/butano/butano/include/bn_unordered_map_fwd.h:
+C:/butano/butano/include/bn_optional.h:
+C:/butano/butano/include/bn_regular_bg_ptr.h:
 C:/butano/homebrew/too-butano/include/too_scene_mainmenu.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/butano/include/bn_sprite_ptr.h:
@@ -198,7 +200,6 @@ C:/butano/butano/include/bn_vector.h:
 C:/butano/homebrew/too-butano/include/too_hitbox.h:
 C:/butano/butano/include/bn_fixed.h:
 C:/butano/homebrew/too-butano/include/too_enemy.h:
-C:/butano/butano/include/bn_optional.h:
 C:/butano/butano/include/bn_string.h:
 C:/butano/butano/include/bn_string_view.h:
 C:/butano/homebrew/too-butano/include/too_enemy_type.h:
@@ -223,7 +224,6 @@ C:/butano/homebrew/too-butano/include/too_scene_summer1.h:
 C:/butano/homebrew/too-butano/include/too_scene_summer2.h:
 C:/butano/homebrew/too-butano/include/too_scene_town1.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
-C:/butano/butano/include/bn_regular_bg_ptr.h:
 C:/butano/butano/include/bn_regular_bg_actions.h:
 C:/butano/butano/include/bn_fixed_point.h:
 C:/butano/butano/include/bn_regular_bg_ptr.h:

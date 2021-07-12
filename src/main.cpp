@@ -65,15 +65,15 @@
         while(true)
         {
             {
-                too::TitleScreen title = too::TitleScreen(text_generator);
+                too::TitleScreen scene = too::TitleScreen(text_generator);
             }
              bn::core::update();
             {
-                too::MainMenu menu = too::MainMenu(0, text_generator);
+                too::MainMenu scene = too::MainMenu(0, text_generator);
             }
             bn::core::update();
             {
-                too::MainGame maingame = too::MainGame(text_generator, too::Scene::TOWN1_LIMBO3);
+                too::MainGame scene = too::MainGame(text_generator, too::Scene::TOWN1_LIMBO3);
             }
              bn::core::update();
         };

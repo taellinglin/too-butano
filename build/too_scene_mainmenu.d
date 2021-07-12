@@ -110,8 +110,6 @@ too_scene_mainmenu.o: \
  C:/butano/homebrew/too-butano/include/too_spellbar.h \
  C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h \
  C:/butano/homebrew/too-butano/include/too_scene_maingame.h \
- C:/butano/homebrew/too-butano/include/too_scene_limbo1.h \
- C:/butano/homebrew/too-butano/include/too_scene_limbo2.h \
  C:/butano/homebrew/too-butano/include/too_scene_options.h \
  C:/butano/homebrew/too-butano/include/too_scene_cutscene1.h \
  C:/butano/homebrew/too-butano/include/too_scene_credits.h \
@@ -229,8 +227,6 @@ C:/butano/butano/include/bn_common.h:
 C:/butano/homebrew/too-butano/include/too_spellbar.h:
 C:/butano/homebrew/too-butano/build/bn_sprite_items_cat_sprite.h:
 C:/butano/homebrew/too-butano/include/too_scene_maingame.h:
-C:/butano/homebrew/too-butano/include/too_scene_limbo1.h:
-C:/butano/homebrew/too-butano/include/too_scene_limbo2.h:
 C:/butano/homebrew/too-butano/include/too_scene_options.h:
 C:/butano/homebrew/too-butano/include/too_scene_cutscene1.h:
 C:/butano/homebrew/too-butano/include/too_scene_credits.h:
