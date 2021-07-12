@@ -25,7 +25,7 @@ namespace too
             bn::fixed_point _pos;
             bn::fixed _dy = 0;
             bn::fixed _dx = 0;
-            bn::optional<bn::camera_ptr> _camera;
+            //bn::optional<bn::camera_ptr> _camera;
             ENEMY_TYPE _type;
             int _dir;
             int _hp;

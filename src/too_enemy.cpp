@@ -73,7 +73,7 @@ namespace too
     constexpr const bn::fixed friction = 0.85;
 
     Enemy::Enemy(int x, int y, bn::optional<bn::camera_ptr>& camera, bn::optional <bn::affine_bg_ptr> map, ENEMY_TYPE type, int hp) :
-        _pos(x, y), _camera(camera), _type(type), _hp(hp), _map(map), _level(Level(map))
+        _pos(x, y), _type(type), _hp(hp), _map(map), _level(Level(map))
     {
         _map_cells = map->map().cells_ref().value();
         _dir = 1;
@@ -81,13 +81,13 @@ namespace too
         if(_type == ENEMY_TYPE::BAT)
         {
             _sprite = bn::sprite_items::bat_sprite.create_sprite(_pos.x(), _pos.y());
-            _sprite->set_camera(_camera);
+            _sprite->set_camera(camera);
             _sprite->set_bg_priority(1);
             _action = bn::create_sprite_animate_action_forever(
                             _sprite.value(), 4, bn::sprite_items::bat_sprite.tiles_item(), 0,1,0,1);
         } else if (_type == ENEMY_TYPE::SLIME){
             _sprite = bn::sprite_items::slime_sprite.create_sprite(_pos.x(), _pos.y());
-            _sprite->set_camera(_camera);
+            _sprite->set_camera(camera);
             _sprite->set_bg_priority(1);
             _action = bn::create_sprite_animate_action_forever(
                              _sprite.value(), 20, bn::sprite_items::slime_sprite.tiles_item(), 0,1,0,1);

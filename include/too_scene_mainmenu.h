@@ -4,13 +4,17 @@
 #include "too_scene.h"
 #include "too_player.h"
 #include "bn_fixed_point.h"
+#include "bn_optional.h"
 
 namespace too
 {
     class MainMenu
-    {       
+    {   
+        private:
+        bn::optional <bn::sprite_ptr> _cat_sprite;
+        
         public:
-        Scene execute(int cursor_index, bn::sprite_text_generator& text_generator, Player player);
+        MainMenu(int cursor_index, bn::sprite_text_generator& text_generator);
     };
 }
 

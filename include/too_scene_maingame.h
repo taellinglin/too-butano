@@ -4,6 +4,7 @@
 #include "too_scene.h"
 #include "too_player.h"
 #include "bn_fixed_point.h"
+#include "bn_optional.h"
 
 namespace too
 {
@@ -13,7 +14,7 @@ namespace too
         bn::optional <bn::sprite_ptr> _cat_sprite;
 
         public:
-            MainGame(bn::sprite_text_generator& text_generator);
+            MainGame(bn::sprite_text_generator& text_generator, too::Scene scene);
     };
 }
 

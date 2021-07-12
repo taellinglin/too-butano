@@ -28,7 +28,7 @@ namespace too
             bn::fixed _dx;
             bn::fixed _dy;
             bn::fixed_point _pos;
-            bn::optional<bn::camera_ptr>_camera;
+            bn::optional<bn::camera_ptr> _camera;
             bn::optional <bn::affine_bg_ptr> _map;
             bn::sprite_ptr _text_bg1;
             bn::sprite_ptr _text_bg2;
@@ -49,7 +49,6 @@ namespace too
             bool _already_running = false;
             bool _attacking = false;
 
-
             bool _invulnerable = false;
             int _inv_timer = 0;
 
@@ -62,12 +61,12 @@ namespace too
             too::Hitbox _hitbox_right = Hitbox(8,0,8,16);
             too::Hitbox _hitbox_jump = Hitbox(0,8,16,8);
             bn::sprite_animate_action<10> _action = bn::create_sprite_animate_action_forever(
-                        _sprite.value(), 6, bn::sprite_items::cat_sprite.tiles_item(), 0,1,0,1,0,1,0,1,0,1);
+                        _sprite.value(), 10, bn::sprite_items::cat_sprite.tiles_item(), 0,1,0,1,0,1,0,1,0,1);
             void _update_camera(int lerp);
             
 
         public:
-            Player(bn::optional<bn::sprite_ptr> sprite, bn::sprite_text_generator& text_generator );
+            Player(bn::optional<bn::sprite_ptr>& sprite, bn::sprite_text_generator& text_generator );
 
             Data data;
 
@@ -87,7 +86,7 @@ namespace too
             void apply_animation_state();
             void update_position(bn::optional<bn::affine_bg_ptr>& map, too::Level level, bn::sprite_text_generator& text_generator);
 
-            void spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::optional<bn::affine_bg_ptr> map, bn::vector<Enemy,32>& enemies);
+            void spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::optional<bn::affine_bg_ptr>& map, bn::vector<Enemy,32>& enemies);
             void reset();
 
             bool is_right();

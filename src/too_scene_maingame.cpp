@@ -47,29 +47,20 @@
 namespace too
 {
     
-    MainGame::MainGame(bn::sprite_text_generator& text_generator)
+    MainGame::MainGame(bn::sprite_text_generator& text_generator, too::Scene scene)
     {
-        too::Scene scene = too::Scene::TOWN1_LIMBO3;
+        
         too::Loading loading = too::Loading();
-        _cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
+        //too::Scene scene = too::Scene::TOWN1_LIMBO3;
+        // bn::optional <bn::sprite_ptr> _cat_sprite;
+         _cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
         too::Player player = too::Player(_cat_sprite, text_generator);
+        
 
         while(true)
         {
-        if(scene == too::Scene::MAINMENU){
-            too::MainMenu mainmenu = too::MainMenu();
-            scene = mainmenu.execute(0, text_generator, player);
-        }
-        else if(scene == too::Scene::MAINMENU_OPTIONS){
-            too::MainMenu mainmenu = too::MainMenu();
-            scene = mainmenu.execute(2, text_generator, player);
-        }
-        else if(scene == too::Scene::MAINMENU_CREDITS){
-            too::MainMenu mainmenu = too::MainMenu();
-            scene = mainmenu.execute(3, text_generator, player);
-        }
            //Starting Room
-        else if(scene == too::Scene::CUTSCENE1){
+        if(scene == too::Scene::CUTSCENE1){
             too::Cutscene1 cutscene1 = too::Cutscene1();
             scene = cutscene1.execute(text_generator);
         }
@@ -138,7 +129,7 @@ namespace too
                 too::Limbo3 to_limbo3_from_town1 = too::Limbo3();
                 scene = to_limbo3_from_town1.execute(player, bn::fixed_point(816, 368));
             }
-            _cat_sprite->set_visible(false);
+            //_cat_sprite->set_visible(false);
             loading.execute();
             bn::core::update();
             

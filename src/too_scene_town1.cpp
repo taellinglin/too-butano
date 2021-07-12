@@ -118,7 +118,7 @@ namespace too
                         map_bg.reset();
                         map.reset();
                         //player.reset();
-                        return Scene::LIMBO3_TOWN1;
+                        return Scene::MAINMENU;
                     }
                 }
             }

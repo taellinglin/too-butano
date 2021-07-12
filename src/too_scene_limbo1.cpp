@@ -90,7 +90,7 @@ namespace too
         enemies.push_back(Enemy(208, 656, camera, map.value(), ENEMY_TYPE::BAT, 2));
 
         // player
-        player.spawn(spawn_location, camera, map.value(), enemies);
+        player.spawn(spawn_location, camera, map, enemies);
 
         StorySave to_limbo2 = StorySave(bn::fixed_point(944, 736), STORY_TYPE::BEGINNING, camera, text_generator);
 
