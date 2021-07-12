@@ -39,7 +39,7 @@ namespace too
             bn::optional<bn::sprite_animate_action<4>> _action;
 
             bn::span<const bn::affine_bg_map_cell> _map_cells;
-            bn::affine_bg_ptr _map;
+            bn::optional <bn::affine_bg_ptr> _map;
             Level _level;
 
             bool _take_damage(int damage);
@@ -47,7 +47,7 @@ namespace too
             bool _will_fall();
 
         public:
-            Enemy(int x, int y, bn::optional<bn::camera_ptr>& camera, bn::affine_bg_ptr map, ENEMY_TYPE type, int hp);
+            Enemy(int x, int y, bn::optional<bn::camera_ptr>& camera, bn::optional<bn::affine_bg_ptr> map, ENEMY_TYPE type, int hp);
             void update();
             bn::fixed_point pos();
             bool is_hit(Hitbox attack);

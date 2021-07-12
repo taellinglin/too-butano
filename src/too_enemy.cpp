@@ -20,9 +20,9 @@ namespace too
 {
     enum directions{up, down, left, right};
 
-    [[nodiscard]] int _get_map_cell(bn::fixed x, bn::fixed y, bn::affine_bg_ptr& map, bn::span<const bn::affine_bg_map_cell> cells)
+    [[nodiscard]] int _get_map_cell(bn::fixed x, bn::fixed y, bn::optional <bn::affine_bg_ptr> map, bn::span<const bn::affine_bg_map_cell> cells)
     {
-        int map_size = map.dimensions().width();
+        int map_size = map->dimensions().width();
         int cell =  modulo((y.safe_division(8).right_shift_integer() * map_size/8 + x/8), map_size*8).integer();
         return cells.at(cell);
     }
@@ -39,7 +39,7 @@ namespace too
         return false;
     }
 
-    [[nodiscard]] bool _check_collisions_map(bn::fixed_point pos, Hitbox hitbox, directions direction, bn::affine_bg_ptr& map, too::Level level, bn::span<const bn::affine_bg_map_cell> cells)
+    [[nodiscard]] bool _check_collisions_map(bn::fixed_point pos, Hitbox hitbox, directions direction, bn::optional<bn::affine_bg_ptr> map, too::Level level, bn::span<const bn::affine_bg_map_cell> cells)
     {
         bn::fixed l = pos.x() - hitbox.width() / 2 + hitbox.x();
         bn::fixed r = pos.x() + hitbox.width() / 2 + hitbox.x();
@@ -72,10 +72,10 @@ namespace too
     constexpr const bn::fixed max_dy = 6;
     constexpr const bn::fixed friction = 0.85;
 
-    Enemy::Enemy(int x, int y, bn::optional<bn::camera_ptr>& camera, bn::affine_bg_ptr map, ENEMY_TYPE type, int hp) :
+    Enemy::Enemy(int x, int y, bn::optional<bn::camera_ptr>& camera, bn::optional <bn::affine_bg_ptr> map, ENEMY_TYPE type, int hp) :
         _pos(x, y), _camera(camera), _type(type), _hp(hp), _map(map), _level(Level(map))
     {
-        _map_cells = map.map().cells_ref().value();
+        _map_cells = map->map().cells_ref().value();
         _dir = 1;
         
         if(_type == ENEMY_TYPE::BAT)
