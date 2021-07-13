@@ -91,6 +91,9 @@ too_scene_titlescreen.o: \
  c:\butano\common\include\common_info.h \
  C:/butano/butano/include/bn_span_fwd.h \
  C:/butano/butano/include/bn_sprite_ptr.h \
+ C:/butano/butano/include/bn_log.h \
+ C:/butano/butano/include/bn_config_log.h \
+ C:/butano/butano/include/bn_log_backend.h \
  C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h \
  C:/butano/homebrew/too-butano/include/too_scene.h
 C:/butano/homebrew/too-butano/build/bn_sprite_items_logo_p1.h:
@@ -187,5 +190,8 @@ C:/butano/butano/include/bn_affine_bg_map_cell.h:
 c:\butano\common\include\common_info.h:
 C:/butano/butano/include/bn_span_fwd.h:
 C:/butano/butano/include/bn_sprite_ptr.h:
+C:/butano/butano/include/bn_log.h:
+C:/butano/butano/include/bn_config_log.h:
+C:/butano/butano/include/bn_log_backend.h:
 C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:

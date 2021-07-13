@@ -29,7 +29,7 @@
 #include "bn_affine_bg_map_cell.h"
 #include "common_info.h"
 #include "bn_optional.h"
-
+#include "bn_log.h"
 #include "too_scene_titlescreen.h"
 namespace too
 {
@@ -91,9 +91,19 @@ namespace too
                     sprite_p4_move_action.update();
                     bn::core::update();
                 }
-                background_bg.reset();
-                foreground_bg.reset();
-                midground_bg.reset();
+                BN_LOG("Reset BG1");
+                if(background_bg.has_value()){
+                    
+                    //background_bg.reset();
+                }
+                if(foreground_bg.has_value()){
+                    BN_LOG("Reset BG1");
+                    //foreground_bg.reset();
+                }
+                if(midground_bg.has_value()){
+                    BN_LOG("Reset BG1");
+                    //midground_bg.reset();
+                }
                 bn::sound_items::spin_up.play();
             };
 }

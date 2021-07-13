@@ -83,6 +83,10 @@ too_scene_mainmenu.o: \
  C:/butano/butano/include/bn_string_view.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
  C:/butano/butano/include/bn_optional.h \
+ C:/butano/butano/include/bn_format.h \
+ C:/butano/butano/include/bn_string.h C:/butano/butano/include/bn_log.h \
+ C:/butano/butano/include/bn_config_log.h \
+ C:/butano/butano/include/bn_log_backend.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/include/too_scene_mainmenu.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
@@ -101,9 +105,6 @@ too_scene_mainmenu.o: \
  C:/butano/homebrew/too-butano/include/too_enemy_type.h \
  C:/butano/homebrew/too-butano/include/too_data.h \
  C:/butano/homebrew/too-butano/include/too_healthbar.h \
- C:/butano/butano/include/bn_log.h \
- C:/butano/butano/include/bn_config_log.h \
- C:/butano/butano/include/bn_log_backend.h \
  C:/butano/butano/include/bn_display.h \
  c:\butano\butano\hw\include\bn_hw_display_constants.h \
  C:/butano/butano/include/bn_common.h \
@@ -200,6 +201,11 @@ C:/butano/butano/include/bn_affine_bg_map_cell.h:
 C:/butano/butano/include/bn_string_view.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
 C:/butano/butano/include/bn_optional.h:
+C:/butano/butano/include/bn_format.h:
+C:/butano/butano/include/bn_string.h:
+C:/butano/butano/include/bn_log.h:
+C:/butano/butano/include/bn_config_log.h:
+C:/butano/butano/include/bn_log_backend.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_scene_mainmenu.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
@@ -218,9 +224,6 @@ C:/butano/butano/include/bn_string.h:
 C:/butano/homebrew/too-butano/include/too_enemy_type.h:
 C:/butano/homebrew/too-butano/include/too_data.h:
 C:/butano/homebrew/too-butano/include/too_healthbar.h:
-C:/butano/butano/include/bn_log.h:
-C:/butano/butano/include/bn_config_log.h:
-C:/butano/butano/include/bn_log_backend.h:
 C:/butano/butano/include/bn_display.h:
 c:\butano\butano\hw\include\bn_hw_display_constants.h:
 C:/butano/butano/include/bn_common.h:

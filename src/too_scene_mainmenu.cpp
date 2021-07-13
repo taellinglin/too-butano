@@ -26,6 +26,9 @@
 #include "bn_vector.h"
 #include "bn_affine_bg_map_cell.h"
 #include "bn_optional.h"
+#include "bn_format.h"
+#include "bn_log.h"
+#include "bn_string_view.h"
 
 #include "too_scene.h"
 #include "too_scene_mainmenu.h"
@@ -42,21 +45,26 @@
 namespace too 
 {
 
-        bool main_menu_mode_enabled = true; //Is menu mode enabled?
-        //int cursor_index =1; // The index that the cursor is at
-        int num_options = 2; // How many options there are
-        int selected_option = 0;
-        int cursor_x_offset = -72;
-        int cursor_y_offset = -22;
+
         MainMenu::MainMenu(int cursor_index, bn::sprite_text_generator& text_generator )
         {
+            bool main_menu_mode_enabled = true; //Is menu mode enabled?
+            //int cursor_index =1; // The index that the cursor is at
+            int num_options = 2; // How many options there are
+            int selected_option = 0;
+            int cursor_x_offset = -72;
+            int cursor_y_offset = -22;
             _cursor_icon = bn::sprite_items::cursor_right.create_sprite_optional(cursor_x_offset, cursor_y_offset);
             //BG0 BG1 BG2 render the background, midground, and foreground on 3 layers.
             background_bg = bn::regular_bg_items::background.create_bg_optional(64,32);
             midground_bg = bn::regular_bg_items::midground.create_bg_optional(64,64);
             foreground_bg = bn::regular_bg_items::foreground.create_bg_optional(64, 64);
             foreground_bg->set_priority(0); //Set the foreground to have priority depth.
-
+            /*
+            BN_LOG(bn::to_string<10>("BG: {}", foreground_bg.has_value())
+            BN_LOG(bn::to_string<10>("BG: {}", background_bg.has_value()))
+            BN_LOG(bn::to_string<10>("BG: {}", foreground_bg.has_value())
+            */
             //Options
             constexpr bn::string_view info_text_lines[] = {
                 "",
@@ -99,65 +107,102 @@ namespace too
                     }
                 }
                 //Update the cursor index to be 15xPixels in the y directions relative to the cursor index
-                _cursor_icon->set_y(cursor_y_offset+cursor_index*15);
-
+                
+                if(_cursor_icon.has_value()){
+                    _cursor_icon->set_y(cursor_y_offset+cursor_index*15);
+                }
+                
                 //We've pressed A so we have selected an option
-                selected_option = cursor_index;
-                bn::sound_items::spin_up.play();
-                //Menu Switchbox (Do something for each possible selected option)
-                if(selected_option == 0){
-                    //background_bg.reset();
-                    //midground_bg.reset();
-                    //foreground_bg.reset();
-                    {
-                        too::MainGame start = too::MainGame(text_generator,  too::Scene::TOWN1_LIMBO3);
-                    }
-                }
-                if(selected_option ==1 ){
-                   // background_bg.reset();
-                   // midground_bg.reset();
-                   // foreground_bg.reset();
-                    {
-                        too::MainGame start = too::MainGame(text_generator,  too::Scene::CUTSCENE1);
-                    }
-                }
-                if(selected_option == 2){
-                //background_bg.reset();
-                //midground_bg.reset();
-                //foreground_bg.reset();
-                    too::Options options = too::Options();
-                    options.execute(0, text_generator);
-                }
-                if(selected_option == 3){
-                    
-                //background_bg.reset();
-                //midground_bg.reset();
-                //foreground_bg.reset();
-                    too::Credits credits = too::Credits();
-                    credits.execute(0, text_generator);
-                }
-                /*
+                
+                
                 //Scroll the Backgrounds
+               
+
                 if (foreground_bg.has_value())
                 {
-                    */
                     foreground_bg->set_x(foreground_bg->x() - 1);
-                    /*
+
                 }
                 
                 if (midground_bg.has_value())
                 {
-                    */
                     midground_bg->set_x(midground_bg->x() - 0.5);
-                //}
+                }
                 
                 
-
+                
                 //Update the frame
                 info.update();
                 bn::core::update();
             }
+            selected_option = cursor_index;
+                bn::sound_items::spin_up.play();
+                BN_LOG("Something selected...");
+                //Menu Switchbox (Do something for each possible selected option)
+                if(selected_option == 0){
+                    BN_LOG("Continue...");
+                    /*
+                        if(background_bg.has_value()){
+                            background_bg.reset();
+                        }
+                        if(foreground_bg.has_value()){
+                            foreground_bg.reset();
+                        }
+                        if(midground_bg.has_value()){
+                            midground_bg.reset();
+                        }
+                    */
+                        background_bg.reset();
+                        too::MainGame start = too::MainGame(text_generator,  too::Scene::TOWN1_LIMBO3);
+                    
+                }
+                if(selected_option ==1 ){
+                    BN_LOG("New Game..");
+                 if(background_bg.has_value()){
+                        background_bg.reset();
+                     }
+                if(foreground_bg.has_value()){
+                    foreground_bg.reset();
+                    }
+                if(midground_bg.has_value()){
+                    midground_bg.reset();
+                    }
 
+                 
+                    too::MainGame start = too::MainGame(text_generator,  too::Scene::CUTSCENE1);
+                    
+                }
+                if(selected_option == 2){
+                    /*
+                if(background_bg.has_value()){
+                    background_bg.reset();
+                }
+                if(foreground_bg.has_value()){
+                    foreground_bg.reset();
+                }
+                if(midground_bg.has_value()){
+                    midground_bg.reset();
+                }
+                */
+                    too::Options options = too::Options();
+                    options.execute(0, text_generator);
+                }
+                
+                if(selected_option == 3){
+                    /*
+                                if(background_bg.has_value()){
+                    background_bg.reset();
+                }
+                if(foreground_bg.has_value()){
+                    foreground_bg.reset();
+                }
+                if(midground_bg.has_value()){
+                    midground_bg.reset();
+                }
+                */
+                    too::Credits credits = too::Credits();
+                    credits.execute(0, text_generator);
+                }
             //If A is pressed, p
             
         };

@@ -115,10 +115,10 @@ namespace too
             {
                 if(player.pos().x() < 96+16 && player.pos().x() > 96-16){
                     if(player.pos().y() < 976+16 && player.pos().y() > 976-16){
-                        map_bg.reset();
-                        map.reset();
+                        //map_bg.reset();
+                        //map.reset();
                         //player.reset();
-                        return Scene::MAINMENU;
+                        return Scene::LIMBO3_TOWN1;
                     }
                 }
             }
