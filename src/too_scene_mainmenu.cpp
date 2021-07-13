@@ -106,47 +106,50 @@ namespace too
                 bn::sound_items::spin_up.play();
                 //Menu Switchbox (Do something for each possible selected option)
                 if(selected_option == 0){
-                    background_bg.reset();
-                    midground_bg.reset();
-                    foreground_bg.reset();
+                    //background_bg.reset();
+                    //midground_bg.reset();
+                    //foreground_bg.reset();
                     {
                         too::MainGame start = too::MainGame(text_generator,  too::Scene::TOWN1_LIMBO3);
                     }
                 }
                 if(selected_option ==1 ){
-                    background_bg.reset();
-                    midground_bg.reset();
-                    foreground_bg.reset();
+                   // background_bg.reset();
+                   // midground_bg.reset();
+                   // foreground_bg.reset();
                     {
                         too::MainGame start = too::MainGame(text_generator,  too::Scene::CUTSCENE1);
                     }
                 }
                 if(selected_option == 2){
-                background_bg.reset();
-                midground_bg.reset();
-                foreground_bg.reset();
+                //background_bg.reset();
+                //midground_bg.reset();
+                //foreground_bg.reset();
                     too::Options options = too::Options();
                     options.execute(0, text_generator);
                 }
                 if(selected_option == 3){
                     
-                background_bg.reset();
-                midground_bg.reset();
-                foreground_bg.reset();
+                //background_bg.reset();
+                //midground_bg.reset();
+                //foreground_bg.reset();
                     too::Credits credits = too::Credits();
                     credits.execute(0, text_generator);
                 }
+                /*
                 //Scroll the Backgrounds
                 if (foreground_bg.has_value())
                 {
+                    */
                     foreground_bg->set_x(foreground_bg->x() - 1);
-
+                    /*
                 }
                 
                 if (midground_bg.has_value())
                 {
+                    */
                     midground_bg->set_x(midground_bg->x() - 0.5);
-                }
+                //}
                 
                 
 
