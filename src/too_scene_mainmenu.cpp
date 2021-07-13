@@ -141,7 +141,7 @@ namespace too
                 //Menu Switchbox (Do something for each possible selected option)
                 if(selected_option == 0){
                     BN_LOG("Continue...");
-                    /*
+                    
                         if(background_bg.has_value()){
                             background_bg.reset();
                         }
@@ -151,7 +151,7 @@ namespace too
                         if(midground_bg.has_value()){
                             midground_bg.reset();
                         }
-                    */
+                    
                         background_bg.reset();
                         too::MainGame start = too::MainGame(text_generator,  too::Scene::TOWN1_LIMBO3);
                     
@@ -159,17 +159,23 @@ namespace too
                 if(selected_option ==1 ){
                     BN_LOG("New Game..");
                  if(background_bg.has_value()){
-                        background_bg.reset();
+                     BN_LOG("background_bg.has_value()");
+                       background_bg.reset();
                      }
-                if(foreground_bg.has_value()){
-                    foreground_bg.reset();
+                if(foreground_bg){
+                    BN_LOG("foreground_bg");
+
+                        foreground_bg.reset();
                     }
                 if(midground_bg.has_value()){
-                    midground_bg.reset();
+                    BN_LOG("midground_bg.has_value()");
+
+                        midground_bg.reset();
                     }
 
                  
-                    too::MainGame start = too::MainGame(text_generator,  too::Scene::CUTSCENE1);
+                    too::Cutscene1 cutscene1 = too::Cutscene1();
+                     cutscene1.execute(text_generator);
                     
                 }
                 if(selected_option == 2){

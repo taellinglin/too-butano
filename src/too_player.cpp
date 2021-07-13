@@ -86,7 +86,7 @@ namespace too
     constexpr const bn::fixed friction = 0.85;
     Player::Player(bn::optional<bn::sprite_ptr>& sprite, bn::sprite_text_generator& text_generator ) :
         _sprite(sprite),
-        _map(bn::affine_bg_items::level_palettes.create_bg_optional(0,0)),
+        //_map(bn::affine_bg_items::level_palettes.create_bg_optional(0,0)),
         _camera(bn::camera_ptr::create_optional(0,0)),
         _text_bg1(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _text_bg2(bn::sprite_items::text_bg.create_sprite(0, 0)),
@@ -110,10 +110,10 @@ namespace too
         //_map = map;
         _pos = pos;
         _camera = camera;
-        _map = map;
-        _map_cells = _map->map().cells_ref().value();
+        //_map = map;
+        _map_cells = map->map().cells_ref().value();
         _enemies = &enemies;
-        _map->set_visible(true);
+        map->set_visible(true);
         _sprite->set_visible(true);
 
         reset();

@@ -60,10 +60,10 @@ namespace too
 
              //Scroll the Backgrounds
            
-            int wait = 512;
+            int wait = 1024;
             while(wait >0){
                 if(cutscene_bg->y() >-48){
-                        cutscene_bg->set_y(cutscene_bg->y() - 0.5);
+                        cutscene_bg->set_y(cutscene_bg->y() - 0.25);
                         BN_LOG("BackgroundY: ", cutscene_bg->y());
                 }
                  
@@ -76,6 +76,6 @@ namespace too
             cutscene_bg.reset();
             //If start is pressed, play sound effect
             bn::sound_items::spin_up.play();
-            return too::Scene::LIMBO1;
+            return too::Scene::TOWN1_LIMBO3;
         };
  }
