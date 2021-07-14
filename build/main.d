@@ -107,6 +107,8 @@ main.o: C:/butano/homebrew/too-butano/src/main.cpp \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_data.h \
+ C:/butano/homebrew/too-butano/include/too_scene_credits.h \
+ C:/butano/homebrew/too-butano/include/too_scene_options.h \
  c:\butano\common\include\common_info.h \
  C:/butano/butano/include/bn_span_fwd.h \
  c:\butano\common\include\common_variable_8x8_sprite_font.h \
@@ -222,6 +224,8 @@ C:/butano/homebrew/too-butano/include/too_scene_loading.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_data.h:
+C:/butano/homebrew/too-butano/include/too_scene_credits.h:
+C:/butano/homebrew/too-butano/include/too_scene_options.h:
 c:\butano\common\include\common_info.h:
 C:/butano/butano/include/bn_span_fwd.h:
 c:\butano\common\include\common_variable_8x8_sprite_font.h:

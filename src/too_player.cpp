@@ -496,4 +496,10 @@ namespace too
         _sprite->set_y(_pos.y());
 
     }
+    void Player::set_visible(bool visible){
+        _spellbar.set_visible(visible);
+        _healthbar.set_visible(visible);
+        _sprite->set_visible(visible);
+        set_listening(visible);
+    }
 }

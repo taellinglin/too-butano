@@ -72,7 +72,7 @@ namespace too
 
             
             [[nodiscard]] bn::fixed_point pos();
-
+            void set_visible(bool visible);
             void jump();
             void attack();
             void collide_with_objects(bn::optional<bn::affine_bg_ptr>& map, too::Level level);

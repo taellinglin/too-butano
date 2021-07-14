@@ -50,6 +50,9 @@
 //#include "too_scene_limbo3.h"
 //#include "too_scene_summer1.h"
 //#include "too_scene_cutscene1.h"
+#include "too_scene_credits.h"
+#include "too_scene_options.h"
+#include "too_scene_mainmenu.h"
 
 #include "common_info.h"
 #include "common_variable_8x8_sprite_font.h"

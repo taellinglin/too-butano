@@ -189,8 +189,7 @@ namespace too
                     midground_bg.reset();
                 }
                 
-                    too::Options options = too::Options();
-                    options.execute(0, text_generator);
+                    return too::Scene::OPTIONS_MAINMENU;
                 }
                 
                 if(selected_option == 3){

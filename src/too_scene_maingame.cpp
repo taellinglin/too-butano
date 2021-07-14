@@ -59,31 +59,47 @@ namespace too
 
         while(true)
         {
+            
             if (scene == too::Scene::TITLESCREEN)
             {
-                player.reset();
+                player.set_visible(false);
                 too::TitleScreen titlescreen = too::TitleScreen();
                 titlescreen.execute(text_generator);
 
             }
         else if (scene == too::Scene::MAINMENU_TITLESCREEN)
             {
-                player.reset();
+                player.set_visible(false);
                 too::MainMenu mainmenu_titlescreen = too::MainMenu();
                 mainmenu_titlescreen.execute(0 ,text_generator);
 
             }
             else if (scene == too::Scene::MAINMENU_OPTIONS)
             {
-                player.reset();
+                player.set_visible(false);
                 too::MainMenu mainmenu_options = too::MainMenu();
                 mainmenu_options.execute(0, text_generator);
 
             }
                     else if (scene == too::Scene::MAINMENU_TITLESCREEN)
             {
+                player.set_visible(false);
                 too::MainMenu mainmenu_titlescreen = too::MainMenu();
                 mainmenu_titlescreen.execute(0, text_generator);
+
+            }
+            else if (scene == too::Scene::OPTIONS_MAINMENU)
+            {
+                player.set_visible(false);
+                too::Options options_mainmenu = too::Options();
+                options_mainmenu.execute(2, text_generator);
+
+            }
+            else if (scene == too::Scene::CREDITS_MAINMENU)
+            {
+                player.set_visible(false);
+                too::Credits credits_mainmenu = too::Credits();
+                credits_mainmenu.execute(3, text_generator);
 
             }
 
