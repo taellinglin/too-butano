@@ -53,6 +53,7 @@
 #include "too_scene_credits.h"
 #include "too_scene_options.h"
 #include "too_scene_mainmenu.h"
+#include "too_scene.h"
 
 #include "common_info.h"
 #include "common_variable_8x8_sprite_font.h"
@@ -66,30 +67,37 @@
         bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
         bn::bg_palettes::set_transparent_color(bn::color(13, 8, 14));
         while(true)
-        {/*
+        {
             {
-                too::TitleScreen scene = too::TitleScreen(text_generator);
+                too::TitleScreen scene = too::TitleScreen();
+                scene.execute(text_generator);
             }
              bn::core::update();
+             
             {
-                too::MainMenu scene = too::MainMenu(0, text_generator);
+                too::MainMenu mainmenu = too::MainMenu();
+                too::Scene option = mainmenu.execute(0,text_generator);
+                too::MainGame scene = too::MainGame(text_generator, option, false);
+
             }
             bn::core::update();
-        */
+        
+           BN_LOG("Start the game");
             {
-                too::MainGame scene = too::MainGame(text_generator, too::Scene::TITLESCREEN, false);
             }
              bn::core::update();
-             /*
+            /*
+             BN_LOG("mainmenu from titlescreen.");
             {
                 too::MainGame scene = too::MainGame(text_generator, too::Scene::MAINMENU_TITLESCREEN, false);
             }
              bn::core::update();
+             BN_LOG ("Continue Game");
               {
             too::MainGame scene = too::MainGame(text_generator, too::Scene::TOWN1_LIMBO3, true);
             }
              bn::core::update();
-             */
+            */             
         };
     }
 

@@ -102,6 +102,13 @@ namespace too
                 credits_mainmenu.execute(3, text_generator);
 
             }
+            else if (scene == too::Scene::CUTSCENE_1)
+            {
+                player.set_visible(false);
+                too::Cutscene1 cutscene1 = too::Cutscene1();
+                cutscene1.execute(text_generator);
+
+            }
 
 
 

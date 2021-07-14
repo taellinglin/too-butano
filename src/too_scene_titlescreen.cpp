@@ -91,6 +91,7 @@ Scene TitleScreen::execute(bn::sprite_text_generator& text_generator)
                     sprite_p4_move_action.update();
                     bn::core::update();
                 }
+                
                 BN_LOG("Reset BG1");
                 if(background_bg.has_value()){
                     
@@ -104,7 +105,10 @@ Scene TitleScreen::execute(bn::sprite_text_generator& text_generator)
                     BN_LOG("Reset BG1");
                     midground_bg.reset();
                 }
+                BN_LOG("Playing Sound");
                 bn::sound_items::spin_up.play();
+            BN_LOG("Going to Main Menu.");
+            return Scene::MAINMENU_TITLESCREEN;
             };
 }
 
