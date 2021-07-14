@@ -46,7 +46,7 @@ namespace too
 {
 
 
-        MainMenu::MainMenu(int cursor_index, bn::sprite_text_generator& text_generator )
+        Scene MainMenu::execute(int cursor_index, bn::sprite_text_generator& text_generator )
         {
             bool main_menu_mode_enabled = true; //Is menu mode enabled?
             //int cursor_index =1; // The index that the cursor is at
@@ -151,9 +151,7 @@ namespace too
                         if(midground_bg.has_value()){
                             midground_bg.reset();
                         }
-                    
-                        background_bg.reset();
-                        too::MainGame start = too::MainGame(text_generator,  too::Scene::TOWN1_LIMBO3);
+                        return Scene::TOWN1_LIMBO3;
                     
                 }
                 if(selected_option ==1 ){
@@ -173,13 +171,14 @@ namespace too
                         midground_bg.reset();
                     }
 
-                 
+                return Scene::CUTSCENE_1;
+                    /*                  
                     too::Cutscene1 cutscene1 = too::Cutscene1();
-                     cutscene1.execute(text_generator);
-                    
+                    cutscene1.execute(text_generator);
+                    */
                 }
                 if(selected_option == 2){
-                    /*
+                    
                 if(background_bg.has_value()){
                     background_bg.reset();
                 }
@@ -189,27 +188,25 @@ namespace too
                 if(midground_bg.has_value()){
                     midground_bg.reset();
                 }
-                */
+                
                     too::Options options = too::Options();
                     options.execute(0, text_generator);
                 }
                 
                 if(selected_option == 3){
-                    /*
-                                if(background_bg.has_value()){
-                    background_bg.reset();
+                    
+                    if(background_bg.has_value()){
+                        background_bg.reset();
+                    }
+                    if(foreground_bg.has_value()){
+                        foreground_bg.reset();
+                    }
+                    if(midground_bg.has_value()){
+                        midground_bg.reset();
+                    }
+                    return Scene::CREDITS_MAINMENU;
                 }
-                if(foreground_bg.has_value()){
-                    foreground_bg.reset();
-                }
-                if(midground_bg.has_value()){
-                    midground_bg.reset();
-                }
-                */
-                    too::Credits credits = too::Credits();
-                    credits.execute(0, text_generator);
-                }
-            //If A is pressed, p
+            
             
         };
  }

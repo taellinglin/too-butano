@@ -44,26 +44,51 @@
 #include "too_scene_cutscene1.h"
 
 
+
 namespace too
 {
     
-    MainGame::MainGame(bn::sprite_text_generator& text_generator, too::Scene scene)
+    MainGame::MainGame(bn::sprite_text_generator& text_generator, too::Scene scene, bool spawn_player)
     {
         
         too::Loading loading = too::Loading();
         //too::Scene scene = too::Scene::TOWN1_LIMBO3;
-        // bn::optional <bn::sprite_ptr> _cat_sprite;
+        // bn::optional <bn::sprite_ptr> 
          _cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
         Player player = Player(_cat_sprite, text_generator);
-        
 
         while(true)
         {
-           //Starting Room
-        if(scene == too::Scene::CUTSCENE1){
-            too::Cutscene1 cutscene1 = too::Cutscene1();
-            scene = cutscene1.execute(text_generator);
-        }
+            if (scene == too::Scene::TITLESCREEN)
+            {
+                player.reset();
+                too::TitleScreen titlescreen = too::TitleScreen();
+                titlescreen.execute(text_generator);
+
+            }
+        else if (scene == too::Scene::MAINMENU_TITLESCREEN)
+            {
+                player.reset();
+                too::MainMenu mainmenu_titlescreen = too::MainMenu();
+                mainmenu_titlescreen.execute(0 ,text_generator);
+
+            }
+            else if (scene == too::Scene::MAINMENU_OPTIONS)
+            {
+                player.reset();
+                too::MainMenu mainmenu_options = too::MainMenu();
+                mainmenu_options.execute(0, text_generator);
+
+            }
+                    else if (scene == too::Scene::MAINMENU_TITLESCREEN)
+            {
+                too::MainMenu mainmenu_titlescreen = too::MainMenu();
+                mainmenu_titlescreen.execute(0, text_generator);
+
+            }
+
+
+
         else if(scene == too::Scene::LIMBO1)
             {
                 too::Limbo1 limbo1 = too::Limbo1();

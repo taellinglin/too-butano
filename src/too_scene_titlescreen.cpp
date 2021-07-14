@@ -33,7 +33,7 @@
 #include "too_scene_titlescreen.h"
 namespace too
 {
-            TitleScreen::TitleScreen(bn::sprite_text_generator& text_generator)
+Scene TitleScreen::execute(bn::sprite_text_generator& text_generator)
             {
 
 
@@ -94,15 +94,15 @@ namespace too
                 BN_LOG("Reset BG1");
                 if(background_bg.has_value()){
                     
-                    //background_bg.reset();
+                    background_bg.reset();
                 }
                 if(foreground_bg.has_value()){
                     BN_LOG("Reset BG1");
-                    //foreground_bg.reset();
+                    foreground_bg.reset();
                 }
                 if(midground_bg.has_value()){
                     BN_LOG("Reset BG1");
-                    //midground_bg.reset();
+                    midground_bg.reset();
                 }
                 bn::sound_items::spin_up.play();
             };

@@ -102,8 +102,8 @@ namespace too
 
             //If A is pressed, p
             bn::sound_items::spin_up.play();
-            //return Scene::MAINMENU;
-            //Scene::LIMBO1;
             return Scene::MAINMENU_OPTIONS;
+            //Scene::LIMBO1;
+            
         };
  }

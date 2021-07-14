@@ -63,7 +63,7 @@
         bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
         bn::bg_palettes::set_transparent_color(bn::color(13, 8, 14));
         while(true)
-        {
+        {/*
             {
                 too::TitleScreen scene = too::TitleScreen(text_generator);
             }
@@ -72,10 +72,21 @@
                 too::MainMenu scene = too::MainMenu(0, text_generator);
             }
             bn::core::update();
+        */
             {
-                too::MainGame scene = too::MainGame(text_generator, too::Scene::TOWN1_LIMBO3);
+                too::MainGame scene = too::MainGame(text_generator, too::Scene::TITLESCREEN, false);
             }
              bn::core::update();
+             /*
+            {
+                too::MainGame scene = too::MainGame(text_generator, too::Scene::MAINMENU_TITLESCREEN, false);
+            }
+             bn::core::update();
+              {
+            too::MainGame scene = too::MainGame(text_generator, too::Scene::TOWN1_LIMBO3, true);
+            }
+             bn::core::update();
+             */
         };
     }
 

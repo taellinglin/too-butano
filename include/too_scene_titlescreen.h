@@ -16,7 +16,7 @@ namespace too
             bn::optional <bn::regular_bg_ptr> foreground_bg;
 
         public:
-            TitleScreen(bn::sprite_text_generator &text_generator);
+            Scene execute(bn::sprite_text_generator &text_generator);
     };
 }
 

@@ -4,14 +4,18 @@
 namespace too
 {
     enum class Scene
-    {
+    {   
+        //Titlescreen
         TITLESCREEN,
-        MAINMENU,
-        MAINMENU_OPTIONS,
+
+        ///Main Menu                          
+        MAINMENU_TITLESCREEN,
+        CREDITS_MAINMENU,
         MAINMENU_CREDITS,
-        CUTSCENE1,
-        OPTIONS,
-        CREDITS,
+        MAINMENU_OPTIONS,
+        OPTIONS_MAINMENU,
+        CUTSCENE_1,
+        CUTSCENE_1_SKIP,
         LIMBO1,
         LIMBO1_LIMBO2,
         LIMBO2_LIMBO1,
