@@ -69,19 +69,33 @@
         while(true)
         {
             {
+                BN_LOG("Title Screen");
                 too::TitleScreen scene = too::TitleScreen();
                 scene.execute(text_generator);
             }
              bn::core::update();
-             
             {
+                BN_LOG("Main Menu");
                 too::MainMenu mainmenu = too::MainMenu();
-                too::Scene option = mainmenu.execute(0,text_generator);
-                too::MainGame scene = too::MainGame(text_generator, option, false);
+                too::Scene selected  = mainmenu.execute(0, text_generator);
+                if(selected == too::Scene::CUTSCENE_1){
+                too::MainGame scene = too::MainGame(text_generator, selected , false);
+                }
+                else if(selected == too::Scene::OPTIONS_MAINMENU){
+                    too::MainGame scene = too::MainGame(text_generator, selected , false);
+                }
+                else if(selected == too::Scene::CREDITS_MAINMENU){
+                    BN_LOG("in main.cpp, loading CREDITS_MAINMENU");
+                    too::MainGame scene = too::MainGame(text_generator, selected , false);
+                }
+                else{
+                    too::MainGame scene = too::MainGame(text_generator, selected , true);
+
+                }
+              
 
             }
             bn::core::update();
-        
            BN_LOG("Start the game");
             {
             }

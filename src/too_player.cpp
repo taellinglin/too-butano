@@ -32,9 +32,9 @@ namespace too
 {
     enum directions{up, down, left, right};
 
-    [[nodiscard]] int get_map_cell(bn::fixed x, bn::fixed y, bn::affine_bg_ptr& map, bn::span<const bn::affine_bg_map_cell> cells)
+    [[nodiscard]] int get_map_cell(bn::fixed x, bn::fixed y,bn::optional<bn::affine_bg_ptr>& map, bn::span<const bn::affine_bg_map_cell> cells)
     {
-        int map_size = map.dimensions().width();
+        int map_size = map->dimensions().width();
         int cell =  modulo((y.safe_division(8).right_shift_integer() * map_size/8 + x/8), map_size*8).integer();
         return cells.at(cell);
     }
@@ -67,10 +67,10 @@ namespace too
             tiles = level.ceil_tiles();
         }
 
-        if(contains_cell(get_map_cell(l, u, map.value(), cells), tiles) ||
-        contains_cell(get_map_cell(l, d, map.value(), cells), tiles) ||
-        contains_cell(get_map_cell(r, u, map.value(), cells), tiles) ||
-        contains_cell(get_map_cell(l, d, map.value(), cells), tiles)){
+        if(contains_cell(get_map_cell(l, u, map, cells), tiles) ||
+        contains_cell(get_map_cell(l, d, map, cells), tiles) ||
+        contains_cell(get_map_cell(r, u, map, cells), tiles) ||
+        contains_cell(get_map_cell(l, d, map, cells), tiles)){
             return true;
         } else {
             return false;
@@ -107,7 +107,7 @@ namespace too
     }
 
     void Player::spawn(bn::fixed_point pos, bn::optional<bn::camera_ptr>& camera, bn::optional <bn::affine_bg_ptr>& map, bn::vector<Enemy,32>& enemies){
-        //_map = map;
+        _map = map;
         _pos = pos;
         _camera = camera;
         //_map = map;

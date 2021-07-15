@@ -151,28 +151,35 @@ namespace too
                         if(midground_bg.has_value()){
                             midground_bg.reset();
                         }
+                        if(_cursor_icon.has_value()){
+                            _cursor_icon.reset();
+                        }
                         return Scene::TOWN1_LIMBO3;
                     
                 }
                 if(selected_option ==1 ){
                     BN_LOG("New Game..");
                  if(background_bg.has_value()){
-                     BN_LOG("background_bg.has_value()");
+                     BN_LOG("background reset...");
                        background_bg.reset();
                      }
                 if(foreground_bg){
-                    BN_LOG("foreground_bg");
+                    BN_LOG("foreground reset...");
 
                         foreground_bg.reset();
                     }
                 if(midground_bg.has_value()){
-                    BN_LOG("midground_bg.has_value()");
+                    BN_LOG("midground reset...");
 
                         midground_bg.reset();
                     }
-
-                return Scene::CUTSCENE_1;
-                    /*                  
+                    if(_cursor_icon.has_value()){
+                        BN_LOG("cursor reset...");
+                        _cursor_icon.reset();
+                    }
+                    BN_LOG("Going to Cutscene1");
+                    return Scene::CUTSCENE_1;
+                    /*        
                     too::Cutscene1 cutscene1 = too::Cutscene1();
                     cutscene1.execute(text_generator);
                     */
@@ -188,21 +195,31 @@ namespace too
                 if(midground_bg.has_value()){
                     midground_bg.reset();
                 }
+                if(_cursor_icon.has_value()){
+                        _cursor_icon.reset();
+                }
                 
-                    return too::Scene::OPTIONS_MAINMENU;
+                    return Scene::OPTIONS_MAINMENU;
                 }
                 
                 if(selected_option == 3){
                     
                     if(background_bg.has_value()){
+                        BN_LOG("background_bg reset...");
                         background_bg.reset();
                     }
                     if(foreground_bg.has_value()){
+                        BN_LOG("foreground_bg reset...");
                         foreground_bg.reset();
                     }
                     if(midground_bg.has_value()){
+                        BN_LOG("midground_bg reset...");
                         midground_bg.reset();
                     }
+                    if(_cursor_icon.has_value()){
+                        _cursor_icon.reset();
+                    }
+                    BN_LOG("Going to Credits...");
                     return Scene::CREDITS_MAINMENU;
                 }
             

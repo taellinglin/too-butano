@@ -53,9 +53,12 @@ namespace too
         
         too::Loading loading = too::Loading();
         //too::Scene scene = too::Scene::TOWN1_LIMBO3;
-        // bn::optional <bn::sprite_ptr> 
-         _cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
+        // bn::optional <bn::sprite_ptr>
+        _cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
+        
         Player player = Player(_cat_sprite, text_generator);
+        
+
 
         while(true)
         {
@@ -81,25 +84,20 @@ namespace too
                 mainmenu_options.execute(0, text_generator);
 
             }
-                    else if (scene == too::Scene::MAINMENU_TITLESCREEN)
-            {
-                player.set_visible(false);
-                too::MainMenu mainmenu_titlescreen = too::MainMenu();
-                mainmenu_titlescreen.execute(0, text_generator);
-
-            }
             else if (scene == too::Scene::OPTIONS_MAINMENU)
             {
                 player.set_visible(false);
                 too::Options options_mainmenu = too::Options();
-                options_mainmenu.execute(2, text_generator);
+                options_mainmenu.execute(0, text_generator);
 
             }
             else if (scene == too::Scene::CREDITS_MAINMENU)
             {
+                BN_LOG("Going to credits, making player invisible...");
                 player.set_visible(false);
                 too::Credits credits_mainmenu = too::Credits();
-                credits_mainmenu.execute(3, text_generator);
+                BN_LOG("Okay, going to load the credits page now...");
+                credits_mainmenu.execute(0, text_generator);
 
             }
             else if (scene == too::Scene::CUTSCENE_1)
@@ -177,7 +175,10 @@ namespace too
                 too::Limbo3 to_limbo3_from_town1 = too::Limbo3();
                 scene = to_limbo3_from_town1.execute(player, bn::fixed_point(816, 368));
             }
-            _cat_sprite->set_visible(false);
+            if (_cat_sprite.has_value()){
+                _cat_sprite->set_visible(false);
+            }
+           
             loading.execute();
             bn::core::update();
             

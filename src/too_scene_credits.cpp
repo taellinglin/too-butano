@@ -41,12 +41,13 @@ namespace too
             int selected_option = 0;
             int cursor_x_offset = -72;
             int cursor_y_offset = -22+72;
-            bn::optional<bn::sprite_ptr> cursor_icon;
-            cursor_icon = bn::sprite_items::cursor_right.create_sprite_optional(cursor_x_offset,cursor_y_offset);
+            _cursor_icon = bn::sprite_items::cursor_right.create_sprite_optional(cursor_x_offset,cursor_y_offset);
             //BG0 BG1 BG2 render the background, midground, and foreground on 3 layers.
-            bn::optional <bn::regular_bg_ptr> background_bg = bn::regular_bg_items::background.create_bg_optional(64,32);
-            bn::optional <bn::regular_bg_ptr> midground_bg = bn::regular_bg_items::midground.create_bg_optional(64,64);
-            bn::optional <bn::regular_bg_ptr> foreground_bg = bn::regular_bg_items::foreground.create_bg_optional(64, 64);
+            BN_LOG("Rendering backgrounds");
+            background_bg = bn::regular_bg_items::background.create_bg_optional(64,32);
+            midground_bg = bn::regular_bg_items::midground.create_bg_optional(64,64);
+            foreground_bg = bn::regular_bg_items::foreground.create_bg_optional(64, 64);
+            BN_LOG("Done Rendering backgrounds");
             foreground_bg->set_priority(0); //Set the foreground to have priority depth.
 
             //Options
@@ -89,6 +90,9 @@ namespace too
                         bn::sound_items::disabled.play();
                     }
                 }
+                if(_cursor_icon.has_value()){
+                    _cursor_icon->set_y(cursor_y_offset+cursor_index*15);
+                }
                 
                 //Scroll the Backgrounds
                 foreground_bg->set_x(foreground_bg->x() - 1);
@@ -101,7 +105,7 @@ namespace too
 
             //If A is pressed, p
             bn::sound_items::spin_up.play();
-            cursor_icon->set_y(cursor_y_offset+cursor_index*15);
+        
             selected_option = cursor_index;
             if(selected_option == 0){
                 if(background_bg.has_value()){
@@ -113,8 +117,11 @@ namespace too
                 if(midground_bg.has_value()){
                     midground_bg.reset();
                 }
-
+                if(_cursor_icon.has_value()){
+                    _cursor_icon.reset();
+                }
             }
-            Scene::MAINMENU_CREDITS;
+
+            return Scene::MAINMENU_CREDITS;
         };
  }

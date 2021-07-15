@@ -8,7 +8,13 @@
 namespace too
 {
     class Credits
-    {       
+    {   
+        private:
+            bn::optional <bn::sprite_ptr> _cursor_icon;
+            bn::optional<bn::regular_bg_ptr> background_bg;
+            bn::optional<bn::regular_bg_ptr> midground_bg;
+            bn::optional<bn::regular_bg_ptr> foreground_bg;
+            
         public:
             Scene execute(int cursor_index, bn::sprite_text_generator& text_generator);
     };

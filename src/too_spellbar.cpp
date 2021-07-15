@@ -36,19 +36,20 @@ namespace too
             bn::sprite_items::spell_flash.create_sprite_optional(x,y),
         }
        {
-            //_spell_icon = bn::sprite_items::spell_icons.create_sprite_optional(x, y,1);
-            //_spell_icon->set_bg_priority(0);;
-            //bn::sprite_text_generator text_generator(variable_8x8_sprite_font);
             text_generator.set_left_alignment();
             text_generator.set_bg_priority(0);
             _spell_hud_sprites.clear();
             _current_spell_index = 0;
             for(int i = 0; i < 6; ++i){
-                _all_spell_sprites[i]->set_visible(false);
-                _all_spell_sprites[i]->set_bg_priority(0);
+                if(_all_spell_sprites[i].has_value()){
+                    _all_spell_sprites[i]->set_visible(false);
+                    _all_spell_sprites[i]->set_bg_priority(0);
+                }
             }
-            _all_spell_sprites[_current_spell_index]->set_visible(true);
-            BN_LOG("Spell: ", _current_spell_index);
+            if(_all_spell_sprites[_current_spell_index].has_value()){
+                _all_spell_sprites[_current_spell_index]->set_visible(true);
+                 BN_LOG("Spell: ", _current_spell_index);
+            }
             text_generator.generate(48, -64, bn::format<20>("{}", _all_spell_names[_current_spell_index]), _spell_hud_sprites);
         }
 
@@ -62,10 +63,15 @@ namespace too
         BN_LOG("Spell Index(passed from player.cpp): ", spell_index);
         BN_LOG("Current Spell Index(from spellbar.h_): ", _current_spell_index);
         for(int i = 0; i < 6; ++i){
-            _all_spell_sprites[i]->set_visible(false);
-            _all_spell_sprites[i]->set_bg_priority(0);
+             if(_all_spell_sprites[i].has_value()){
+                _all_spell_sprites[i]->set_visible(false);
+                _all_spell_sprites[i]->set_bg_priority(0);
+             }  
         }
-        _all_spell_sprites[_current_spell_index]->set_visible(true);
+        if(_all_spell_sprites[_current_spell_index].has_value()){
+            _all_spell_sprites[_current_spell_index]->set_visible(true);
+        }
+        
 
         text_generator.generate(48, -64, bn::format<20>("{}", _all_spell_names[spell_index]), _spell_hud_sprites);
     }

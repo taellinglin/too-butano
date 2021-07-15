@@ -29,7 +29,7 @@ namespace too
             bn::fixed _dy;
             bn::fixed_point _pos;
             bn::optional<bn::camera_ptr> _camera;
-            //bn::optional <bn::affine_bg_ptr> _map;
+            bn::optional <bn::affine_bg_ptr> _map;
             bn::sprite_ptr _text_bg1;
             bn::sprite_ptr _text_bg2;
             too::Healthbar _healthbar;

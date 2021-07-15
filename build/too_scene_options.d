@@ -82,6 +82,7 @@ too_scene_options.o: \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
  C:/butano/butano/include/bn_string_view.h \
  C:/butano/butano/include/bn_affine_bg_map_cell.h \
+ C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/include/too_scene_options.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
@@ -194,6 +195,7 @@ C:/butano/butano/include/bn_affine_bg_map_ptr.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
 C:/butano/butano/include/bn_string_view.h:
 C:/butano/butano/include/bn_affine_bg_map_cell.h:
+C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_scene_options.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/homebrew/too-butano/include/too_player.h:

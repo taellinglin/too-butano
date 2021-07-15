@@ -26,7 +26,7 @@
 #include "bn_vector.h"
 #include "bn_sprite_text_generator.h"
 #include "bn_affine_bg_map_cell.h"
-
+#include "too_scene.h"
 #include "too_scene_options.h"
 #include "too_scene_mainmenu.h"
 namespace too 
@@ -37,7 +37,7 @@ namespace too
         Scene Options::execute(int cursor_index, bn::sprite_text_generator& text_generator )
         {
         bool options_mode = true;
-        //int cursor_index =1; // The index that the cursor is at
+        //int cursor_index =0; // The index that the cursor is at
         int num_options = 3; // How many options there are
         int selected_option = 0;
         int cursor_x_offset = -72;
@@ -89,8 +89,6 @@ namespace too
                         bn::sound_items::disabled.play();
                     }
                 }
-                cursor_icon->set_y(cursor_y_offset+cursor_index*15);
-                selected_option = cursor_index;
                 //Scroll the Backgrounds
                 foreground_bg->set_x(foreground_bg->x() - 1);
                 midground_bg->set_x(midground_bg->x() - 0.5);
@@ -102,8 +100,20 @@ namespace too
 
             //If A is pressed, p
             bn::sound_items::spin_up.play();
-            return Scene::MAINMENU_OPTIONS;
-            //Scene::LIMBO1;
-            
+           cursor_icon->set_y(cursor_y_offset+cursor_index*15);
+            selected_option = cursor_index;
+            if(selected_option == 0){
+                if(background_bg.has_value()){
+                    background_bg.reset();
+                }
+                if(foreground_bg.has_value()){
+                    foreground_bg.reset();
+                }
+                if(midground_bg.has_value()){
+                    midground_bg.reset();
+                }
+
+            }
+            return Scene::MAINMENU_CREDITS;
         };
  }
