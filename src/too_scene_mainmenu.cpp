@@ -154,7 +154,7 @@ namespace too
                         if(_cursor_icon.has_value()){
                             _cursor_icon.reset();
                         }
-                        return Scene::TOWN1_LIMBO3;
+                        return Scene::SUMMER1_SUMMER2;
                     
                 }
                 if(selected_option ==1 ){
@@ -163,7 +163,7 @@ namespace too
                      BN_LOG("background reset...");
                        background_bg.reset();
                      }
-                if(foreground_bg){
+                if(foreground_bg.has_value()){
                     BN_LOG("foreground reset...");
 
                         foreground_bg.reset();
@@ -178,11 +178,11 @@ namespace too
                         _cursor_icon.reset();
                     }
                     BN_LOG("Going to Cutscene1");
-                    return Scene::CUTSCENE_1;
-                    /*        
+                    //return Scene::CUTSCENE_1;
+                       
                     too::Cutscene1 cutscene1 = too::Cutscene1();
-                    cutscene1.execute(text_generator);
-                    */
+                    return cutscene1.execute(text_generator);
+                    
                 }
                 if(selected_option == 2){
                     

@@ -36,7 +36,7 @@ too_scene_titlescreen.o: \
  C:/butano/butano/include/bn_regular_bg_item.h \
  C:/butano/butano/include/bn_bg_palette_item.h \
  C:/butano/butano/include/bn_regular_bg_map_item.h \
- C:/butano/butano/include/bn_size.h \
+ C:/butano/butano/include/bn_size.h C:/butano/butano/include/bn_point.h \
  C:/butano/butano/include/bn_regular_bg_map_cell.h \
  C:/butano/butano/include/bn_regular_bg_tiles_item.h \
  C:/butano/homebrew/too-butano/build/bn_regular_bg_items_midground.h \
@@ -55,7 +55,6 @@ too_scene_titlescreen.o: \
  C:/butano/butano/include/bn_sprite_actions.h \
  C:/butano/butano/include/bn_sprite_ptr.h \
  C:/butano/butano/include/bn_fixed_point.h \
- C:/butano/butano/include/bn_point.h \
  C:/butano/butano/include/bn_value_template_actions.h \
  C:/butano/butano/include/bn_sprite_text_generator.h \
  C:/butano/butano/include/bn_vector.h \
@@ -134,6 +133,7 @@ C:/butano/butano/include/bn_regular_bg_item.h:
 C:/butano/butano/include/bn_bg_palette_item.h:
 C:/butano/butano/include/bn_regular_bg_map_item.h:
 C:/butano/butano/include/bn_size.h:
+C:/butano/butano/include/bn_point.h:
 C:/butano/butano/include/bn_regular_bg_map_cell.h:
 C:/butano/butano/include/bn_regular_bg_tiles_item.h:
 C:/butano/homebrew/too-butano/build/bn_regular_bg_items_midground.h:
@@ -154,7 +154,6 @@ C:/butano/butano/include/bn_template_actions.h:
 C:/butano/butano/include/bn_sprite_actions.h:
 C:/butano/butano/include/bn_sprite_ptr.h:
 C:/butano/butano/include/bn_fixed_point.h:
-C:/butano/butano/include/bn_point.h:
 C:/butano/butano/include/bn_value_template_actions.h:
 C:/butano/butano/include/bn_sprite_text_generator.h:
 C:/butano/butano/include/bn_vector.h:

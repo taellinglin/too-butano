@@ -76,7 +76,7 @@ bn_bg_blocks_manager.o: C:/butano/butano/src/bn_bg_blocks_manager.cpp \
  C:/butano/butano/include/bn_bpp_mode.h \
  C:/butano/butano/include/bn_compression_type.h \
  C:/butano/butano/include/bn_regular_bg_map_item.h \
- C:/butano/butano/include/bn_size.h \
+ C:/butano/butano/include/bn_size.h C:/butano/butano/include/bn_point.h \
  C:/butano/butano/include/bn_regular_bg_tiles_item.h \
  C:/butano/butano/include/bn_tile.h \
  C:/butano/butano/include/bn_regular_bg_tiles_ptr.h \
@@ -179,6 +179,7 @@ C:/butano/butano/include/bn_bpp_mode.h:
 C:/butano/butano/include/bn_compression_type.h:
 C:/butano/butano/include/bn_regular_bg_map_item.h:
 C:/butano/butano/include/bn_size.h:
+C:/butano/butano/include/bn_point.h:
 C:/butano/butano/include/bn_regular_bg_tiles_item.h:
 C:/butano/butano/include/bn_tile.h:
 C:/butano/butano/include/bn_regular_bg_tiles_ptr.h:

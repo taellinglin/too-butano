@@ -48,16 +48,15 @@
 namespace too
 {
     
-    MainGame::MainGame(bn::sprite_text_generator& text_generator, too::Scene scene, bool spawn_player)
+    MainGame::MainGame(bn::sprite_text_generator& text_generator, too::Scene scene, bool spawn_player, too::Player& player)
     {
         
         too::Loading loading = too::Loading();
         //too::Scene scene = too::Scene::TOWN1_LIMBO3;
         // bn::optional <bn::sprite_ptr>
-        _cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
-        
-        Player player = Player(_cat_sprite, text_generator);
-        
+        //bn::optional <bn::sprite_ptr> _cat_sprite;
+        //_cat_sprite = bn::sprite_items::cat_sprite.create_sprite_optional(0,0);
+        //too::Player _player = too::Player(_cat_sprite, text_generator);
 
 
         while(true)
@@ -65,28 +64,28 @@ namespace too
             
             if (scene == too::Scene::TITLESCREEN)
             {
-                player.set_visible(false);
+                //player.set_visible(false);
                 too::TitleScreen titlescreen = too::TitleScreen();
                 titlescreen.execute(text_generator);
 
             }
         else if (scene == too::Scene::MAINMENU_TITLESCREEN)
             {
-                player.set_visible(false);
+                //player.set_visible(false);
                 too::MainMenu mainmenu_titlescreen = too::MainMenu();
                 mainmenu_titlescreen.execute(0 ,text_generator);
 
             }
             else if (scene == too::Scene::MAINMENU_OPTIONS)
             {
-                player.set_visible(false);
+               // player.set_visible(false);
                 too::MainMenu mainmenu_options = too::MainMenu();
                 mainmenu_options.execute(0, text_generator);
 
             }
             else if (scene == too::Scene::OPTIONS_MAINMENU)
             {
-                player.set_visible(false);
+                //player.set_visible(false);
                 too::Options options_mainmenu = too::Options();
                 options_mainmenu.execute(0, text_generator);
 
@@ -94,7 +93,7 @@ namespace too
             else if (scene == too::Scene::CREDITS_MAINMENU)
             {
                 BN_LOG("Going to credits, making player invisible...");
-                player.set_visible(false);
+               // player.set_visible(false);
                 too::Credits credits_mainmenu = too::Credits();
                 BN_LOG("Okay, going to load the credits page now...");
                 credits_mainmenu.execute(0, text_generator);
@@ -102,7 +101,7 @@ namespace too
             }
             else if (scene == too::Scene::CUTSCENE_1)
             {
-                player.set_visible(false);
+                ///player.set_visible(false);
                 too::Cutscene1 cutscene1 = too::Cutscene1();
                 cutscene1.execute(text_generator);
 
@@ -110,7 +109,7 @@ namespace too
 
 
 
-        else if(scene == too::Scene::LIMBO1)
+        if(scene == too::Scene::LIMBO1)
             {
                 too::Limbo1 limbo1 = too::Limbo1();
                 scene = limbo1.execute(player, bn::fixed_point(112, 208));
@@ -175,10 +174,6 @@ namespace too
                 too::Limbo3 to_limbo3_from_town1 = too::Limbo3();
                 scene = to_limbo3_from_town1.execute(player, bn::fixed_point(816, 368));
             }
-            if (_cat_sprite.has_value()){
-                _cat_sprite->set_visible(false);
-            }
-           
             loading.execute();
             bn::core::update();
             

@@ -84,6 +84,8 @@ too_scene_summer2.o: \
  C:/butano/butano/include/bn_bg_palette_actions.h \
  C:/butano/butano/include/bn_bg_palette_ptr.h \
  C:/butano/butano/include/bn_value_template_actions.h \
+ C:/butano/butano/include/bn_bgs.h \
+ c:\butano\butano\hw\include\bn_hw_bgs_constants.h \
  C:/butano/homebrew/too-butano/include/too_level.h \
  C:/butano/homebrew/too-butano/include/too_player.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
@@ -204,6 +206,8 @@ C:/butano/butano/include/bn_bg_palette_ptr.h:
 C:/butano/butano/include/bn_bg_palette_actions.h:
 C:/butano/butano/include/bn_bg_palette_ptr.h:
 C:/butano/butano/include/bn_value_template_actions.h:
+C:/butano/butano/include/bn_bgs.h:
+c:\butano\butano\hw\include\bn_hw_bgs_constants.h:
 C:/butano/homebrew/too-butano/include/too_level.h:
 C:/butano/homebrew/too-butano/include/too_player.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:

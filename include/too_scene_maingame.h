@@ -14,7 +14,7 @@ namespace too
         bn::optional <bn::sprite_ptr> _cat_sprite;
 
         public:
-            MainGame(bn::sprite_text_generator& text_generator, too::Scene scene, bool spawn_player);
+            MainGame(bn::sprite_text_generator& text_generator, too::Scene scene, bool spawn_player, too::Player& player);
     };
 }
 

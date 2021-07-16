@@ -18,6 +18,7 @@
 #include "bn_affine_bg_map_cell.h"
 #include "bn_bg_palette_ptr.h"
 #include "bn_bg_palette_actions.h"
+#include "bn_bgs.h"
 
 //Travels of Oorta Includes
 #include "too_level.h"
@@ -110,6 +111,14 @@ namespace too
             {
                 if(player.pos().x() < 128+16 && player.pos().x() > 128-16){
                     if(player.pos().y() < 928+16 && player.pos().y() > 928-16){
+                        BN_LOG("Summer2 BG Reset 'map'");
+                        map.reset();
+                         BN_LOG("Summer2 BG Reset 'map_bg'");
+                        map_bg.reset();
+                        BN_LOG("Going to Scene 'summer1'");
+                        BN_LOG(bn::to_string<32>(bn::bgs::used_items_count()));
+                        BN_LOG(bn::to_string<32>(bn::bgs::available_items_count()));
+
                         return Scene::SUMMER2_SUMMER1;
                     }
                 }

@@ -87,7 +87,7 @@ namespace too
     Player::Player(bn::optional<bn::sprite_ptr>& sprite, bn::sprite_text_generator& text_generator ) :
         _sprite(sprite),
         //_map(bn::affine_bg_items::level_palettes.create_bg_optional(0,0)),
-        _camera(bn::camera_ptr::create_optional(0,0)),
+        //_camera(bn::camera_ptr::create_optional(0,0)),
         _text_bg1(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _text_bg2(bn::sprite_items::text_bg.create_sprite(0, 0)),
         _healthbar(too::Healthbar(text_generator)),
@@ -499,7 +499,9 @@ namespace too
     void Player::set_visible(bool visible){
         _spellbar.set_visible(visible);
         _healthbar.set_visible(visible);
-        _sprite->set_visible(visible);
+        if(_sprite.has_value()){
+             _sprite->set_visible(visible);
+        }
         set_listening(visible);
     }
 }

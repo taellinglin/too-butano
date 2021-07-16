@@ -28,7 +28,7 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_optional_fwd.h \
  C:/butano/butano/include/bn_compression_type.h \
  C:/butano/butano/include/bn_regular_bg_map_item.h \
- C:/butano/butano/include/bn_size.h \
+ C:/butano/butano/include/bn_size.h C:/butano/butano/include/bn_point.h \
  C:/butano/butano/include/bn_regular_bg_map_cell.h \
  C:/butano/butano/include/bn_regular_bg_tiles_item.h \
  C:/butano/butano/include/bn_tile.h \
@@ -43,7 +43,6 @@ too_scene_maingame.o: \
  C:/butano/butano/include/bn_music.h \
  C:/butano/butano/include/bn_template_actions.h \
  C:/butano/butano/include/bn_fixed_point.h \
- C:/butano/butano/include/bn_point.h \
  C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h \
  C:/butano/homebrew/too-butano/include/too_scene.h \
  C:/butano/butano/include/bn_sprite_text_generator.h \
@@ -150,6 +149,7 @@ C:/butano/butano/include/bn_optional_fwd.h:
 C:/butano/butano/include/bn_compression_type.h:
 C:/butano/butano/include/bn_regular_bg_map_item.h:
 C:/butano/butano/include/bn_size.h:
+C:/butano/butano/include/bn_point.h:
 C:/butano/butano/include/bn_regular_bg_map_cell.h:
 C:/butano/butano/include/bn_regular_bg_tiles_item.h:
 C:/butano/butano/include/bn_tile.h:
@@ -165,7 +165,6 @@ C:/butano/butano/include/bn_limits.h:
 C:/butano/butano/include/bn_music.h:
 C:/butano/butano/include/bn_template_actions.h:
 C:/butano/butano/include/bn_fixed_point.h:
-C:/butano/butano/include/bn_point.h:
 C:/butano/homebrew/too-butano/include/too_scene_titlescreen.h:
 C:/butano/homebrew/too-butano/include/too_scene.h:
 C:/butano/butano/include/bn_sprite_text_generator.h:

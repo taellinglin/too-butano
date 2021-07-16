@@ -41,15 +41,24 @@ namespace too
             int selected_option = 0;
             int cursor_x_offset = -72;
             int cursor_y_offset = -22+72;
+            if (!_cursor_icon.has_value()){
             _cursor_icon = bn::sprite_items::cursor_right.create_sprite_optional(cursor_x_offset,cursor_y_offset);
+            }
             //BG0 BG1 BG2 render the background, midground, and foreground on 3 layers.
             BN_LOG("Rendering backgrounds");
-            background_bg = bn::regular_bg_items::background.create_bg_optional(64,32);
+            if (!background_bg.has_value()){
+                background_bg = bn::regular_bg_items::background.create_bg_optional(64,32);
+            }
+            if (!midground_bg.has_value()){
             midground_bg = bn::regular_bg_items::midground.create_bg_optional(64,64);
+            }
+            if (!foreground_bg.has_value()){
             foreground_bg = bn::regular_bg_items::foreground.create_bg_optional(64, 64);
+            }
             BN_LOG("Done Rendering backgrounds");
+            if (foreground_bg.has_value()){
             foreground_bg->set_priority(0); //Set the foreground to have priority depth.
-
+            }
             //Options
             constexpr bn::string_view info_text_lines[] = {
                 "",
@@ -95,9 +104,12 @@ namespace too
                 }
                 
                 //Scroll the Backgrounds
-                foreground_bg->set_x(foreground_bg->x() - 1);
-                midground_bg->set_x(midground_bg->x() - 0.5);
-
+                if(foreground_bg.has_value()){
+                    foreground_bg->set_x(foreground_bg->x() - 1);
+                }
+                if (midground_bg.has_value()){
+                    midground_bg->set_x(midground_bg->x() - 0.5);
+                }
                 //Update the frame
                 info.update();
                 bn::core::update();
